@@ -42,10 +42,11 @@ function PropertyCard({
     <div className="group overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 hover:ring-white/20 transition">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
-          src={imageUrl}
-          alt={title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          src={heroImageUrl}
+          alt="Warsaw skyline"
+          className="h-full w-full object-cover object-[center_35%]"
         />
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
       <div className="p-5">
