@@ -223,7 +223,9 @@ export default function Page() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 border-t border-transparent bg-[#0C2D3A]">
+      <section className="relative -mt-8 py-16 bg-[#0C2D3A]">
+        {/* мягкий переход сверху: прозрачный → синий */}
+        <div className="pointer-events-none absolute -top-8 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[#0C2D3A]" />
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Stat value="150+" label="активных объявлений" />
