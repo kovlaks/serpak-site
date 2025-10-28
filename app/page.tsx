@@ -105,7 +105,7 @@ export default function Page() {
             <a href="#" className="flex items-center gap-2">
               <img
                 src="/logo.png"           // если у вас .svg — поставьте "/logo.svg"
-                alt="SERPAK Nieruchomości"
+                alt="SERPAKOWSKI Nieruchomości"
                 className="h-8 w-8 object-contain"
               />
               <span className="font-serif text-xl tracking-wide text-white">
@@ -273,7 +273,7 @@ export default function Page() {
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm text-neutral-200/80">
             <div>
-              <div className="font-serif text-white text-lg">SERPAK Nieruchomości</div>
+              <div className="font-serif text-white text-lg">SERPAKOWSKI Nieruchomości</div>
               <p className="mt-2 max-w-xs">Agencja nieruchomości w Warszawie. Wynajem premium i komfort-klasa.</p>
             </div>
             <div>
@@ -301,7 +301,7 @@ export default function Page() {
               </ul>
             </div>
           </div>
-          <div className="mt-10 text-xs text-neutral-200/60">© {new Date().getFullYear()} SERPAK Nieruchomości. Wszystkie prawa zastrzeżone.</div>
+          <div className="mt-10 text-xs text-neutral-200/60">© {new Date().getFullYear()} SERPAKOWSKI Nieruchomości. Wszystkie prawa zastrzeżone.</div>
         </Container>
       </footer>
     </div>
