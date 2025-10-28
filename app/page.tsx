@@ -102,16 +102,17 @@ export default function Page() {
       <header id="header" className="fixed inset-x-0 top-0 z-50 transition">
         <Container>
           <div className="flex h-16 items-center justify-between">
-            <a href="#" className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-3">
               <img
-                src="/logo.png"           // если у вас .svg — поставьте "/logo.svg"
+                src="/logo.png"             // если файл другой: поменяй имя (например /logo.svg или /logo.jpg)
                 alt="SERPAKOWSKI Nieruchomości"
-                className="h-8 w-8 object-contain"
+                className="h-12 w-12 rounded-full object-cover"
               />
-              <span className="font-serif text-xl tracking-wide text-white">
+              <span className="font-serif whitespace-nowrap text-base sm:text-lg md:text-xl tracking-wide text-white">
                 SERPAKOWSKI Nieruchomości
               </span>
             </a>
+
             <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
               <a href="#communities" className="hover:text-white">Объекты</a>
               <a href="#about" className="hover:text-white">О нас</a>
