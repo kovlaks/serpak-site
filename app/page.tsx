@@ -250,9 +250,6 @@ export default function Page() {
             <div>
               <h2 className="font-serif text-3xl text-white">Подбор квартиры под ваш запрос</h2>
               <p className="mt-2 text-neutral-200/90 max-w-md">Заполните анкету — мы свяжемся с вами очень скоро (пн–пт 09:00–18:00).</p>
-              <div className="mt-6 flex gap-3">
-                <Button href="#">Заполнить форму</Button>
-              </div>
               <p className="mt-3 text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
