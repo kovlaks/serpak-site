@@ -163,10 +163,6 @@ export default function Page() {
               Искусство находить<strong className="text-amber-300"> лучшее</strong>.
             </h1>
 
-           <p className="mt-6 max-w-xl text-base text-neutral-200/90">
-            Безопасность. Уверенность. Комфорт.
-          </p>
-
 
             <div className="mt-10 flex items-center gap-4">
               <Button href="#communities">Смотреть объекты</Button>
