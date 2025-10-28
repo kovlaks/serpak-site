@@ -199,7 +199,7 @@ export default function Page() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0C2D3A]/25 to-[#0C2D3A]" />
         </div>
         <Container>
-          <div className="py-28 sm:py-36 md:py-44">
+          <div className="pt-[34vh] sm:pt-[38vh] md:pt-[42vh] pb-24 sm:pb-28 md:pb-32">
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white max-w-3xl leading-tight">
               Искусство находить
               <strong className="text-amber-300"> лучшее жильё</strong> в
