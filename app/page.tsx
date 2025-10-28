@@ -103,7 +103,11 @@ export default function Page() {
         <Container>
           <div className="flex h-16 items-center justify-between">
             <a href="#" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-amber-300 to-amber-500"></div>
+              <img
+                src="/logo.png"           // если у вас .svg — поставьте "/logo.svg"
+                alt="SERPAK Nieruchomości"
+                className="h-8 w-8 object-contain"
+              />
               <span className="font-serif text-xl tracking-wide text-white">
                 SERPAK Nieruchomości
               </span>
