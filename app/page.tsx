@@ -69,7 +69,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   // Поставь сюда своё изображение (можно /hero.jpg если ты загрузил в public)
-  const heroImageUrl = "/Depositphotos_455695662_XL.jpg"; // или "YOUR_WARSAW_IMAGE_URL"
+  const heroImageUrl = "/hero.webp"; // или "YOUR_WARSAW_IMAGE_URL"
 
   useEffect(() => {
     const onScroll = () => {
