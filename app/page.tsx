@@ -196,7 +196,7 @@ export default function Page() {
             </video>
           )}
           {/* Прозрачный сверху → синий снизу */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0C2D3A]/40 to-[#0C2D3A]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0C2D3A]/25 to-[#0C2D3A]" />
         </div>
         <Container>
           <div className="py-28 sm:py-36 md:py-44">
