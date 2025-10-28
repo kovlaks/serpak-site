@@ -44,7 +44,7 @@ function PropertyCard({
         <img
           src={heroImageUrl}
           alt="Warsaw skyline"
-          className="h-full w-full object-cover object-[center_35%]"
+          className="h-full w-full object-cover object-[center_50%]"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
