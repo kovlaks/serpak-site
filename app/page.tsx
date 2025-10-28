@@ -186,7 +186,7 @@ export default function Page() {
       </section>
 
       {/* Featured Properties */}
-      <section id="communities" className="py-20">
+      <section id="communities" className="py-20 hidden">
         <Container>
           <div className="flex items-end justify-between">
             <div>
@@ -204,7 +204,7 @@ export default function Page() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-20">
+      <section id="about" className="py-20 hidden">
         <Container>
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="space-y-6">
