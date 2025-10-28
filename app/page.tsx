@@ -146,7 +146,7 @@ export default function Page() {
           <img
             src={heroImageUrl}
             alt="Warsaw skyline"
-            className="h-full w-full object-cover object-[center_25%]"  // ← «поднимаем» кадр (можно 30%, 25% если надо ещё ближе)
+            className="h-full w-full object-cover object-[center_50%]"  // ← «поднимаем» кадр (можно 30%, 25% если надо ещё ближе)
           />
           {/* Прозрачный сверху → синий снизу */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0C2D3A]/25 to-[#0C2D3A]" />
