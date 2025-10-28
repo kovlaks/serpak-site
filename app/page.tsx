@@ -162,11 +162,10 @@ export default function Page() {
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white max-w-3xl leading-tight">
               Искусство находить<strong className="text-amber-300"> лучшее жильё</strong> в Варшаве
             </h1>
-           <div className="mt-6 flex flex-wrap gap-2">
-            <span className="rounded-full bg-white/10 px-3 py-1 text-sm text-white ring-1 ring-white/15">Безопасность</span>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-sm text-white ring-1 ring-white/15">Уверенность</span>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-sm text-white ring-1 ring-white/15">Комфорт</span>
-          </div>
+           <p className="mt-6 max-w-xl text-base text-neutral-200/90">
+            Безопасность. Уверенность. Комфорт.
+          </p>
+
 
             <div className="mt-10 flex items-center gap-4">
               <Button href="#communities">Смотреть объекты</Button>
