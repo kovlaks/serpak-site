@@ -248,18 +248,22 @@ export default function Page() {
         <Container>
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div>
-              <h2 className="font-serif text-3xl text-white">Расскажите, что ищете</h2>
-              <p className="mt-2 text-neutral-200/90 max-w-md">Оставьте контакты — менеджер свяжется в течение рабочего часа (пн–пт 10:00–18:00).</p>
+              <h2 className="font-serif text-3xl text-white">Подбор квартиры под ваш запрос</h2>
+              <p className="mt-2 text-neutral-200/90 max-w-md">Заполните анкету — мы свяжемся с вами очень скоро (пн–пт 09:00–18:00).</p>
               <div className="mt-6 flex gap-3">
                 <Button href="#">Заполнить форму</Button>
-                <a className="text-sm text-neutral-200/90 hover:text-white" href="https://wa.me/" target="_blank" rel="noreferrer">Написать в WhatsApp →</a>
               </div>
               <p className="mt-3 text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
               <form className="grid gap-4">
                 <input placeholder="Имя" className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
-                <input placeholder="Телеграм или телефон" className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+               <input
+                  name="phone"
+                  placeholder="Телефон"
+                  required
+                  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                />
                 <textarea placeholder="Какая квартира нужна? Район, бюджет, сроки" rows={4} className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
                 <Button>Отправить</Button>
               </form>
