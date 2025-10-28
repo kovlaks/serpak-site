@@ -135,7 +135,7 @@ export default function Page() {
       </section>
 
       {/* Trust / Stats */}
-      <section className="py-16 border-t border-white/10 bg-gradient-to-b from-neutral-950 to-neutral-950">
+      <section className="py-16 border-t border-white/10 bg-gradient-to-b from-[#0C2D3A] to-[#0A2530]">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Stat value="150+" label="активных объявлений" />
