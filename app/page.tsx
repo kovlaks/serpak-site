@@ -53,8 +53,8 @@ export default function Page() {
     const onScroll = () => {
       const header = document.getElementById("header");
       if (!header) return;
-      if (window.scrollY > 10) header.classList.add("bg-neutral-950/70", "backdrop-blur", "ring-1", "ring-white/10");
-      else header.classList.remove("bg-neutral-950/70", "backdrop-blur", "ring-1", "ring-white/10");
+      if (window.scrollY > 10) header.classList.add("bg-[#0C2D3A]/70", "backdrop-blur", "ring-1", "ring-white/10");
+      else header.classList.remove("bg-[#0C2D3A]/70", "backdrop-blur", "ring-1", "ring-white/10");
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
