@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'SERPAK Nieruchomości — Warszawa',
+  title: 'SERPAKOWSKI Nieruchomości — Warszawa',
   description: 'Agencja nieruchomości w Warszawie. Wynajem premium i komfort.',
 };
 
