@@ -257,7 +257,7 @@ export default function Page() {
               <ul className="mt-2 space-y-2">
                 <li>Warszawa, Polska</li>
                 <li><a href="mailto:hello@example.com" className="hover:text-white">hello@example.com</a></li>
-                <li><a href="tel:+48111222333" className="hover:text-white">+48 111 222 333</a></li>
+                <li><a href="tel:+48453053969" className="hover:text-white">+48 453 053 969</a></li>
               </ul>
             </div>
             <div>
