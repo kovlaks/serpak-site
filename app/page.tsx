@@ -109,7 +109,7 @@ export default function Page() {
                 className="h-8 w-8 object-contain"
               />
               <span className="font-serif text-xl tracking-wide text-white">
-                SERPAK Nieruchomości
+                SERPAKOWSKI Nieruchomości
               </span>
             </a>
             <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
