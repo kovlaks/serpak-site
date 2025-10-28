@@ -116,7 +116,7 @@ export default function Page() {
               <source src="" type="video/mp4" />
             </video>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-neutral-950/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0C2D3A]/40 to-[#0C2D3A]" />
         </div>
         <Container>
           <div className="py-28 sm:py-36 md:py-44">
