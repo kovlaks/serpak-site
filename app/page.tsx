@@ -47,7 +47,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   // Temporary Warsaw hero image (can be watermarked). Replace with your URL:
-  const heroImageUrl = "YOUR_WARSAW_IMAGE_URL";
+  const heroImageUrl = "https://st2.depositphotos.com/35126858/45569/i/1600/depositphotos_455695662-stock-photo-warsaw-poland-01-12-2020.jpg";
 
   useEffect(() => {
     const onScroll = () => {
