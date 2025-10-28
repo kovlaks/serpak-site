@@ -154,7 +154,7 @@ export default function Page() {
 
         <Container>
           {/* просто опускаем блок с текстом ниже, ничего не удаляем */}
-          <div className="pt-[50vh] sm:pt-[54vh] md:pt-[58vh] pb-24 sm:pb-28 md:pb-32">
+          <div className="pt-[50vh] sm:pt-[54vh] md:pt-[58vh] pb-24 sm:pb-28 md:pb-32 lg:-ml-8 xl:-ml-12">
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white max-w-3xl leading-tight">
               Искусство находить<strong className="text-amber-300"> лучшее жильё</strong> в Варшаве
             </h1>
