@@ -174,7 +174,7 @@ export default function Page() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-[#0C2D3A]">
+      <section className="py-16 bg-[#0C2D3A] hidden">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Stat value="150+" label="активных объявлений" />
