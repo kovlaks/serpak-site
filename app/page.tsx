@@ -152,7 +152,7 @@ export default function Page() {
           </div>
         </Container>
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/10 bg-[#0C2D3A]/95 backdrop-blur">
+          <div className="md:hidden border-t border-transparent bg-[#0C2D3A]/95 backdrop-blur">
             <Container>
               <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
                 <a href="#communities" className="hover:text-white">
@@ -223,7 +223,7 @@ export default function Page() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 border-t border-white/10 bg-[#0C2D3A]">
+      <section className="py-16 border-t border-transparent bg-[#0C2D3A]">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Stat value="150+" label="активных объявлений" />
@@ -278,7 +278,7 @@ export default function Page() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-20 border-t border-white/10">
+      <section id="about" className="py-20 border-t border-transparent">
         <Container>
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="space-y-6">
@@ -341,7 +341,7 @@ export default function Page() {
       {/* Contact CTA */}
       <section
         id="contact"
-        className="relative isolate py-20 border-t border-white/10"
+        className="relative isolate py-20 border-t border-transparent"
       >
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.15),transparent_60%)]" />
         <Container>
@@ -393,7 +393,7 @@ export default function Page() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-12 bg-gradient-to-b from-transparent to-[#0A2530]">
+      <footer className="border-t border-transparent py-12 bg-gradient-to-b from-transparent to-[#0A2530]">
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm text-neutral-200/80">
             <div>
