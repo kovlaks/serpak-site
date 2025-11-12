@@ -340,7 +340,7 @@ export default function Page() {
       <div>
         <div className="text-white">Контакты</div>
         <ul className="mt-2 space-y-2">
-          <li>Warszawa, Polska</li>
+          <li>Варшава, Польша</li>
           <li>
             <a href="mailto:kovlaks@gmail.com" className="hover:text-white">
               kovlaks@gmail.com
@@ -368,7 +368,7 @@ export default function Page() {
     {/* JDG info (RU) */}
 <div className="mt-8 text-[13px] leading-relaxed text-neutral-200/75">
   <div>NIP: 1133184502 • REGON: 543202915</div>
-  <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Warszawa</div>
+  <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Варшава</div>
 </div>
 
 
