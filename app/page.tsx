@@ -300,41 +300,94 @@ export default function Page() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-gradient-to-b from-transparent to-[#0A2530]">
-        <Container>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm text-neutral-200/80">
-            <div>
-              <div className="font-serif text-white text-lg">SERPAKOWSKI Nieruchomości</div>
-              <p className="mt-2 max-w-xs">Agencja nieruchomości w Warszawie. Wynajem premium i komfort-klasa.</p>
-            </div>
-            <div>
-              <div className="text-white">Навигация</div>
-              <ul className="mt-2 space-y-2">
-                <li><a href="#communities" className="hover:text-white">Объекты</a></li>
-                <li><a href="#services" className="hover:text-white">Услуги</a></li>
-                <li><a href="#about" className="hover:text-white">О нас</a></li>
-                <li><a href="#contact" className="hover:text-white">Контакты</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="text-white">Контакты</div>
-              <ul className="mt-2 space-y-2">
-                <li>Warszawa, Polska</li>
-                <li><a href="mailto:hello@example.com" className="hover:text-white">hello@example.com</a></li>
-                <li><a href="tel:+48111222333" className="hover:text-white">+48 111 222 333</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="text-white">Юридическое</div>
-              <ul className="mt-2 space-y-2">
-                <li><a href="#" className="hover:text-white">Polityka prywatności</a></li>
-                <li><a href="#" className="hover:text-white">Cookies</a></li>
-              </ul>
-            </div>
+<footer className="py-12 bg-gradient-to-b from-transparent to-[#0A2530]">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    {/* Верхняя часть футера: 4 колонки */}
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm text-neutral-200/80">
+      {/* Бренд и краткое описание */}
+      <div>
+        <div className="flex items-center gap-3">
+          {/* Если есть файл логотипа в /public/logo.png — раскомментируй img ниже и убери круг */}
+          {/* <img src="/logo.png" alt="SERPAKOWSKI Nieruchomości" className="h-10 w-10 rounded-full object-cover" /> */}
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-amber-300 to-amber-500" />
+          <div className="font-serif text-white text-lg whitespace-nowrap">
+            SERPAKOWSKI Nieruchomości
           </div>
-          <div className="mt-10 text-xs text-neutral-200/60">© {new Date().getFullYear()} SERPAKOWSKI Nieruchomości. Wszystkie prawa zastrzeżone.</div>
-        </Container>
-      </footer>
+        </div>
+        <p className="mt-3 max-w-xs">
+          Агентство недвижимости в Варшаве. Аренда и сопровождение сделок. Работаем по записи.
+        </p>
+
+        {/* Соцсети (по желанию) */}
+        <div className="mt-4 flex items-center gap-4 text-neutral-200/80">
+          {/* Вставь свои ссылки */}
+          <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="hover:text-white">Instagram</a>
+          <a href="https://t.me/" target="_blank" rel="noreferrer" className="hover:text-white">Telegram</a>
+        </div>
+      </div>
+
+      {/* Навигация */}
+      <div>
+        <div className="text-white">Навигация</div>
+        <ul className="mt-2 space-y-2">
+          <li><a href="#services" className="hover:text-white">Услуги</a></li>
+          <li><a href="#contact" className="hover:text-white">Контакты</a></li>
+          {/* Если вернёшь разделы позже — добавь ссылки ниже */}
+          {/* <li><a href="#communities" className="hover:text-white">Объявления</a></li> */}
+          {/* <li><a href="#about" className="hover:text-white">О нас</a></li> */}
+        </ul>
+      </div>
+
+      {/* Контакты */}
+      <div>
+        <div className="text-white">Контакты</div>
+        <ul className="mt-2 space-y-2">
+          <li>Warszawa, Polska</li>
+          <li>
+            <a href="mailto:hello@example.com" className="hover:text-white">
+              hello@example.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+48111222333" className="hover:text-white">
+              +48 111 222 333
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Юридическое */}
+      <div>
+        <div className="text-white">Юридическая информация</div>
+        <ul className="mt-2 space-y-2">
+          <li><a href="#" className="hover:text-white">Политика конфиденциальности</a></li>
+          <li><a href="#" className="hover:text-white">Cookies</a></li>
+          {/* при необходимости: <li><a href="#" className="hover:text-white">Regulamin</a></li> */}
+        </ul>
+      </div>
+    </div>
+
+    {/* JDG info (RU) */}
+    <div className="mt-8 text-[13px] leading-relaxed text-neutral-200/75">
+      <div className="font-medium text-white">Данные ИП (JDG)</div>
+      <div className="mt-1">Полное имя (JDG): Serhii Kovlak</div>
+      <div>Торговое наименование: SERPAKOWSKI Nieruchomości</div>
+      <div>NIP: 1133184502 • REGON: 543202915</div>
+      <div>
+        Формат работы: услуги оказываются мобильно; 
+        <span className="whitespace-nowrap"> brak stałego miejsca wykonywania działalności</span>
+      </div>
+      <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Warszawa</div>
+      <div>Место встреч (по записи): Złota 75A/7, 00-819 Warszawa</div>
+      <div>Запись в CEIDG: активна</div>
+    </div>
+
+    {/* Копирайт */}
+    <div className="mt-10 text-xs text-neutral-200/60">
+      © {new Date().getFullYear()} SERPAKOWSKI Nieruchomości. Все права защищены.
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
