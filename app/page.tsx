@@ -307,13 +307,18 @@ export default function Page() {
       {/* Бренд и краткое описание */}
       <div>
         <div className="flex items-center gap-3">
-          {/* Если есть файл логотипа в /public/logo.png — раскомментируй img ниже и убери круг */}
-          {/* <img src="/logo.png" alt="SERPAKOWSKI Nieruchomości" className="h-10 w-10 rounded-full object-cover" /> */}
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-amber-300 to-amber-500" />
-          <div className="font-serif text-white text-lg whitespace-nowrap">
-            SERPAKOWSKI Nieruchomości
+            <img
+              src="/logo.png"                 // или /logo.svg
+              alt="SERPAKOWSKI Nieruchomości"
+              className="h-8 w-8 rounded-full object-cover ring-1 ring-white/15"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="font-serif text-white text-lg whitespace-nowrap">
+              SERPAKOWSKI Nieruchomości
+            </div>
           </div>
-        </div>
+
         
 
         {/* Соцсети (по желанию) */}
