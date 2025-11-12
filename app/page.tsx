@@ -310,7 +310,7 @@ export default function Page() {
             <img
               src="/logo.png"                 // или /logo.svg
               alt="SERPAKOWSKI Nieruchomości"
-              className="h-16 w-16 rounded-full object-cover ring-1 ring-white/15"
+              className="h-8 w-8 rounded-full object-cover ring-1 ring-white/15"
               loading="lazy"
               decoding="async"
             />
