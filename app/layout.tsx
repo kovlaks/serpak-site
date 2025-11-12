@@ -1,8 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'SERPAKOWSKI Nieruchomości — Warszawa',
-  description: 'Agencja nieruchomości w Warszawie. Wynajem premium i komfort.',
+  title: "SERPAKOWSKI Nieruchomości — Варшава",
+  description: "Агентство недвижимости в Варшаве. Аренда и сопровождение сделок.",
+  openGraph: { title: "SERPAKOWSKI Nieruchomości — Варшава", description: "Агентство недвижимости в Варшаве. Аренда и сопровождение сделок.", locale: "ru_RU" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
