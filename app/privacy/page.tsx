@@ -23,8 +23,8 @@ export default function PrivacyPage() {
         <p><strong>Адрес для корреспонденции:</strong> Złota 75A/7, 00-819 Warszawa</p>
         <p>
           <strong>Контакт:</strong>{" "}
-          <a className="underline hover:no-underline" href="mailto:hello@example.com">
-            hello@example.com
+          <a className="underline hover:no-underline" href="mailto:kovlaks@gmail.com">
+            kovlaks@gmail.com
           </a>{" "}
           / <a className="underline hover:no-underline" href="tel:+48453053969">+48 453 053 969</a>
         </p>
