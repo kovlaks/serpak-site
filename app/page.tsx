@@ -378,7 +378,7 @@ export default function Page() {
     {/* JDG info (RU) */}
 <div className="mt-8 text-[13px] leading-relaxed text-neutral-200/75">
   <div>NIP: 1133184502 • REGON: 543202915</div>
-  <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Варшава</div>
+  <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Warszawa</div>
 </div>
 
 
