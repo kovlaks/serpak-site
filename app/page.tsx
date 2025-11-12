@@ -358,7 +358,7 @@ export default function Page() {
       <div>
         <div className="text-white">Юридическая информация</div>
         <ul className="mt-2 space-y-2">
-          <li><a href="#" className="hover:text-white">Политика конфиденциальности</a></li>
+          <li><a href="/privacy" className="hover:text-white">Политика конфиденциальности</a></li>
           <li><a href="#" className="hover:text-white">Cookies</a></li>
           {/* при необходимости: <li><a href="#" className="hover:text-white">Regulamin</a></li> */}
         </ul>
