@@ -156,12 +156,20 @@ export default function Page() {
           <div className="md:hidden bg-[#0C2D3A]/95 backdrop-blur border-t border-white/10">
             <Container>
               <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
-                <a href="#communities" className="hover:text-white">Объекты</a>
-                <a href="#about" className="hover:text-white">О нас</a>
                 <a href="#services" className="hover:text-white">Услуги</a>
                 <a href="#contact" className="hover:text-white">Контакты</a>
+              
+                <div className="flex items-center gap-3 pt-2">
+                  <button type="button" title="PL — скоро" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed">PL</button>
+                  <span className="text-white/30">/</span>
+                  <span className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</span>
+                  <span className="text-white/30">/</span>
+                  <button type="button" title="EN — soon" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed">EN</button>
+                </div>
+              
                 <Button href="#contact">Оставить заявку</Button>
               </div>
+
             </Container>
           </div>
         )}
