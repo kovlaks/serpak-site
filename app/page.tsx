@@ -114,19 +114,41 @@ export default function Page() {
             </a>
 
             <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
-              <a href="#communities" className="hover:text-white">Объекты</a>
-              <a href="#about" className="hover:text-white">О нас</a>
-              <a href="#services" className="hover:text-white">Услуги</a>
-              <a href="#contact" className="hover:text-white">Контакты</a>
-              <div className="flex items-center gap-3">
-                <a href="#" className="text-xs uppercase tracking-widest text-white">PL</a>
-                <span className="text-white/30">/</span>
-                <a href="#" className="text-xs uppercase tracking-widest text-white/70 hover:text-white">RU</a>
-                <span className="text-white/30">/</span>
-                <a href="#" className="text-xs uppercase tracking-widest text-white/70 hover:text-white">EN</a>
-              </div>
-              <Button href="#contact">Оставить заявку</Button>
-            </nav>
+  <a href="#services" className="hover:text-white">Услуги</a>
+  <a href="#contact" className="hover:text-white">Контакты</a>
+
+  {/* Языки — RU активно, PL/EN пока «серые» */}
+  <div className="flex items-center gap-3">
+    <button
+      type="button"
+      title="PL — скоро"
+      className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed"
+      aria-disabled="true"
+    >
+      PL
+    </button>
+    <span className="text-white/30">/</span>
+    <span
+      className="text-xs uppercase tracking-widest text-white"
+      aria-current="true"
+      title="Текущий язык"
+    >
+      RU
+    </span>
+    <span className="text-white/30">/</span>
+    <button
+      type="button"
+      title="EN — soon"
+      className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed"
+      aria-disabled="true"
+    >
+      EN
+    </button>
+  </div>
+
+  <Button href="#contact">Оставить заявку</Button>
+</nav>
+
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">☰</button>
           </div>
         </Container>
