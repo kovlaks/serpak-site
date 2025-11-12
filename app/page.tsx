@@ -368,19 +368,12 @@ export default function Page() {
     </div>
 
     {/* JDG info (RU) */}
-    <div className="mt-8 text-[13px] leading-relaxed text-neutral-200/75">
-      <div className="font-medium text-white">Данные ИП (JDG)</div>
-      <div className="mt-1">Полное имя (JDG): Serhii Kovlak</div>
-      <div>Торговое наименование: SERPAKOWSKI Nieruchomości</div>
-      <div>NIP: 1133184502 • REGON: 543202915</div>
-      <div>
-        Формат работы: услуги оказываются мобильно; 
-        <span className="whitespace-nowrap"> brak stałego miejsca wykonywania działalności</span>
-      </div>
-      <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Warszawa</div>
-      <div>Место встреч (по записи): Złota 75A/7, 00-819 Warszawa</div>
-      <div>Запись в CEIDG: активна</div>
-    </div>
+<div className="mt-8 text-[13px] leading-relaxed text-neutral-200/75">
+  <div className="font-medium text-white">JDG: Serhii Kovlak</div>
+  <div>NIP: 1133184502 • REGON: 543202915</div>
+  <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Warszawa</div>
+</div>
+
 
     {/* Копирайт */}
     <div className="mt-10 text-xs text-neutral-200/60">
