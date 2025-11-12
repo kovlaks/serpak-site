@@ -190,9 +190,14 @@ export default function Page() {
         <Container>
           {/* просто опускаем блок с текстом ниже, ничего не удаляем */}
           <div className="pt-[50vh] sm:pt-[54vh] md:pt-[58vh] pb-24 sm:pb-28 md:pb-32 lg:-ml-8 xl:-ml-12">
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white max-w-3xl leading-tight">
-              Искусство находить<strong className="text-amber-300"> лучшее</strong>.
-            </h1>
+            <h1 className="font-serif text-white leading-tight tracking-tight
+               text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+  <span className="block">Искусство</span>
+  <span className="block">
+    находить <strong className="text-amber-300">лучшее</strong>
+  </span>
+</h1>
+
 
 
             <div className="mt-10 flex items-center gap-4">
