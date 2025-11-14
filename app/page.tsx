@@ -225,8 +225,13 @@ export default function Page() {
         <Container>
           <div className="flex items-end justify-between">
             <div>
-              <h2 className="font-serif text-3xl text-white">Избранные объекты</h2>
-              <p className="mt-2 text-neutral-200/80">Подборка свежих предложений от собственников и проверенных партнёров.</p>
+              <h2 className="font-serif text-3xl text-white">
+  Поможем с арендой, сдачей, покупкой или продажей
+</h2>
+<p className="mt-2 text-neutral-200/90 max-w-md">
+  Заполните анкету — мы свяжемся с вами очень скоро (пн–пт 09:00–18:00).
+</p>
+
             </div>
             <a href="#" className="text-sm text-neutral-200/90 hover:text-white">Смотреть все</a>
           </div>
@@ -361,7 +366,13 @@ export default function Page() {
                   required
                   className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
                 />
-                <textarea placeholder="Какая квартира нужна? Район, бюджет, сроки" rows={4} className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+                <textarea
+  name="message"
+  placeholder="Кратко опишите задачу: аренда/сдача/покупка/продажа, район, бюджет, сроки"
+  rows={4}
+  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
+/>
+
                 <Button>Отправить</Button>
               </form>
             </div>
