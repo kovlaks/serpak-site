@@ -265,7 +265,7 @@ export default function Page() {
 
     <div className="space-y-6">
       {/* Хочу снять */}
-      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу снять</h3>
@@ -283,7 +283,7 @@ export default function Page() {
       </article>
 
       {/* Хочу сдать */}
-      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу сдать</h3>
@@ -301,7 +301,7 @@ export default function Page() {
       </article>
 
       {/* Хочу продать */}
-      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу продать</h3>
@@ -319,7 +319,7 @@ export default function Page() {
       </article>
 
       {/* Хочу купить */}
-      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу купить</h3>
