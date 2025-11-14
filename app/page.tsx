@@ -258,24 +258,92 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* Services */}
-      <section id="services" className="py-20">
-        <Container>
-          <h2 className="font-serif text-3xl text-white">Услуги</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {[
-              { t: "Аренда для арендаторов", d: "Подбор за 24 часа, переговоры, проверка договора, подключение коммунальных услуг." },
-              { t: "Аренда для собственников", d: "Фотосъёмка, подготовка объявления, маркетинг, отбор надёжных арендаторов." },
-              { t: "Премиум сопровождение", d: "Консьерж-подход, приватные показы, подбор по закрытым базам." },
-            ].map((it, i) => (
-              <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <div className="text-lg text-white font-medium">{it.t}</div>
-                <p className="mt-2 text-sm text-neutral-200/80">{it.d}</p>
-              </div>
-            ))}
+      {/* Услуги */}
+<section id="services" className="py-20">
+  <Container>
+    <h2 className="font-serif text-3xl text-white mb-8">Услуги</h2>
+
+    <div className="space-y-6">
+      {/* Хочу снять */}
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div className="max-w-3xl">
+            <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу снять</h3>
+            <p className="mt-3 text-neutral-200/90">
+              Перейдя в раздел, вы увидите, как именно мы помогаем снять жильё в Польше:
+              от формулировки вашего запроса и подбора вариантов до проверок собственника,
+              договора, <em>najem okazjonalny</em> и правильной приёмки квартиры по протоколу.
+              Внутри — подробные этапы работы, чек-лист арендатора, рекомендации по безопасной
+              аренде, базовые решения по страхованию и ответы на частые вопросы.
+            </p>
           </div>
-        </Container>
-      </section>
+          <div className="shrink-0">
+            <Button href="/rent">Подробнее</Button>
+          </div>
+        </div>
+      </article>
+
+      {/* Хочу сдать */}
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div className="max-w-3xl">
+            <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу сдать</h3>
+            <p className="mt-3 text-neutral-200/90">
+              В этом разделе мы подробно разбираем, как безопасно и без лишних нервов сдавать
+              свою квартиру: от подготовки объекта и отбора арендаторов до формата договора,
+              протокола приёмки и взаимодействия с наймодателем/агентом. Вы получите понятные
+              этапы, чек-лист для владельца, блок о снижении рисков и страховке, а также ответы
+              на частые вопросы о комиссии, налогах и проблемных арендаторах.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <Button href="/landlord">Подробнее</Button>
+          </div>
+        </div>
+      </article>
+
+      {/* Хочу продать */}
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div className="max-w-3xl">
+            <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу продать</h3>
+            <p className="mt-3 text-neutral-200/90">
+              Здесь описано, как мы сопровождаем продажу жилья: анализ и подготовка квартиры,
+              стратегия цены, маркетинг и показы, переговоры и юридическое оформление сделки.
+              Внутри — поэтапный план, чек-лист продавца, рекомендации по безопасной продаже
+              и работе с задатком/умовой, обзор вариантов страховой защиты и ответы на самые
+              частые вопросы про сроки, стоимость и риски.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <Button href="/sell">Подробнее</Button>
+          </div>
+        </div>
+      </article>
+
+      {/* Хочу купить */}
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div className="max-w-3xl">
+            <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу купить</h3>
+            <p className="mt-3 text-neutral-200/90">
+              В этом разделе показано, как мы помогаем купить квартиру или дом с понятными
+              условиями и минимальными рисками: от формулирования ваших критериев и анализа
+              рынка до проверок объекта, договора, формы финансирования и финального подписания.
+              Вы найдёте пошаговые этапы, чек-лист покупателя, блок о безопасной покупке
+              (в т.ч. при ипотеке), варианты страхования и ответы на ключевые вопросы о цене,
+              скрытых проблемах и защите ваших интересов.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <Button href="/buy">Подробнее</Button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </Container>
+</section>
+
 
       {/* Contact */}
       <section id="contact" className="relative isolate py-20">
