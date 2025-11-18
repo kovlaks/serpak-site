@@ -354,10 +354,10 @@ export default function Page() {
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div>
              <h2 className="font-serif text-3xl text-white">
-  Поможем с арендой, сдачей, покупкой или продажей
+  Оставьте ваши контакты
 </h2>
 <p className="mt-2 text-neutral-200/90 max-w-md">
-  Заполните анкету — мы свяжемся с вами очень скоро (пн–пт 09:00–18:00).
+  Мы свяжемся с вами как можно скорее.
 </p>
 
               <p className="mt-3 text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
