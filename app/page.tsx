@@ -226,10 +226,10 @@ export default function Page() {
           <div className="flex items-end justify-between">
             <div>
               <h2 className="font-serif text-3xl text-white">
-  Поможем с арендой, сдачей, покупкой или продажей
+  Оставьте ваши контакты для консультации
 </h2>
 <p className="mt-2 text-neutral-200/90 max-w-md">
-  Заполните анкету — мы свяжемся с вами очень скоро (пн–пт 09:00–18:00).
+  Мы постараемся с вами связаться как можно скорее.
 </p>
 
             </div>
