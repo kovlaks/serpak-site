@@ -1,6 +1,16 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+const highlightWords = [
+  "лучшее",
+  "лушчее",
+  "безопасное",
+  "комфортное",
+  "подходящее",
+  "идеальное",
+  "уникальное",
+];
 
 function Container({ children }: { children: React.ReactNode }) {
   return <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>;
@@ -68,6 +78,9 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [highlightIndex, setHighlightIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+  const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 👉 тут укажи имя файла из папки /public
   // если позже переименуешь картинку в hero.webp — просто поменяй строку ниже
@@ -94,6 +107,23 @@ export default function Page() {
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setIsFading(true);
+      fadeTimeoutRef.current = window.setTimeout(() => {
+        setHighlightIndex((prev) => (prev + 1) % highlightWords.length);
+        setIsFading(false);
+      }, 350);
+    }, 2500);
+
+    return () => {
+      window.clearInterval(interval);
+      if (fadeTimeoutRef.current) {
+        window.clearTimeout(fadeTimeoutRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -194,7 +224,14 @@ export default function Page() {
                text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
   <span className="block">Искусство</span>
   <span className="block">
-    находить <strong className="text-amber-300">лучшее</strong>
+    находить{" "}
+    <strong
+      className={`text-amber-300 inline-block transition-opacity duration-500 ${
+        isFading ? "opacity-0" : "opacity-100"
+      }`}
+    >
+      {highlightWords[highlightIndex]}
+    </strong>
   </span>
 </h1>
 
