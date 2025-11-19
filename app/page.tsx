@@ -198,6 +198,10 @@ export default function Page() {
   </span>
 </h1>
 
+            <p className="mt-6 text-lg text-neutral-200/90 max-w-2xl">
+              Заполняйте анкету и находите жилье в кратчайшие сроки
+            </p>
+
 
 
             <div className="mt-10 flex items-center gap-4">
