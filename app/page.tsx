@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 const highlightWords = [
   "лучшее",
-  "лушчее",
   "безопасное",
   "комфортное",
   "подходящее",
