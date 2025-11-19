@@ -80,7 +80,7 @@ export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
-  const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const fadeTimeoutRef = useRef<number | null>(null);
 
   // 👉 тут укажи имя файла из папки /public
   // если позже переименуешь картинку в hero.webp — просто поменяй строку ниже
@@ -110,7 +110,7 @@ export default function Page() {
   }, []);
 
   useEffect(() => {
-    const interval = window.setInterval(() => {
+    const intervalId = window.setInterval(() => {
       setIsFading(true);
       fadeTimeoutRef.current = window.setTimeout(() => {
         setHighlightIndex((prev) => (prev + 1) % highlightWords.length);
@@ -119,7 +119,7 @@ export default function Page() {
     }, 2500);
 
     return () => {
-      window.clearInterval(interval);
+      window.clearInterval(intervalId);
       if (fadeTimeoutRef.current) {
         window.clearTimeout(fadeTimeoutRef.current);
       }
