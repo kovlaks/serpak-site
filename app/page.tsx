@@ -241,8 +241,7 @@ export default function Page() {
 
 
 
-            <div className="mt-10 flex items-center gap-4">
-              <Button href="#communities">Смотреть объекты</Button>
+            <div className="mt-10">
               <a href="#contact" className="text-sm text-neutral-200/90 hover:text-white">Связаться с нами →</a>
             </div>
           </div>
