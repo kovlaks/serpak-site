@@ -1,3 +1,6 @@
+import { SiteFooter } from "../../components/layout/SiteFooter";
+import { SiteHeader } from "../../components/layout/SiteHeader";
+
 export const metadata = {
   title: "Хочу снять — SERPAKOWSKI Nieruchomości",
 };
@@ -113,9 +116,32 @@ const faq = [
   },
 ];
 
+const messengerLinks = [
+  {
+    label: "Telegram",
+    href: "https://t.me/",
+    gradient: "from-[#229ED9] to-[#1c94cb]",
+    icon: "✉️",
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/48453053969",
+    gradient: "from-[#25D366] to-[#1fb95a]",
+    icon: "💬",
+  },
+  {
+    label: "Viber",
+    href: "viber://chat?number=%2B48453053969",
+    gradient: "from-[#7360F2] to-[#5f47ec]",
+    icon: "📞",
+  },
+];
+
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 text-neutral-100 space-y-20">
+    <div className="min-h-screen bg-[#0C2D3A] text-neutral-100">
+      <SiteHeader />
+      <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-28 pb-20 space-y-20">
       {/* Hero */}
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0C2D3A] p-8 sm:p-12 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,193,7,0.12),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_35%)]" />
@@ -144,6 +170,21 @@ export default function Page() {
               >
                 Получить консультацию
               </a>
+            </div>
+            <div className="flex flex-wrap items-center gap-2 pt-3">
+              <span className="text-xs uppercase tracking-[0.12em] text-neutral-200/75">Связаться в мессенджере</span>
+              {messengerLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${link.gradient} px-4 py-2 text-xs font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] ring-1 ring-white/15 transition hover:-translate-y-0.5`}
+                >
+                  <span>{link.icon}</span>
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
           <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
@@ -347,6 +388,21 @@ export default function Page() {
                 Получить консультацию
               </a>
             </div>
+            <div className="flex flex-wrap items-center gap-2 pt-3">
+              <span className="text-xs uppercase tracking-[0.12em] text-neutral-200/75">Или напишите в чат</span>
+              {messengerLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${link.gradient} px-4 py-2 text-xs font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] ring-1 ring-white/15 transition hover:-translate-y-0.5`}
+                >
+                  <span>{link.icon}</span>
+                  {link.label}
+                </a>
+              ))}
+            </div>
             <p className="text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
           </div>
           <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
@@ -378,6 +434,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+      <SiteFooter />
+    </div>
   );
 }
