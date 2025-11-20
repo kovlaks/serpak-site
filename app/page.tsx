@@ -1,6 +1,11 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { ChatButton } from "../components/common/ChatButton";
+import { Button } from "../components/layout/Button";
+import { Container } from "../components/layout/Container";
+import { SiteFooter } from "../components/layout/SiteFooter";
+import { SiteHeader } from "../components/layout/SiteHeader";
 
 const highlightWords = [
   "лучшее",
@@ -10,63 +15,6 @@ const highlightWords = [
   "идеальное",
   "уникальное",
 ];
-
-function Container({ children }: { children: React.ReactNode }) {
-  return <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>;
-}
-
-function Button({
-  children,
-  href = "#",
-  onClick,
-}: {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void;
-}) {
-  const Comp: any = href ? "a" : "button";
-  return (
-    <Comp
-      href={href}
-      onClick={onClick}
-      className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold tracking-wide shadow-sm ring-1 ring-white/15 hover:ring-white/25 transition bg-white/10 backdrop-blur-md text-white hover:bg-white/15"
-    >
-      {children}
-    </Comp>
-  );
-}
-
-function ChatButton({
-  label,
-  href,
-  gradient,
-  icon,
-}: {
-  label: string;
-  href: string;
-  gradient: string;
-  icon: (className: string) => React.ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className={`group flex items-center justify-between gap-4 rounded-2xl bg-gradient-to-r ${gradient} px-5 py-4 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] ring-1 ring-white/20 transition hover:scale-[1.02]`}
-    >
-      <div className="flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
-          {icon("h-5 w-5")}
-        </span>
-        <div className="text-left">
-          <div className="text-xs uppercase tracking-[0.14em] text-white/80">Чат</div>
-          <div className="text-base font-semibold">{label}</div>
-        </div>
-      </div>
-      <span className="text-lg font-semibold transition group-hover:translate-x-1">→</span>
-    </a>
-  );
-}
 
 function PropertyCard({
   title,
@@ -108,7 +56,6 @@ function Stat({ value, label }: { value: string; label: string }) {
 }
 
 export default function Page() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const fadeTimeoutRef = useRef<number | null>(null);
@@ -116,29 +63,6 @@ export default function Page() {
   // 👉 тут укажи имя файла из папки /public
   // если позже переименуешь картинку в hero.webp — просто поменяй строку ниже
   const heroImageUrl = "/Depositphotos_455695662_XL.jpg";
-
-  useEffect(() => {
-    const onScroll = () => {
-      const header = document.getElementById("header");
-      if (!header) return;
-      if (window.scrollY > 10)
-        header.classList.add(
-          "bg-[#0C2D3A]/70",
-          "backdrop-blur",
-          "ring-1",
-          "ring-white/10"
-        );
-      else
-        header.classList.remove(
-          "bg-[#0C2D3A]/70",
-          "backdrop-blur",
-          "ring-1",
-          "ring-white/10"
-        );
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -159,82 +83,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-[#0C2D3A] text-neutral-100">
-      {/* Header */}
-      <header id="header" className="fixed inset-x-0 top-0 z-50 transition">
-        <Container>
-          <div className="flex h-16 items-center justify-between">
-            <a href="/" className="flex items-center gap-3">
-              <img
-                src="/logo.png"             // если файл другой: поменяй имя (например /logo.svg или /logo.jpg)
-                alt="SERPAKOWSKI Nieruchomości"
-                className="h-12 w-12 rounded-full object-cover"
-              />
-              <span className="font-serif whitespace-nowrap text-base sm:text-lg md:text-xl tracking-wide text-white">
-                SERPAKOWSKI Nieruchomości
-              </span>
-            </a>
-
-            <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
-  <a href="#services" className="hover:text-white">Услуги</a>
-  <a href="#contact" className="hover:text-white">Контакты</a>
-
-  {/* Языки — RU активно, PL/EN пока «серые» */}
-  <div className="flex items-center gap-3">
-    <button
-      type="button"
-      title="PL — скоро"
-      className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed"
-      aria-disabled="true"
-    >
-      PL
-    </button>
-    <span className="text-white/30">/</span>
-    <span
-      className="text-xs uppercase tracking-widest text-white"
-      aria-current="true"
-      title="Текущий язык"
-    >
-      RU
-    </span>
-    <span className="text-white/30">/</span>
-    <button
-      type="button"
-      title="EN — soon"
-      className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed"
-      aria-disabled="true"
-    >
-      EN
-    </button>
-  </div>
-
-  <Button href="#contact">Оставить заявку</Button>
-</nav>
-
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">☰</button>
-          </div>
-        </Container>
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-[#0C2D3A]/95 backdrop-blur border-t border-white/10">
-            <Container>
-              <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
-                <a href="#services" className="hover:text-white">Услуги</a>
-                <a href="#contact" className="hover:text-white">Контакты</a>
-              
-                <div className="flex items-center gap-3 pt-2">
-                  <button type="button" title="PL — скоро" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed">PL</button>
-                  <span className="text-white/30">/</span>
-                  <span className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</span>
-                  <span className="text-white/30">/</span>
-                  <button type="button" title="EN — soon" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed">EN</button>
-                </div>
-              
-                <Button href="#contact">Оставить заявку</Button>
-              </div>
-
-            </Container>
-          </div>
-        )}
-      </header>
+      <SiteHeader />
 
       {/* HERO — большой верхний блок с картинкой */}
       <section className="relative isolate pt-24">
@@ -531,88 +380,7 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* Footer */}
-<footer className="py-12 bg-gradient-to-b from-transparent to-[#0A2530]">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    {/* Верхняя часть футера: 4 колонки */}
-    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm text-neutral-200/80">
-      {/* Бренд и краткое описание */}
-      <div>
-        <div className="flex items-center gap-3">
-  <div
-    aria-hidden="true"
-    className="h-10 w-10 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 ring-1 ring-white/15 shadow-[0_2px_8px_rgba(0,0,0,0.25)]"
-  />
-  <div className="font-serif text-white text-lg whitespace-nowrap">
-    SERPAKOWSKI Nieruchomości
-  </div>
-</div>
-
-
-        
-
-        {/* Соцсети (по желанию) */}
-        <div className="mt-4 flex items-center gap-4 text-neutral-200/80">
-          {/* Вставь свои ссылки */}
-          <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="hover:text-white">Instagram</a>
-          <a href="https://t.me/" target="_blank" rel="noreferrer" className="hover:text-white">Telegram</a>
-        </div>
-      </div>
-
-      {/* Навигация */}
-      <div>
-        <div className="text-white">Навигация</div>
-        <ul className="mt-2 space-y-2">
-          <li><a href="#services" className="hover:text-white">Услуги</a></li>
-          <li><a href="#contact" className="hover:text-white">Контакты</a></li>
-          {/* Если вернёшь разделы позже — добавь ссылки ниже */}
-          {/* <li><a href="#communities" className="hover:text-white">Объявления</a></li> */}
-          {/* <li><a href="#about" className="hover:text-white">О нас</a></li> */}
-        </ul>
-      </div>
-
-      {/* Контакты */}
-      <div>
-        <div className="text-white">Контакты</div>
-        <ul className="mt-2 space-y-2">
-          <li>Варшава, Польша</li>
-          <li>
-            <a href="mailto:kovlaks@gmail.com" className="hover:text-white">
-              kovlaks@gmail.com
-            </a>
-          </li>
-          <li>
-            <a href="tel:+48453053969" className="hover:text-white">
-              +48 453 053 969
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      {/* Юридическое */}
-      <div>
-        <div className="text-white">Юридическая информация</div>
-        <ul className="mt-2 space-y-2">
-          <li><a href="/privacy" className="hover:text-white">Политика конфиденциальности</a></li>
-          <li><a href="#" className="hover:text-white">Cookies</a></li>
-          {/* при необходимости: <li><a href="#" className="hover:text-white">Regulamin</a></li> */}
-        </ul>
-      </div>
-    </div>
-
-    {/* JDG info (RU) */}
-<div className="mt-8 text-[13px] leading-relaxed text-neutral-200/75">
-  <div>NIP: 1133184502 • REGON: 543202915</div>
-  <div>Адрес для корреспонденции: Złota 75A/7, 00-819 Warszawa</div>
-</div>
-
-
-    {/* Копирайт */}
-    <div className="mt-10 text-xs text-neutral-200/60">
-      © {new Date().getFullYear()} SERPAKOWSKI Nieruchomości. Все права защищены.
-    </div>
-  </div>
-</footer>
+      <SiteFooter />
     </div>
   );
 }
