@@ -28,7 +28,7 @@ function PropertyCard({
   imageUrl: string;
 }) {
   return (
-    <div className="animated-block group overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 hover:ring-white/20 transition">
+    <div className="group overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 hover:ring-white/20 transition">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={imageUrl}
@@ -190,7 +190,7 @@ export default function Page() {
 
     <div className="space-y-6">
       {/* Хочу снять */}
-      <article className="animated-block rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу снять</h3>
@@ -208,7 +208,7 @@ export default function Page() {
       </article>
 
       {/* Хочу сдать */}
-      <article className="animated-block rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу сдать</h3>
@@ -226,7 +226,7 @@ export default function Page() {
       </article>
 
       {/* Хочу продать */}
-      <article className="animated-block rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу продать</h3>
@@ -244,7 +244,7 @@ export default function Page() {
       </article>
 
       {/* Хочу купить */}
-      <article className="animated-block rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
+      <article className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm p-6 md:p-8 transition-shadow shadow-[0_6px_18px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.28)]">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="max-w-3xl">
             <h3 className="text-white font-semibold text-xl md:text-2xl">Хочу купить</h3>
@@ -284,7 +284,7 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="animated-block rounded-2xl bg-white/5 p-6 sm:p-8 ring-1 ring-white/10 shadow-[0_16px_60px_rgba(0,0,0,0.25)]">
+            <div className="rounded-2xl bg-white/5 p-6 sm:p-8 ring-1 ring-white/10 shadow-[0_16px_60px_rgba(0,0,0,0.25)]">
               <div className="grid gap-4 sm:grid-cols-2">
                 <ChatButton
                   label="Telegram"
@@ -357,7 +357,7 @@ export default function Page() {
 
               <p className="mt-3 text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
             </div>
-            <div className="animated-block rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
+            <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
               <form className="grid gap-4">
                 <input placeholder="Имя" className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
                <input

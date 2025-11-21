@@ -143,7 +143,7 @@ export default function Page() {
       <SiteHeader />
       <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-28 pb-20 space-y-20">
       {/* Hero */}
-      <section className="animated-block relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0C2D3A] p-8 sm:p-12 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0C2D3A] p-8 sm:p-12 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,193,7,0.12),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_35%)]" />
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
           <div className="space-y-6">
@@ -198,17 +198,17 @@ export default function Page() {
                   <div className="text-lg font-semibold text-white">После заселения — мы рядом</div>
                 </div>
               </div>
-              <div className="animated-block rounded-2xl bg-[#0A2530] p-5 ring-1 ring-white/5">
+              <div className="rounded-2xl bg-[#0A2530] p-5 ring-1 ring-white/5">
                 <div className="text-sm text-neutral-200/80">Коротко о процессе</div>
                 <p className="mt-2 text-base text-white/90 leading-relaxed">
                   От брифа и подбора до проверки договора, торга, протокола приёмки и связи после въезда. Вы не тратите время на шум, риски и переговоры.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-3 text-sm text-neutral-200/90">
-                <div className="animated-block rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Шорт-лист — за 24–48 часов</div>
-                <div className="animated-block rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Юридический фильтр без сложных терминов</div>
-                <div className="animated-block rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Полевой чек-лист квартиры</div>
-                <div className="animated-block rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Все договорённости — письменно</div>
+                <div className="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Шорт-лист — за 24–48 часов</div>
+                <div className="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Юридический фильтр без сложных терминов</div>
+                <div className="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Полевой чек-лист квартиры</div>
+                <div className="rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">Все договорённости — письменно</div>
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function Page() {
       </section>
 
       {/* Для кого */}
-      <section className="animated-block grid gap-8 rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="grid gap-8 rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Для кого</p>
           <h2 className="font-serif text-3xl text-white">Для тех, кто хочет не просто «снять», а жить спокойно</h2>
@@ -233,7 +233,7 @@ export default function Page() {
           ].map((item) => (
             <li
               key={item}
-              className="animated-block flex gap-3 rounded-2xl bg-[#0A2530] px-4 py-3 text-base ring-1 ring-white/5"
+              className="flex gap-3 rounded-2xl bg-[#0A2530] px-4 py-3 text-base ring-1 ring-white/5"
             >
               <span className="text-amber-300">•</span>
               <span>{item}</span>
@@ -243,7 +243,7 @@ export default function Page() {
       </section>
 
       {/* Процесс */}
-      <section className="animated-block rounded-3xl border border-white/10 bg-gradient-to-r from-white/5 to-transparent p-8">
+      <section className="rounded-3xl border border-white/10 bg-gradient-to-r from-white/5 to-transparent p-8">
         <div className="space-y-4 max-w-4xl">
           <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Процесс</p>
           <h2 className="font-serif text-3xl text-white">Мы превращаем хаотичный поиск квартиры в понятный и безопасный процесс</h2>
@@ -269,7 +269,7 @@ export default function Page() {
           {worryCards.map((card) => (
             <div
               key={card.title}
-              className="animated-block rounded-2xl bg-[#0A2530] p-5 ring-1 ring-white/10 transition hover:-translate-y-1 hover:ring-amber-200/30"
+              className="rounded-2xl bg-[#0A2530] p-5 ring-1 ring-white/10 transition hover:-translate-y-1 hover:ring-amber-200/30"
             >
               <div className="flex items-start gap-3">
                 <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/10 text-amber-300">✦</span>
@@ -284,7 +284,7 @@ export default function Page() {
       </section>
 
       {/* Услуги */}
-      <section className="animated-block rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
+      <section className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Что делаем</p>
           <h2 className="font-serif text-3xl text-white">Что именно мы берём на себя</h2>
@@ -296,7 +296,7 @@ export default function Page() {
           {serviceList.map((item) => (
             <div
               key={item.title}
-              className="animated-block flex items-start gap-4 rounded-2xl bg-[#0C2D3A] px-5 py-4 ring-1 ring-white/10"
+              className="flex items-start gap-4 rounded-2xl bg-[#0C2D3A] px-5 py-4 ring-1 ring-white/10"
             >
               <span className="mt-1 text-amber-300">➜</span>
               <div className="space-y-1">
@@ -309,14 +309,14 @@ export default function Page() {
       </section>
 
       {/* Как это происходит */}
-      <section className="animated-block rounded-3xl border border-white/10 bg-gradient-to-r from-[#0A2530] to-transparent p-8">
+      <section className="rounded-3xl border border-white/10 bg-gradient-to-r from-[#0A2530] to-transparent p-8">
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Путь арендатора</p>
           <h2 className="font-serif text-3xl text-white">Как всё происходит, если коротко</h2>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {steps.map((step, index) => (
-            <div key={step.title} className="animated-block relative overflow-hidden rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <div key={step.title} className="relative overflow-hidden rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
               <div className="absolute -right-6 -top-6 h-20 w-20 rotate-12 rounded-full bg-amber-300/10" />
               <div className="relative flex items-start gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-300/90 text-[#0C2D3A] font-semibold">
@@ -333,14 +333,14 @@ export default function Page() {
       </section>
 
       {/* Почему мы */}
-      <section className="animated-block rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
+      <section className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Почему именно мы</p>
           <h2 className="font-serif text-3xl text-white">Плюсы работы с нами</h2>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {["Мы на стороне арендатора, а не владельца", "Глубокое понимание рынка Варшавы", "Юридический фильтр без перегруза терминами", "Чек-лист осмотра, который обычный арендатор не делает", "Поддержка после заселения, а не «подписали и забыли»", "Сеть партнёров под переезд и быт"].map((item) => (
-            <div key={item} className="animated-block flex items-start gap-3 rounded-2xl bg-[#0C2D3A] px-5 py-4 ring-1 ring-white/10">
+            <div key={item} className="flex items-start gap-3 rounded-2xl bg-[#0C2D3A] px-5 py-4 ring-1 ring-white/10">
               <span className="mt-1 text-amber-300">★</span>
               <p className="text-base text-neutral-100">{item}</p>
             </div>
@@ -354,7 +354,7 @@ export default function Page() {
           <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">FAQ</p>
           <h2 className="font-serif text-3xl text-white">Частые вопросы</h2>
         </div>
-        <div className="animated-block divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10">
+        <div className="divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10">
           {faq.map((item) => (
             <div key={item.question} className="bg-white/5 p-5">
               <h3 className="text-lg font-semibold text-white">{item.question}</h3>
@@ -365,7 +365,7 @@ export default function Page() {
       </section>
 
       {/* CTA + форма */}
-      <section id="contact" className="animated-block relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10">
+      <section id="contact" className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,rgba(255,193,7,0.16),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,0.08),transparent_45%)]" />
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-4">
@@ -405,7 +405,7 @@ export default function Page() {
             </div>
             <p className="text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
           </div>
-          <div className="animated-block rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
             <form className="grid gap-4">
               <input
                 name="name"

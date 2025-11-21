@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="animated-block mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 text-neutral-100">
+    <main className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 text-neutral-100">
       <h1 className="font-serif text-3xl text-white">Хочу снять</h1>
       <p className="mt-4 text-neutral-200/90">
         Здесь описано, как мы сопровождаем продажу жилья: анализ и подготовка квартиры,
