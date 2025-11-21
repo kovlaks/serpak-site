@@ -372,7 +372,7 @@ export default function Page() {
             <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Оставьте свои конакты</p>
             <h2 className="font-serif text-3xl text-white">Готовы начать?</h2>
             <p className="text-neutral-200/90 max-w-2xl">
-              Мы свяжемся, зададим несколько вопросов и покажем, как можем помочь.
+              Мы свяжемся с вами, зададим несколько вопросов и покажем, как можем помочь.
             </p>
             <div className="flex flex-wrap items-center gap-2 pt-3">
               <span className="text-xs uppercase tracking-[0.12em] text-neutral-200/75">Или просто напишите в удобном для вас мессендежере чат</span>
