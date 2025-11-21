@@ -1,6 +1,0 @@
-node_modules
-.next
-.vercel
-*.log
-pnpm-lock.yaml
-yarn.lock
