@@ -374,20 +374,6 @@ export default function Page() {
             <p className="text-neutral-200/90 max-w-2xl">
               Оставьте контакты — мы свяжемся, зададим несколько структурных вопросов и покажем, как можем помочь именно в вашей ситуации.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
-              >
-                Найти квартиру с нами
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10"
-              >
-                Получить консультацию
-              </a>
-            </div>
             <div className="flex flex-wrap items-center gap-2 pt-3">
               <span className="text-xs uppercase tracking-[0.12em] text-neutral-200/75">Или напишите в чат</span>
               {messengerLinks.map((link) => (
