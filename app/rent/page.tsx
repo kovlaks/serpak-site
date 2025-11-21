@@ -369,13 +369,13 @@ export default function Page() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,rgba(255,193,7,0.16),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,0.08),transparent_45%)]" />
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Готовы начать</p>
-            <h2 className="font-serif text-3xl text-white">Готовы снять квартиру без стресса?</h2>
+            <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Оставьте свои конакты</p>
+            <h2 className="font-serif text-3xl text-white">Готовы начать?</h2>
             <p className="text-neutral-200/90 max-w-2xl">
-              Оставьте контакты — мы свяжемся, зададим несколько структурных вопросов и покажем, как можем помочь именно в вашей ситуации.
+              Мы свяжемся, зададим несколько вопросов и покажем, как можем помочь.
             </p>
             <div className="flex flex-wrap items-center gap-2 pt-3">
-              <span className="text-xs uppercase tracking-[0.12em] text-neutral-200/75">Или напишите в чат</span>
+              <span className="text-xs uppercase tracking-[0.12em] text-neutral-200/75">Или просто напишите в удобном для вас мессендежере чат</span>
               {messengerLinks.map((link) => (
                 <a
                   key={link.label}
@@ -414,7 +414,7 @@ export default function Page() {
                 type="submit"
                 className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
               >
-                Отправить заявку
+                Перезвоните мне
               </button>
             </form>
           </div>
