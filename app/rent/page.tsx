@@ -246,7 +246,7 @@ export default function Page() {
             <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Главное</p>
             <h2 className="font-serif text-3xl text-white">Почему арендовать с нами удобно</h2>
           </div>
-          <span className="text-sm text-neutral-200/80">Как в monobank — только про аренду в Варшаве</span>
+          <span className="text-sm text-neutral-200/80"></span>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {advantages.map((item) => (
