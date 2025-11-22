@@ -116,6 +116,30 @@ const faq = [
   },
 ];
 
+const advantages = [
+  {
+    title: "Нет походов в офис",
+    description: "Поиск жилья и формирование запроса онлайн.",
+    icon: "🧭",
+  },
+  {
+    title: "0 злотых предоплаты",
+    description: "Оплата за услуги риелтора только после подписания договора аренды.",
+    icon: "0 zł",
+  },
+  {
+    title: "Полное сопровождение",
+    description:
+      "Согласование просмотров, проверка собственника, анализ договора и приём квартиры — это наша ответственность.",
+    icon: "⚖️",
+  },
+  {
+    title: "Поддержка после заселения",
+    description: "Мы на связи для помощи в экстренных ситуациях.",
+    icon: "🧡",
+  },
+];
+
 const messengerLinks = [
   {
     label: "Telegram",
@@ -212,6 +236,33 @@ export default function Page() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Преимущества для арендаторов */}
+      <section className="rounded-3xl bg-[#0A2530] p-6 sm:p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+        <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-2">
+            <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Главное</p>
+            <h2 className="font-serif text-3xl text-white">Почему арендовать с нами удобно</h2>
+          </div>
+          <span className="text-sm text-neutral-200/80">Как в monobank — только про аренду в Варшаве</span>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {advantages.map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col gap-3 rounded-2xl bg-white/5 px-4 py-5 text-left ring-1 ring-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+            >
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-amber-300/20 text-base font-semibold text-amber-100 ring-1 ring-amber-200/30">
+                {item.icon}
+              </div>
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                <p className="text-sm text-neutral-200/85 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
