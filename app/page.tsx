@@ -238,7 +238,7 @@ export default function Page() {
             </p>
           </div>
           <div className="shrink-0">
-            <Button href="/sell">Подробнее</Button>
+            <Button disabled>Скоро</Button>
           </div>
         </div>
       </article>
@@ -258,7 +258,7 @@ export default function Page() {
             </p>
           </div>
           <div className="shrink-0">
-            <Button href="/buy">Подробнее</Button>
+            <Button disabled>Скоро</Button>
           </div>
         </div>
       </article>
