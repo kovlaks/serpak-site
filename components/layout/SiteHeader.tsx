@@ -43,6 +43,9 @@ export function SiteHeader() {
             <a href="#services" className="hover:text-white">
               Услуги
             </a>
+            <a href="/wspolpraca" className="hover:text-white">
+              Сотрудничество
+            </a>
             <a href="#contact" className="hover:text-white">
               Контакты
             </a>
@@ -85,6 +88,9 @@ export function SiteHeader() {
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
               <a href="#services" className="hover:text-white">
                 Услуги
+              </a>
+              <a href="/wspolpraca" className="hover:text-white">
+                Сотрудничество
               </a>
               <a href="#contact" className="hover:text-white">
                 Контакты
