@@ -34,6 +34,11 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
+                <a href="/wspolpraca" className="hover:text-white">
+                  Сотрудничество
+                </a>
+              </li>
+              <li>
                 <a href="#contact" className="hover:text-white">
                   Контакты
                 </a>
