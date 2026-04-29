@@ -1,11 +1,29 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "./Button";
 import { Container } from "./Container";
 
+const languageSwitcherMap = {
+  home: { ru: "/", pl: "/pl", en: "/en" },
+  rent: { ru: "/rent", pl: "/pl/rent", en: "/en/rent" },
+  landlord: { ru: "/landlord", pl: "/pl/landlord", en: "/en/landlord" },
+  partnership: { ru: "/wspolpraca", pl: "/pl/wspolpraca", en: "/en/partnership" },
+} as const;
+
+function getLanguageLinks(pathname: string) {
+  if (pathname === "/rent" || pathname === "/pl/rent" || pathname === "/en/rent") return languageSwitcherMap.rent;
+  if (pathname === "/landlord" || pathname === "/pl/landlord" || pathname === "/en/landlord") return languageSwitcherMap.landlord;
+  if (pathname === "/wspolpraca" || pathname === "/pl/wspolpraca" || pathname === "/en/partnership") return languageSwitcherMap.partnership;
+  return languageSwitcherMap.home;
+}
+
+
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const languageLinks = getLanguageLinks(pathname);
   const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -35,11 +53,11 @@ export function SiteHeader() {
             <a href="#contact" className="hover:text-white">Контакты</a>
 
             <div className="flex items-center gap-3">
-              <a href="/pl" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polski">PL</a>
+              <a href={languageLinks.pl} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polski">PL</a>
               <span className="text-white/30">/</span>
-              <a href="/" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</a>
+              <a href={languageLinks.ru} className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</a>
               <span className="text-white/30">/</span>
-              <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
+              <a href={languageLinks.en} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
             </div>
 
             <Button href="#contact">Оставить заявку</Button>
@@ -57,11 +75,11 @@ export function SiteHeader() {
               <a href="#contact" className="hover:text-white">Контакты</a>
 
               <div className="flex items-center gap-3 pt-2">
-                <a href="/pl" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polski">PL</a>
+                <a href={languageLinks.pl} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polski">PL</a>
                 <span className="text-white/30">/</span>
-                <a href="/" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</a>
+                <a href={languageLinks.ru} className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</a>
                 <span className="text-white/30">/</span>
-                <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
+                <a href={languageLinks.en} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
               </div>
 
               <Button href="#contact" className="justify-center">Оставить заявку</Button>

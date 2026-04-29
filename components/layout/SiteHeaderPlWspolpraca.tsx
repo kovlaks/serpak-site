@@ -38,7 +38,7 @@ export function SiteHeaderPlWspolpraca() {
               <span className="text-white/30">/</span>
               <a href="/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
               <span className="text-white/30">/</span>
-              <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
+              <a href="/en/partnership" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
             </div>
 
             <Button href="#contact">Zostaw zgłoszenie</Button>
@@ -60,7 +60,7 @@ export function SiteHeaderPlWspolpraca() {
                 <span className="text-white/30">/</span>
                 <a href="/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
                 <span className="text-white/30">/</span>
-                <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
+                <a href="/en/partnership" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
               </div>
 
               <Button href="#contact" className="justify-center">Zostaw zgłoszenie</Button>
