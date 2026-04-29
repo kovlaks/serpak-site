@@ -207,7 +207,7 @@ export default function HomePageClient() {
             </p>
           </div>
           <div className="shrink-0">
-            <Button href="/landlord">Więcej</Button>
+            <Button href="/pl/landlord">Więcej</Button>
           </div>
         </div>
       </article>
