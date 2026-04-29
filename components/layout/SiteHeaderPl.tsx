@@ -35,7 +35,7 @@ export function SiteHeaderPl() {
             <a href="#services" className="hover:text-white">
               Usługi
             </a>
-            <a href="/wspolpraca" className="hover:text-white">
+            <a href="/pl/wspolpraca" className="hover:text-white">
               Współpraca
             </a>
             <a href="#contact" className="hover:text-white">
@@ -63,7 +63,7 @@ export function SiteHeaderPl() {
           <Container>
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
               <a href="#services" className="hover:text-white">Usługi</a>
-              <a href="/wspolpraca" className="hover:text-white">Współpraca</a>
+              <a href="/pl/wspolpraca" className="hover:text-white">Współpraca</a>
               <a href="#contact" className="hover:text-white">Kontakt</a>
 
               <div className="flex items-center gap-3 pt-2">
