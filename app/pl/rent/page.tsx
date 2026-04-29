@@ -68,9 +68,9 @@ const advantages = [
 ];
 
 const messengerLinks = [
-  { label: "Telegram", href: "https://t.me/", gradient: "from-[#229ED9] to-[#1c94cb]", icon: "✉️" },
+  { label: "Telegram", href: "https://t.me/+48453053969", gradient: "from-[#229ED9] to-[#1c94cb]", icon: "✉️" },
   { label: "WhatsApp", href: "https://wa.me/48453053969", gradient: "from-[#25D366] to-[#1fb95a]", icon: "💬" },
-  { label: "Viber", href: "viber://chat?number=%2B48453053969", gradient: "from-[#7360F2] to-[#5f47ec]", icon: "📞" },
+  { label: "Viber", href: "viber://chat?number=%2B380679762988", gradient: "from-[#7360F2] to-[#5f47ec]", icon: "📞" },
 ];
 
 export default function Page() {
