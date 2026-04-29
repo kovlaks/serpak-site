@@ -1,5 +1,6 @@
 import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../../components/layout/SiteHeaderPl";
+import { RentContactSection } from "../../../components/rent/RentContactSection";
 
 export const metadata = {
   title: "Najem mieszkania w Warszawie | SERPAKOWSKI Nieruchomości",
@@ -90,6 +91,26 @@ export default function Page() {
 
       <section className="space-y-6"><div className="space-y-2"><p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">FAQ</p><h2 className="font-serif text-3xl text-white">Najczęstsze pytania</h2></div><div className="divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10">{faq.map((item) => (<div key={item.question} className="bg-white/5 p-5"><h3 className="text-lg font-semibold text-white">{item.question}</h3><p className="mt-2 text-neutral-200/85 text-sm leading-relaxed">{item.answer}</p></div>))}</div></section>
 
-      <section id="contact" className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10"><div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,rgba(255,193,7,0.16),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,0.08),transparent_45%)]" /><div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]"><div className="space-y-4"><p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Zostaw swoje dane kontaktowe</p><h2 className="font-serif text-3xl text-white">Gotowi zacząć?</h2><p className="text-neutral-200/90 max-w-2xl">Skontaktujemy się z Tobą, zadamy kilka pytań i pokażemy najlepszy plan działania.</p></div></div></section>
+      <RentContactSection
+        pageLanguage="pl"
+        sourcePage="/pl/rent"
+        smallLabel="ZOSTAW SWOJE DANE KONTAKTOWE"
+        headline="Gotowi zacząć?"
+        description="Skontaktujemy się z Tobą, zadamy kilka pytań i pokażemy najlepszy plan działania."
+        messengerLabel="ALBO NAPISZ DO NAS W WYGODNYM KOMUNIKATORZE"
+        placeholders={{
+          name: "Imię",
+          phone: "Telefon",
+          message: "Opisz zadanie: dzielnice, budżet, termin wprowadzenia, format umowy",
+        }}
+        submitLabel="Wyślij"
+        privacyNote="Klikając przycisk, akceptujesz politykę prywatności."
+        statusMessages={{
+          success: "Dziękujemy. Otrzymaliśmy zgłoszenie i skontaktujemy się z Tobą tak szybko, jak to możliwe.",
+          error: "Nie udało się wysłać zgłoszenia. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio.",
+          validation: "Proszę podać imię i telefon.",
+        }}
+        messengerLinks={messengerLinks}
+      />
 </main><SiteFooterPl /></div>;
 }

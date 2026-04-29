@@ -1,5 +1,6 @@
 import { SiteFooter } from "../../components/layout/SiteFooter";
 import { SiteHeader } from "../../components/layout/SiteHeader";
+import { RentContactSection } from "../../components/rent/RentContactSection";
 
 export const metadata = {
   title: "Хочу снять — SERPAKOWSKI Nieruchomości",
@@ -416,61 +417,27 @@ export default function Page() {
       </section>
 
       {/* CTA + форма */}
-      <section id="contact" className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,rgba(255,193,7,0.16),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,0.08),transparent_45%)]" />
-        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Оставьте свои конакты</p>
-            <h2 className="font-serif text-3xl text-white">Готовы начать?</h2>
-            <p className="text-neutral-200/90 max-w-2xl">
-              Мы свяжемся с вами, зададим несколько вопросов и покажем, как можем помочь.
-            </p>
-            <div className="flex flex-wrap items-center gap-2 pt-3">
-              <span className="text-xs uppercase tracking-[0.12em] text-neutral-200/75">Или просто напишите в удобном для вас мессендежере чат</span>
-              {messengerLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${link.gradient} px-4 py-2 text-xs font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] ring-1 ring-white/15 transition hover:-translate-y-0.5`}
-                >
-                  <span>{link.icon}</span>
-                  {link.label}
-                </a>
-              ))}
-            </div>
-            <p className="text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
-          </div>
-          <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-            <form className="grid gap-4">
-              <input
-                name="name"
-                placeholder="Имя"
-                className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-              />
-              <input
-                name="phone"
-                placeholder="Телефон"
-                required
-                className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-              />
-              <textarea
-                name="message"
-                rows={4}
-                placeholder="Опишите задачу: районы, бюджет, сроки заселения, формат договора"
-                className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-              />
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
-              >
-                Перезвоните мне
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <RentContactSection
+        pageLanguage="ru"
+        sourcePage="/rent"
+        smallLabel="Оставьте свои конакты"
+        headline="Готовы начать?"
+        description="Мы свяжемся с вами, зададим несколько вопросов и покажем, как можем помочь."
+        messengerLabel="Или просто напишите в удобном для вас мессендежере чат"
+        placeholders={{
+          name: "Имя",
+          phone: "Телефон",
+          message: "Опишите задачу: районы, бюджет, сроки заселения, формат договора",
+        }}
+        submitLabel="Перезвоните мне"
+        privacyNote="Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности."
+        statusMessages={{
+          success: "Спасибо. Мы получили заявку и свяжемся с вами как можно скорее.",
+          error: "Не удалось отправить заявку. Попробуйте ещё раз или свяжитесь с нами напрямую.",
+          validation: "Пожалуйста, укажите имя и телефон.",
+        }}
+        messengerLinks={messengerLinks}
+      />
       </main>
       <SiteFooter />
     </div>
