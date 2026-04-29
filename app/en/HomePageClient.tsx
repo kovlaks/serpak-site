@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ChatButton } from "../../components/common/ChatButton";
 import { Button } from "../../components/layout/Button";
+import HomeContactForm from "../../components/common/HomeContactForm";
 import { Container } from "../../components/layout/Container";
 import { SiteFooterEn } from "../../components/layout/SiteFooterEn";
 import { SiteHeaderEn } from "../../components/layout/SiteHeaderEn";
@@ -336,23 +337,14 @@ export default function HomePageClient() {
               <p className="mt-3 text-xs text-neutral-200/70">By clicking the button, you agree to the privacy policy.</p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
-              <form className="grid gap-4">
-                <input placeholder="Name" className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
-               <input
-                  name="phone"
-                  placeholder="Phone"
-                  required
-                  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                />
-                <textarea
-  name="message"
-  placeholder="Briefly describe your request: rental/rent-out/buy/sell, district, budget, timeline"
-  rows={4}
-  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-/>
-
-                <Button>Submit</Button>
-              </form>
+              <HomeContactForm
+                language="en"
+                sourcePage="/en"
+                namePlaceholder="Name"
+                phonePlaceholder="Phone"
+                messagePlaceholder="Briefly describe your request: rental/rent-out/buy/sell, district, budget, timeline"
+                submitLabel="Send"
+              />
             </div>
           </div>
         </Container>

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ChatButton } from "../../components/common/ChatButton";
 import { Button } from "../../components/layout/Button";
+import HomeContactForm from "../../components/common/HomeContactForm";
 import { Container } from "../../components/layout/Container";
 import { SiteFooterPl } from "../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../components/layout/SiteHeaderPl";
@@ -336,23 +337,14 @@ export default function HomePageClient() {
               <p className="mt-3 text-xs text-neutral-200/70">Klikając przycisk, akceptujesz politykę prywatności.</p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
-              <form className="grid gap-4">
-                <input placeholder="Imię" className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
-               <input
-                  name="phone"
-                  placeholder="Telefon"
-                  required
-                  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                />
-                <textarea
-  name="message"
-  placeholder="Krótko opisz cel: najem/wynajem/zakup/sprzedaż, dzielnica, budżet, termin"
-  rows={4}
-  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-/>
-
-                <Button>Wyślij</Button>
-              </form>
+              <HomeContactForm
+                language="pl"
+                sourcePage="/pl"
+                namePlaceholder="Imię"
+                phonePlaceholder="Telefon"
+                messagePlaceholder="Krótko opisz cel: najem/wynajem/zakup/sprzedaż, dzielnica, budżet, termin"
+                submitLabel="Wyślij"
+              />
             </div>
           </div>
         </Container>
