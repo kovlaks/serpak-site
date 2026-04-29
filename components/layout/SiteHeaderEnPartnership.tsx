@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button } from "./Button";
 import { Container } from "./Container";
 
-export function SiteHeaderEn() {
+export function SiteHeaderEnPartnership() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
 
@@ -12,8 +12,7 @@ export function SiteHeaderEn() {
     const onScroll = () => {
       const header = headerRef.current;
       if (!header) return;
-      if (window.scrollY > 10)
-        header.classList.add("bg-[#0C2D3A]/70", "backdrop-blur", "ring-1", "ring-white/10");
+      if (window.scrollY > 10) header.classList.add("bg-[#0C2D3A]/70", "backdrop-blur", "ring-1", "ring-white/10");
       else header.classList.remove("bg-[#0C2D3A]/70", "backdrop-blur", "ring-1", "ring-white/10");
     };
     window.addEventListener("scroll", onScroll);
@@ -30,16 +29,16 @@ export function SiteHeaderEn() {
           </a>
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
-            <a href="#services" className="hover:text-white">Services</a>
+            <a href="/en#services" className="hover:text-white">Services</a>
             <a href="/en/partnership" className="hover:text-white">Partnership</a>
             <a href="#contact" className="hover:text-white">Contact</a>
 
             <div className="flex items-center gap-3">
-              <a href="/pl" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
+              <a href="/pl/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
               <span className="text-white/30">/</span>
-              <a href="/" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
+              <a href="/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
               <span className="text-white/30">/</span>
-              <a href="/en" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
+              <a href="/en/partnership" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
             </div>
 
             <Button href="#contact">Submit request</Button>
@@ -52,16 +51,16 @@ export function SiteHeaderEn() {
         <div className="md:hidden bg-[#0C2D3A]/95 backdrop-blur border-t border-white/10">
           <Container>
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
-              <a href="#services" className="hover:text-white">Services</a>
+              <a href="/en#services" className="hover:text-white">Services</a>
               <a href="/en/partnership" className="hover:text-white">Partnership</a>
               <a href="#contact" className="hover:text-white">Contact</a>
 
               <div className="flex items-center gap-3 pt-2">
-                <a href="/pl" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
+                <a href="/pl/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
                 <span className="text-white/30">/</span>
-                <a href="/" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
+                <a href="/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
                 <span className="text-white/30">/</span>
-                <a href="/en" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
+                <a href="/en/partnership" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
               </div>
 
               <Button href="#contact" className="justify-center">Submit request</Button>
