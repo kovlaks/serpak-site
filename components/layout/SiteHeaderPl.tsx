@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button } from "./Button";
 import { Container } from "./Container";
 
-export function SiteHeader() {
+export function SiteHeaderPl() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
 
@@ -24,47 +24,57 @@ export function SiteHeader() {
     <header id="header" ref={headerRef} className="fixed inset-x-0 top-0 z-50 transition">
       <Container>
         <div className="flex h-16 items-center justify-between">
-          <a href="/" className="flex items-center gap-3">
+          <a href="/pl" className="flex items-center gap-3">
             <img src="/logo.png" alt="SERPAKOWSKI Nieruchomości" className="h-12 w-12 rounded-full object-cover" />
-            <span className="font-serif whitespace-nowrap text-base sm:text-lg md:text-xl tracking-wide text-white">SERPAKOWSKI Nieruchomości</span>
+            <span className="font-serif whitespace-nowrap text-base sm:text-lg md:text-xl tracking-wide text-white">
+              SERPAKOWSKI Nieruchomości
+            </span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
-            <a href="#services" className="hover:text-white">Услуги</a>
-            <a href="/wspolpraca" className="hover:text-white">Сотрудничество</a>
-            <a href="#contact" className="hover:text-white">Контакты</a>
+            <a href="#services" className="hover:text-white">
+              Usługi
+            </a>
+            <a href="/wspolpraca" className="hover:text-white">
+              Współpraca
+            </a>
+            <a href="#contact" className="hover:text-white">
+              Kontakt
+            </a>
 
             <div className="flex items-center gap-3">
-              <a href="/pl" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polski">PL</a>
+              <a href="/pl" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Aktualny język">PL</a>
               <span className="text-white/30">/</span>
-              <a href="/" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</a>
+              <a href="/" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
               <span className="text-white/30">/</span>
               <button type="button" title="EN — soon" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed" aria-disabled="true">EN</button>
             </div>
 
-            <Button href="#contact">Оставить заявку</Button>
+            <Button href="#contact">Zostaw zgłoszenie</Button>
           </nav>
 
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">☰</button>
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">
+            ☰
+          </button>
         </div>
       </Container>
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#0C2D3A]/95 backdrop-blur border-t border-white/10">
           <Container>
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
-              <a href="#services" className="hover:text-white">Услуги</a>
-              <a href="/wspolpraca" className="hover:text-white">Сотрудничество</a>
-              <a href="#contact" className="hover:text-white">Контакты</a>
+              <a href="#services" className="hover:text-white">Usługi</a>
+              <a href="/wspolpraca" className="hover:text-white">Współpraca</a>
+              <a href="#contact" className="hover:text-white">Kontakt</a>
 
               <div className="flex items-center gap-3 pt-2">
-                <a href="/pl" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polski">PL</a>
+                <a href="/pl" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Aktualny język">PL</a>
                 <span className="text-white/30">/</span>
-                <a href="/" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Текущий язык">RU</a>
+                <a href="/" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
                 <span className="text-white/30">/</span>
                 <button type="button" title="EN — soon" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed">EN</button>
               </div>
 
-              <Button href="#contact" className="justify-center">Оставить заявку</Button>
+              <Button href="#contact" className="justify-center">Zostaw zgłoszenie</Button>
             </div>
           </Container>
         </div>
