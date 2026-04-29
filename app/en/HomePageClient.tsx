@@ -266,7 +266,7 @@ export default function HomePageClient() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <ChatButton
                   label="Telegram"
-                  href="https://t.me/"
+                  href="https://t.me/+48453053969"
                   gradient="from-[#229ED9] via-[#1c94cb] to-[#178abf]"
                   icon={(className) => (
                     <svg className={className} viewBox="0 0 24 24" aria-hidden>
@@ -279,7 +279,7 @@ export default function HomePageClient() {
                 />
                 <ChatButton
                   label="Viber"
-                  href="viber://chat?number=%2B48453053969"
+                  href="viber://chat?number=%2B380679762988"
                   gradient="from-[#7360F2] via-[#6a55ef] to-[#5f47ec]"
                   icon={(className) => (
                     <svg className={className} viewBox="0 0 24 24" aria-hidden>
