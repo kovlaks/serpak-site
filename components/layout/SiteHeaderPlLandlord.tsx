@@ -41,7 +41,7 @@ export function SiteHeaderPlLandlord() {
               <span className="text-white/30">/</span>
               <a href="/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
               <span className="text-white/30">/</span>
-              <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
+              <a href="/en/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
             </div>
 
             <Button href="#contact">Zostaw zgłoszenie</Button>
@@ -63,7 +63,7 @@ export function SiteHeaderPlLandlord() {
                 <span className="text-white/30">/</span>
                 <a href="/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
                 <span className="text-white/30">/</span>
-                <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
+                <a href="/en/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
               </div>
 
               <Button href="#contact" className="justify-center">Zostaw zgłoszenie</Button>
