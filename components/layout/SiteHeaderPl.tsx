@@ -47,7 +47,7 @@ export function SiteHeaderPl() {
               <span className="text-white/30">/</span>
               <a href="/" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
               <span className="text-white/30">/</span>
-              <button type="button" title="EN — soon" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed" aria-disabled="true">EN</button>
+              <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
             </div>
 
             <Button href="#contact">Zostaw zgłoszenie</Button>
@@ -71,7 +71,7 @@ export function SiteHeaderPl() {
                 <span className="text-white/30">/</span>
                 <a href="/" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
                 <span className="text-white/30">/</span>
-                <button type="button" title="EN — soon" className="text-xs uppercase tracking-widest text-white/50 cursor-not-allowed">EN</button>
+                <a href="/en" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
               </div>
 
               <Button href="#contact" className="justify-center">Zostaw zgłoszenie</Button>
