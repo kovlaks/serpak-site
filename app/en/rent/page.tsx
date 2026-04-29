@@ -45,7 +45,7 @@ const serviceList = [
   },
   {
     title: "On-site property checklist",
-    description: "Text in English",
+    description: "We inspect more than “nice walls”: electricals, windows, dampness, ventilation, appliances, noise, common areas, and parking.",
   },
   {
     title: "Owner and property verification",
@@ -60,84 +60,84 @@ const serviceList = [
     description: "Consent templates, communication, notary scheduling, and full process coordination.",
   },
   {
-    title: "Text in English",
-    description: "Text in English",
+    title: "Signing and handover",
+    description: "Handover protocol, photos/videos, meter readings, keys, and defect records — everything documented properly.",
   },
   {
-    title: "Text in English",
-    description: "Text in English",
+    title: "Post move-in support",
+    description: "Guidance on utilities, internet setup, building administration, and lease-related details.",
   },
   {
-    title: "Text in English",
-    description: "Text in English",
+    title: "Support for early move-out",
+    description: "Replacement tenant search (with owner approval) and support for a clean contract exit.",
   },
 ];
 
 const steps = [
   {
-    title: "Text in English",
+    title: "Request and brief",
     details:
-      "Text in English",
+      "You complete a short form or have a call with us. We ask structured questions: budget, districts, family needs, legal status in Poland, and must-haves.",
   },
   {
-    title: "Text in English",
+    title: "Selection and recommendations",
     details:
-      "Text in English",
+      "We analyze the market, send a shortlist with clear pros and cons, and plan viewings.",
   },
   {
-    title: "Text in English",
+    title: "Viewings, verification, lease",
     details:
-      "Text in English",
+      "We attend viewings, verify the property and owner, discuss lease terms, and handle negotiations.",
   },
   {
-    title: "Text in English",
+    title: "Signing, move-in, support",
     details:
-      "Text in English",
+      "We are present at handover, document the condition of the property, and support you through the first weeks in your new home.",
   },
 ];
 
 const faq = [
   {
-    question: "Text in English",
+    question: "Who pays the commission?",
     answer:
-      "Text in English",
+      "The fee model is agreed in advance and fixed in the service agreement. No last-minute surprises.",
   },
   {
-    question: "Text in English",
+    question: "Can the whole process be handled remotely?",
     answer:
-      "Text in English",
+      "Yes. Video tours, remote approvals, and signing via power of attorney are all possible depending on your situation.",
   },
   {
-    question: "Text in English",
-    answer: "Text in English",
+    question: "What role do you take in the deal?",
+    answer: "We represent the tenant’s interests professionally and support the transaction at every stage.",
   },
   {
-    question: "Text in English",
+    question: "What if the owner rejects our amendments?",
     answer:
-      "Text in English",
+      "We define in advance where compromise is acceptable and where it is better to walk away. The final decision is always yours — with full information.",
   },
 ];
 
 const advantages = [
   {
-    title: "Text in English",
-    description: "Text in English",
+    title: "No office visits",
+    description: "Your housing search and requirement brief are handled online.",
     icon: "🧭",
   },
   {
-    title: "Text in English",
-    description: "Text in English",
+    title: "0 PLN upfront",
+    description: "You pay for realtor services only after the lease agreement is signed.",
     icon: "💵",
   },
   {
-    title: "Text in English",
+    title: "End-to-end support",
     description:
-      "Text in English",
+      "Viewing coordination, owner verification, lease review, and property handover — we take responsibility for the full process.",
     icon: "⚖️",
   },
   {
-    title: "Text in English",
-    description: "Text in English",
+    title: "Post move-in support",
+    description: "We stay available to help in urgent situations.",
     icon: "🧡",
   },
 ];
@@ -279,10 +279,10 @@ export default function Page() {
         </div>
         <ul className="space-y-3 text-neutral-100/90">
           {[
-            "Text in English",
-            "Text in English",
-            "Text in English",
-            "Text in English",
+            "If you are relocating to Warsaw and are unsure where to start.",
+            "If you don’t have time to navigate hundreds of listings and legal details.",
+            "If you have had a bad rental experience before and don’t want to repeat it.",
+            "If you want professional support in negotiations and deal terms.",
           ].map((item) => (
             <li
               key={item}
@@ -392,7 +392,7 @@ export default function Page() {
           <h2 className="font-serif text-3xl text-white">Benefits of working with us</h2>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {["Text in English", "Text in English", "Text in English", "Text in English", "Text in English", "Text in English"].map((item) => (
+          {["We represent tenants’ interests professionally and respectfully", "Deep understanding of the Warsaw rental market", "A practical legal filter without overwhelming jargon", "A viewing checklist that helps you avoid costly risks", "Post move-in support instead of “sign and disappear”", "A trusted partner network for relocation and everyday setup"].map((item) => (
             <div key={item} className="flex items-start gap-3 rounded-2xl bg-[#0C2D3A] px-5 py-4 ring-1 ring-white/10">
               <span className="mt-1 text-amber-300">★</span>
               <p className="text-base text-neutral-100">{item}</p>
