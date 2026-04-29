@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ChatButton } from "../components/common/ChatButton";
 import { Button } from "../components/layout/Button";
+import HomeContactForm from "../components/common/HomeContactForm";
 import { Container } from "../components/layout/Container";
 import { SiteFooter } from "../components/layout/SiteFooter";
 import { SiteHeader } from "../components/layout/SiteHeader";
@@ -356,23 +357,14 @@ export default function Page() {
               <p className="mt-3 text-xs text-neutral-200/70">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
-              <form className="grid gap-4">
-                <input placeholder="Имя" className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300" />
-               <input
-                  name="phone"
-                  placeholder="Телефон"
-                  required
-                  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                />
-                <textarea
-  name="message"
-  placeholder="Кратко опишите задачу: аренда/сдача/покупка/продажа, район, бюджет, сроки"
-  rows={4}
-  className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white placeholder-neutral-300/70 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
-/>
-
-                <Button>Отправить</Button>
-              </form>
+              <HomeContactForm
+                language="ru"
+                sourcePage="/"
+                namePlaceholder="Имя"
+                phonePlaceholder="Телефон"
+                messagePlaceholder="Кратко опишите задачу: аренда/сдача/покупка/продажа, район, бюджет, сроки"
+                submitLabel="Отправить"
+              />
             </div>
           </div>
         </Container>
