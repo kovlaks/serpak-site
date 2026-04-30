@@ -187,7 +187,7 @@ export default function WspolpracaPage() {
               </h2>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
-                  href="mailto:kovlaks@gmail.com"
+                  href="mailto:kontakt@serpakowski.pl"
                   className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
                 >
                   Написать сейчас
@@ -195,8 +195,8 @@ export default function WspolpracaPage() {
                 <Button href="tel:+48453053969">Позвонить</Button>
               </div>
               <div className="mt-8 grid gap-3 text-neutral-200/90 sm:grid-cols-2">
-                <a href="mailto:kovlaks@gmail.com" className="rounded-2xl bg-white/5 px-4 py-4 ring-1 ring-white/10 hover:bg-white/10 transition">
-                  kovlaks@gmail.com
+                <a href="mailto:kontakt@serpakowski.pl" className="rounded-2xl bg-white/5 px-4 py-4 ring-1 ring-white/10 hover:bg-white/10 transition">
+                  kontakt@serpakowski.pl
                 </a>
                 <a href="tel:+48453053969" className="rounded-2xl bg-white/5 px-4 py-4 ring-1 ring-white/10 hover:bg-white/10 transition">
                   +48 453 053 969

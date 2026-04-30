@@ -23,8 +23,8 @@ export default function PrivacyPage() {
         <p><strong>Адрес для корреспонденции:</strong> Złota 75A/7, 00-819 Warszawa</p>
         <p>
           <strong>Контакт:</strong>{" "}
-          <a className="underline hover:no-underline" href="mailto:kovlaks@gmail.com">
-            kovlaks@gmail.com
+          <a className="underline hover:no-underline" href="mailto:kontakt@serpakowski.pl">
+            kontakt@serpakowski.pl
           </a>{" "}
           / <a className="underline hover:no-underline" href="tel:+48453053969">+48 453 053 969</a>
         </p>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
         <li>жалоба: <strong>PUODO</strong>, ul. Stawki 2, 00-193 Warszawa.</li>
       </ul>
       <p className="mt-2 text-neutral-200/90">
-        Для реализации прав: <a className="underline hover:no-underline" href="mailto:kovlaks@gmail.com">kovlaks@gmail.com</a>
+        Для реализации прав: <a className="underline hover:no-underline" href="mailto:kontakt@serpakowski.pl">kontakt@serpakowski.pl</a>
       </p>
 
       <h2 className="font-serif text-2xl mt-10 mb-3 text-white">8. Cookie и аналитика</h2>

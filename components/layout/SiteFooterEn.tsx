@@ -27,7 +27,7 @@ export function SiteFooterEn() {
             <div className="text-white">Contact</div>
             <ul className="mt-2 space-y-2">
               <li>Warsaw, Poland</li>
-              <li><a href="mailto:kovlaks@gmail.com" className="hover:text-white">kovlaks@gmail.com</a></li>
+              <li><a href="mailto:kontakt@serpakowski.pl" className="hover:text-white">kontakt@serpakowski.pl</a></li>
               <li><a href="tel:+48453053969" className="hover:text-white">+48 453 053 969</a></li>
             </ul>
           </div>

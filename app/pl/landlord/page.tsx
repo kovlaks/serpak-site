@@ -181,11 +181,11 @@ export default function Page() {
           <h2 className="font-serif text-3xl text-white">Chcesz wynająć mieszkanie bez chaosu?</h2>
           <p className="mt-4 max-w-3xl text-neutral-200/90">Opowiedz nam o nieruchomości — ocenimy sytuację i zaproponujemy przejrzysty format współpracy.</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <a href="mailto:kovlaks@gmail.com" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">Zostaw zgłoszenie</a>
+            <a href="mailto:kontakt@serpakowski.pl" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">Zostaw zgłoszenie</a>
             <a href="https://wa.me/48453053969" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">Napisz na WhatsApp</a>
           </div>
           <div className="mt-6 space-y-1 text-neutral-200/90">
-            <p>kovlaks@gmail.com</p>
+            <p>kontakt@serpakowski.pl</p>
             <p>+48 453 053 969</p>
           </div>
         </section>
