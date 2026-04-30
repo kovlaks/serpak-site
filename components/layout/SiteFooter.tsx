@@ -48,8 +48,8 @@ export function SiteFooter() {
             <ul className="mt-2 space-y-2">
               <li>Варшава, Польша</li>
               <li>
-                <a href="mailto:kovlaks@gmail.com" className="hover:text-white">
-                  kovlaks@gmail.com
+                <a href="mailto:kontakt@serpakowski.pl" className="hover:text-white">
+                  kontakt@serpakowski.pl
                 </a>
               </li>
               <li>
