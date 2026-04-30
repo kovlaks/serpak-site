@@ -104,7 +104,15 @@ export default function Page() {
           message: "Opisz zadanie: dzielnice, budżet, termin wprowadzenia, format umowy",
         }}
         submitLabel="Wyślij"
-        privacyNote="Wysyłając formularz, potwierdzasz zapoznanie się z polityką prywatności."
+        privacyNote={
+          <>
+            Wysyłając formularz, potwierdzasz zapoznanie się z{" "}
+            <a href="/pl/polityka-prywatnosci" className="underline underline-offset-2 hover:text-white">
+              polityką prywatności
+            </a>
+            .
+          </>
+        }
         statusMessages={{
           success: "Dziękujemy. Otrzymaliśmy zgłoszenie i skontaktujemy się z Tobą tak szybko, jak to możliwe.",
           error: "Nie udało się wysłać zgłoszenia. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio.",

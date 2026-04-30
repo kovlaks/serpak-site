@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, ReactNode, useState } from "react";
 
 type MessengerLink = {
   label: string;
@@ -18,7 +18,7 @@ type RentContactSectionProps = {
   messengerLabel: string;
   placeholders: { name: string; phone: string; message: string };
   submitLabel: string;
-  privacyNote: string;
+  privacyNote: ReactNode;
   statusMessages: { success: string; error: string; validation: string };
   messengerLinks: MessengerLink[];
 };

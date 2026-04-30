@@ -334,7 +334,13 @@ export default function HomePageClient() {
   Skontaktujemy się z Tobą tak szybko, jak to możliwe.
 </p>
 
-              <p className="mt-3 text-xs text-neutral-200/70">Wysyłając formularz, potwierdzasz zapoznanie się z polityką prywatności.</p>
+              <p className="mt-3 text-xs text-neutral-200/70">
+                Wysyłając formularz, potwierdzasz zapoznanie się z{" "}
+                <a href="/pl/polityka-prywatnosci" className="underline underline-offset-2 hover:text-white">
+                  polityką prywatności
+                </a>
+                .
+              </p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
               <HomeContactForm
