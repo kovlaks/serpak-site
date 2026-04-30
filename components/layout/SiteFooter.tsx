@@ -16,10 +16,7 @@ export function SiteFooter() {
             </div>
 
             <div className="mt-4 flex items-center gap-4 text-neutral-200/80">
-              <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="hover:text-white">
-                Instagram
-              </a>
-              <a href="https://t.me/" target="_blank" rel="noreferrer" className="hover:text-white">
+                            <a href="https://t.me/+48453053969" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 Telegram
               </a>
             </div>

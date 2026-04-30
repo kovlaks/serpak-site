@@ -12,16 +12,15 @@ export function SiteFooterEn() {
               <div className="font-serif text-white text-lg whitespace-nowrap">SERPAKOWSKI Nieruchomości</div>
             </div>
             <div className="mt-4 flex items-center gap-4 text-neutral-200/80">
-              <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="hover:text-white">Instagram</a>
-              <a href="https://t.me/" target="_blank" rel="noreferrer" className="hover:text-white">Telegram</a>
+                            <a href="https://t.me/+48453053969" target="_blank" rel="noopener noreferrer" className="hover:text-white">Telegram</a>
             </div>
           </div>
           <div>
             <div className="text-white">Navigation</div>
             <ul className="mt-2 space-y-2">
-              <li><a href="#services" className="hover:text-white">Services</a></li>
-              <li><a href="/wspolpraca" className="hover:text-white">Partnership</a></li>
-              <li><a href="#contact" className="hover:text-white">Contact</a></li>
+              <li><a href="/en#services" className="hover:text-white">Services</a></li>
+              <li><a href="/en/partnership" className="hover:text-white">Partnership</a></li>
+              <li><a href="/en#contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
           <div>
