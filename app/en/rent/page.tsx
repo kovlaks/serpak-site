@@ -431,7 +431,15 @@ export default function Page() {
           message: "Describe your request: districts, budget, move-in timeline, lease format",
         }}
         submitLabel="Call me back"
-        privacyNote="By submitting the form, you confirm that you have read the privacy policy."
+        privacyNote={
+          <>
+            By submitting the form, you confirm that you have read the{" "}
+            <a href="/en/privacy" className="underline underline-offset-2 hover:text-white">
+              privacy policy
+            </a>
+            .
+          </>
+        }
         statusMessages={{
           success: "Thank you. We received your request and will contact you as soon as possible.",
           error: "Could not send your request. Please try again or contact us directly.",

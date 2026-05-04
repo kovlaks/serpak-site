@@ -334,7 +334,13 @@ export default function HomePageClient() {
   We will contact you as soon as possible.
 </p>
 
-              <p className="mt-3 text-xs text-neutral-200/70">By submitting the form, you confirm that you have read the privacy policy.</p>
+              <p className="mt-3 text-xs text-neutral-200/70">
+                By submitting the form, you confirm that you have read the{" "}
+                <a href="/en/privacy" className="underline underline-offset-2 hover:text-white">
+                  privacy policy
+                </a>
+                .
+              </p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
               <HomeContactForm

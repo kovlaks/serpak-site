@@ -34,7 +34,7 @@ export function SiteFooterEn() {
           <div>
             <div className="text-white">Legal information</div>
             <ul className="mt-2 space-y-2">
-              <li><a href="/privacy" className="hover:text-white">Privacy policy</a></li>
+              <li><a href="/en/privacy" className="hover:text-white">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-white">Cookies</a></li>
             </ul>
           </div>

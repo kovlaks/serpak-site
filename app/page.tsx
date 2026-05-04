@@ -354,7 +354,13 @@ export default function Page() {
   Мы свяжемся с вами как можно скорее.
 </p>
 
-              <p className="mt-3 text-xs text-neutral-200/70">Отправляя форму, вы подтверждаете, что ознакомились с политикой конфиденциальности.</p>
+              <p className="mt-3 text-xs text-neutral-200/70">
+                Отправляя форму, вы подтверждаете, что ознакомились с{" "}
+                <a href="/privacy" className="underline underline-offset-2 hover:text-white">
+                  политикой конфиденциальности
+                </a>
+                .
+              </p>
             </div>
             <div className="rounded-2xl p-6 ring-1 ring-white/10 bg-white/5">
               <HomeContactForm
