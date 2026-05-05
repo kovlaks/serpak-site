@@ -16,6 +16,7 @@ type Lang = "pl" | "ru" | "en";
 const CONSENT_KEY = "serpakowski_cookie_consent";
 const CONSENT_UPDATED_AT_KEY = "serpakowski_cookie_consent_updated_at";
 const OPEN_SETTINGS_EVENT = "serpakowski:open-cookie-settings";
+const CONSENT_UPDATED_EVENT = "serpakowski_cookie_consent_updated";
 
 const baseConsent: ConsentState = {
   necessary: true,
@@ -171,6 +172,7 @@ export function CookieConsentManager() {
     localStorage.setItem(CONSENT_UPDATED_AT_KEY, new Date().toISOString());
     setShowBanner(false);
     setShowSettings(false);
+    window.dispatchEvent(new Event(CONSENT_UPDATED_EVENT));
   };
 
   const acceptAll = () => {
