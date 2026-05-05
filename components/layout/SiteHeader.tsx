@@ -42,7 +42,7 @@ export function SiteHeader() {
     <header id="header" ref={headerRef} className="fixed inset-x-0 top-0 z-50 transition">
       <Container>
         <div className="flex h-16 items-center justify-between">
-          <a href="/" className="flex items-center gap-3">
+          <a href="/ru" className="flex items-center gap-3">
             <img src="/logo.png" alt="SERPAKOWSKI Nieruchomości" className="h-12 w-12 rounded-full object-cover" />
             <span className="font-serif whitespace-nowrap text-base sm:text-lg md:text-xl tracking-wide text-white">SERPAKOWSKI Nieruchomości</span>
           </a>

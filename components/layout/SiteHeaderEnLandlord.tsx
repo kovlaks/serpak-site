@@ -31,7 +31,7 @@ export function SiteHeaderEnLandlord() {
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
             <a href="/en#services" className="hover:text-white">Services</a>
-            <a href="/ru/wspolpraca" className="hover:text-white">Partnership</a>
+            <a href="/en/partnership" className="hover:text-white">Partnership</a>
             <a href="/en#contact" className="hover:text-white">Contact</a>
 
             <div className="flex items-center gap-3">
@@ -53,7 +53,7 @@ export function SiteHeaderEnLandlord() {
           <Container>
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
               <a href="/en#services" className="hover:text-white">Services</a>
-              <a href="/ru/wspolpraca" className="hover:text-white">Partnership</a>
+              <a href="/en/partnership" className="hover:text-white">Partnership</a>
               <a href="/en#contact" className="hover:text-white">Contact</a>
 
               <div className="flex items-center gap-3 pt-2">
