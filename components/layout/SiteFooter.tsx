@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "./Container";
+import { FooterCookieSettingsTrigger } from "../common/FooterCookieSettingsTrigger";
 
 export function SiteFooter() {
   return (
@@ -72,6 +73,9 @@ export function SiteFooter() {
                 <a href="/ru/cookies" className="hover:text-white">
                   Cookies
                 </a>
+              </li>
+              <li>
+                <FooterCookieSettingsTrigger label="Настройки cookies" />
               </li>
             </ul>
           </div>
