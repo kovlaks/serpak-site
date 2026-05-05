@@ -6,16 +6,16 @@ import { Button } from "./Button";
 import { Container } from "./Container";
 
 const languageSwitcherMap = {
-  home: { ru: "/", pl: "/pl", en: "/en" },
-  rent: { ru: "/rent", pl: "/pl/rent", en: "/en/rent" },
-  landlord: { ru: "/landlord", pl: "/pl/landlord", en: "/en/landlord" },
-  partnership: { ru: "/wspolpraca", pl: "/pl/wspolpraca", en: "/en/partnership" },
+  home: { ru: "/ru", pl: "/pl", en: "/en" },
+  rent: { ru: "/ru/rent", pl: "/pl/rent", en: "/en/rent" },
+  landlord: { ru: "/ru/landlord", pl: "/pl/landlord", en: "/en/landlord" },
+  partnership: { ru: "/ru/wspolpraca", pl: "/pl/wspolpraca", en: "/en/partnership" },
 } as const;
 
 function getLanguageLinks(pathname: string) {
-  if (pathname === "/rent" || pathname === "/pl/rent" || pathname === "/en/rent") return languageSwitcherMap.rent;
-  if (pathname === "/landlord" || pathname === "/pl/landlord" || pathname === "/en/landlord") return languageSwitcherMap.landlord;
-  if (pathname === "/wspolpraca" || pathname === "/pl/wspolpraca" || pathname === "/en/partnership") return languageSwitcherMap.partnership;
+  if (pathname === "/ru/rent" || pathname === "/rent" || pathname === "/pl/rent" || pathname === "/en/rent") return languageSwitcherMap.rent;
+  if (pathname === "/ru/landlord" || pathname === "/landlord" || pathname === "/pl/landlord" || pathname === "/en/landlord") return languageSwitcherMap.landlord;
+  if (pathname === "/ru/wspolpraca" || pathname === "/wspolpraca" || pathname === "/pl/wspolpraca" || pathname === "/en/partnership") return languageSwitcherMap.partnership;
   return languageSwitcherMap.home;
 }
 
@@ -48,9 +48,9 @@ export function SiteHeaderEn() {
           </a>
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
-            <a href="#services" className="hover:text-white">Services</a>
+            <a href="/en#services" className="hover:text-white">Services</a>
             <a href="/en/partnership" className="hover:text-white">Partnership</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+            <a href="/en#contact" className="hover:text-white">Contact</a>
 
             <div className="flex items-center gap-3">
               <a href={languageLinks.pl} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
@@ -60,7 +60,7 @@ export function SiteHeaderEn() {
               <a href={languageLinks.en} className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
             </div>
 
-            <Button href="#contact">Submit request</Button>
+            <Button href="/en#contact">Submit request</Button>
           </nav>
 
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">☰</button>
@@ -70,9 +70,9 @@ export function SiteHeaderEn() {
         <div className="md:hidden bg-[#0C2D3A]/95 backdrop-blur border-t border-white/10">
           <Container>
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
-              <a href="#services" className="hover:text-white">Services</a>
+              <a href="/en#services" className="hover:text-white">Services</a>
               <a href="/en/partnership" className="hover:text-white">Partnership</a>
-              <a href="#contact" className="hover:text-white">Contact</a>
+              <a href="/en#contact" className="hover:text-white">Contact</a>
 
               <div className="flex items-center gap-3 pt-2">
                 <a href={languageLinks.pl} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
@@ -82,7 +82,7 @@ export function SiteHeaderEn() {
                 <a href={languageLinks.en} className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
               </div>
 
-              <Button href="#contact" className="justify-center">Submit request</Button>
+              <Button href="/en#contact" className="justify-center">Submit request</Button>
             </div>
           </Container>
         </div>

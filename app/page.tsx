@@ -123,7 +123,7 @@ export default function Page() {
 
 
             <div className="mt-10">
-              <a href="#contact" className="text-sm text-neutral-200/90 hover:text-white">Связаться с нами →</a>
+              <a href="/ru#contact" className="text-sm text-neutral-200/90 hover:text-white">Связаться с нами →</a>
             </div>
           </div>
         </Container>
@@ -203,7 +203,7 @@ export default function Page() {
             </p>
           </div>
           <div className="shrink-0">
-            <Button href="/rent">Подробнее</Button>
+            <Button href="/ru/rent">Подробнее</Button>
           </div>
         </div>
       </article>
@@ -220,7 +220,7 @@ export default function Page() {
             </p>
           </div>
           <div className="shrink-0">
-            <Button href="/landlord">Подробнее</Button>
+            <Button href="/ru/landlord">Подробнее</Button>
           </div>
         </div>
       </article>
@@ -356,7 +356,7 @@ export default function Page() {
 
               <p className="mt-3 text-xs text-neutral-200/70">
                 Отправляя форму, вы подтверждаете, что ознакомились с{" "}
-                <a href="/privacy" className="underline underline-offset-2 hover:text-white">
+                <a href="/ru/privacy" className="underline underline-offset-2 hover:text-white">
                   политикой конфиденциальности
                 </a>
                 .

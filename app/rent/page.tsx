@@ -184,13 +184,13 @@ export default function Page() {
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
               <a
-                href="#contact"
+                href="/ru#contact"
                 className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
               >
                 Найти квартиру с нами
               </a>
               <a
-                href="#contact"
+                href="/ru#contact"
                 className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10"
               >
                 Получить консультацию
@@ -315,7 +315,7 @@ export default function Page() {
             <p className="text-xs uppercase tracking-[0.16em] text-amber-200/80">Ответы на страхи</p>
             <h2 className="font-serif text-3xl text-white">Что перестанет вас беспокоить</h2>
           </div>
-          <a href="#contact" className="text-sm text-amber-200 hover:text-amber-100">Связаться →</a>
+          <a href="/ru#contact" className="text-sm text-amber-200 hover:text-amber-100">Связаться →</a>
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {worryCards.map((card) => (
@@ -433,7 +433,7 @@ export default function Page() {
         privacyNote={
           <>
             Отправляя форму, вы подтверждаете, что ознакомились с{" "}
-            <a href="/privacy" className="underline underline-offset-2 hover:text-white">
+            <a href="/ru/privacy" className="underline underline-offset-2 hover:text-white">
               политикой конфиденциальности
             </a>
             .
