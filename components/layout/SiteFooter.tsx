@@ -69,7 +69,7 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="/ru/cookies" className="hover:text-white">
                   Cookies
                 </a>
               </li>
