@@ -1,4 +1,5 @@
 import './globals.css';
+import { CookieConsentManager } from "../components/common/CookieConsentManager";
 
 export const metadata = {
   title: "SERPAKOWSKI Nieruchomości — Варшава",
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pl">
       <body className="bg-[#0C2D3A] text-neutral-100 antialiased">
         {children}
+        <CookieConsentManager />
       </body>
     </html>
   );
