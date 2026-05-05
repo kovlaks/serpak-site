@@ -26,17 +26,17 @@ export function SiteFooter() {
             <div className="text-white">Навигация</div>
             <ul className="mt-2 space-y-2">
               <li>
-                <a href="#services" className="hover:text-white">
+                <a href="/ru#services" className="hover:text-white">
                   Услуги
                 </a>
               </li>
               <li>
-                <a href="/wspolpraca" className="hover:text-white">
+                <a href="/ru/wspolpraca" className="hover:text-white">
                   Сотрудничество
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white">
+                <a href="/ru#contact" className="hover:text-white">
                   Контакты
                 </a>
               </li>
@@ -64,7 +64,7 @@ export function SiteFooter() {
             <div className="text-white">Юридическая информация</div>
             <ul className="mt-2 space-y-2">
               <li>
-                <a href="/privacy" className="hover:text-white">
+                <a href="/ru/privacy" className="hover:text-white">
                   Политика конфиденциальности
                 </a>
               </li>

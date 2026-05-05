@@ -33,18 +33,18 @@ export function SiteHeaderPlLandlord() {
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
             <a href="/pl#services" className="hover:text-white">Usługi</a>
-            <a href="/wspolpraca" className="hover:text-white">Współpraca</a>
-            <a href="#contact" className="hover:text-white">Kontakt</a>
+            <a href="/ru/wspolpraca" className="hover:text-white">Współpraca</a>
+            <a href="/pl#contact" className="hover:text-white">Kontakt</a>
 
             <div className="flex items-center gap-3">
               <a href="/pl/landlord" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Aktualny język">PL</a>
               <span className="text-white/30">/</span>
-              <a href="/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
+              <a href="/ru/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
               <span className="text-white/30">/</span>
               <a href="/en/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
             </div>
 
-            <Button href="#contact">Zostaw zgłoszenie</Button>
+            <Button href="/pl#contact">Zostaw zgłoszenie</Button>
           </nav>
 
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">☰</button>
@@ -55,18 +55,18 @@ export function SiteHeaderPlLandlord() {
           <Container>
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
               <a href="/pl#services" className="hover:text-white">Usługi</a>
-              <a href="/wspolpraca" className="hover:text-white">Współpraca</a>
-              <a href="#contact" className="hover:text-white">Kontakt</a>
+              <a href="/ru/wspolpraca" className="hover:text-white">Współpraca</a>
+              <a href="/pl#contact" className="hover:text-white">Kontakt</a>
 
               <div className="flex items-center gap-3 pt-2">
                 <a href="/pl/landlord" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Aktualny język">PL</a>
                 <span className="text-white/30">/</span>
-                <a href="/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
+                <a href="/ru/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Rosyjski">RU</a>
                 <span className="text-white/30">/</span>
                 <a href="/en/landlord" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="English">EN</a>
               </div>
 
-              <Button href="#contact" className="justify-center">Zostaw zgłoszenie</Button>
+              <Button href="/pl#contact" className="justify-center">Zostaw zgłoszenie</Button>
             </div>
           </Container>
         </div>

@@ -31,17 +31,17 @@ export function SiteHeaderEnPartnership() {
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-200/80">
             <a href="/en#services" className="hover:text-white">Services</a>
             <a href="/en/partnership" className="hover:text-white">Partnership</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+            <a href="/en#contact" className="hover:text-white">Contact</a>
 
             <div className="flex items-center gap-3">
               <a href="/pl/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
               <span className="text-white/30">/</span>
-              <a href="/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
+              <a href="/ru/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
               <span className="text-white/30">/</span>
               <a href="/en/partnership" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
             </div>
 
-            <Button href="#contact">Submit request</Button>
+            <Button href="/en#contact">Submit request</Button>
           </nav>
 
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">☰</button>
@@ -53,17 +53,17 @@ export function SiteHeaderEnPartnership() {
             <div className="py-4 flex flex-col gap-4 text-neutral-200/90">
               <a href="/en#services" className="hover:text-white">Services</a>
               <a href="/en/partnership" className="hover:text-white">Partnership</a>
-              <a href="#contact" className="hover:text-white">Contact</a>
+              <a href="/en#contact" className="hover:text-white">Contact</a>
 
               <div className="flex items-center gap-3 pt-2">
                 <a href="/pl/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
                 <span className="text-white/30">/</span>
-                <a href="/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
+                <a href="/ru/wspolpraca" className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
                 <span className="text-white/30">/</span>
                 <a href="/en/partnership" className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
               </div>
 
-              <Button href="#contact" className="justify-center">Submit request</Button>
+              <Button href="/en#contact" className="justify-center">Submit request</Button>
             </div>
           </Container>
         </div>
