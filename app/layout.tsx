@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CookieConsentManager } from "../components/common/CookieConsentManager";
 import { ConsentBasedTracking } from "../components/common/ConsentBasedTracking";
+import { StructuredData } from "../components/common/StructuredData";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.serpakowski.pl"),
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pl">
       <body className="bg-[#0C2D3A] text-neutral-100 antialiased">
+        <StructuredData />
         {children}
         <Suspense fallback={null}>
           <ConsentBasedTracking />
