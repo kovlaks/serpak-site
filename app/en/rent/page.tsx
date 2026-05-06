@@ -1,11 +1,15 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterEn } from "../../../components/layout/SiteFooterEn";
 import { SiteHeaderEn } from "../../../components/layout/SiteHeaderEn";
 import { RentContactSection } from "../../../components/rent/RentContactSection";
 
-export const metadata = {
-  title: "Find a Rental in Warsaw | SERPAKOWSKI Nieruchomości",
-  description: "We help you rent safely in Warsaw: property search, verification, lease review, occasional lease support and handover.",
-};
+export const metadata = createSeoMetadata({
+  title: "Apartment rental in Warsaw | SERPAKOWSKI Nieruchomości",
+  description: "We help tenants find and safely rent apartments in Warsaw: requirements analysis, property selection, owner verification, lease agreement and handover support.",
+  canonicalPath: "/en/rent",
+  languages: seoAlternates.rent,
+  locale: "en_US",
+});
 
 const worryCards = [
   {

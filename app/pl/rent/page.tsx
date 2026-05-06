@@ -1,12 +1,15 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../../components/layout/SiteHeaderPl";
 import { RentContactSection } from "../../../components/rent/RentContactSection";
 
-export const metadata = {
-  title: "Najem mieszkania w Warszawie | SERPAKOWSKI Nieruchomości",
-  description:
-    "Pomagamy bezpiecznie znaleźć mieszkanie w Warszawie: wybór ofert, weryfikacja, umowa, najem okazjonalny i przekazanie lokalu.",
-};
+export const metadata = createSeoMetadata({
+  title: "Wynajem mieszkania w Warszawie | SERPAKOWSKI Nieruchomości",
+  description: "Pomagamy znaleźć i bezpiecznie wynająć mieszkanie w Warszawie: analiza potrzeb, selekcja ofert, weryfikacja właściciela, umowa najmu i przekazanie lokalu.",
+  canonicalPath: "/pl/rent",
+  languages: seoAlternates.rent,
+  locale: "pl_PL",
+});
 
 const worryCards = [
   {

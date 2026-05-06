@@ -1,13 +1,16 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { Button } from "../../../components/layout/Button";
 import { Container } from "../../../components/layout/Container";
 import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import { SiteHeaderPlWspolpraca } from "../../../components/layout/SiteHeaderPlWspolpraca";
 
-export const metadata = {
-  title: "Współpraca | SERPAKOWSKI Nieruchomości",
-  description:
-    "Współpraca z agencjami, niezależnymi agentami, firmami, operatorami najmu, projektami PRS i instytucjami w Warszawie.",
-};
+export const metadata = createSeoMetadata({
+  title: "Współpraca B2B w nieruchomościach | SERPAKOWSKI Nieruchomości",
+  description: "Współpraca dla agencji, pośredników, inwestorów i partnerów z rynku nieruchomości w Warszawie. Tworzymy relacje, które przynoszą klientów i transakcje.",
+  canonicalPath: "/pl/wspolpraca",
+  languages: seoAlternates.partnership,
+  locale: "pl_PL",
+});
 
 const trustItems = ["Fokus: Warszawa", "Języki: RU / UA / PL / EN", "Szybka odpowiedź", "Nowoczesne podejście", "Nastawienie na wynik"];
 
