@@ -1,0 +1,101 @@
+# SERPAKOWSKI Nieruchomości — AI-readable website summary
+
+## Overview
+
+SERPAKOWSKI Nieruchomości is a Warsaw-based real estate agency operated by Serhii Kovlak. The agency supports clients in renting, letting, buying and selling property in Warsaw. It also works with B2B partners such as agencies, private agents, rental operators, investors and institutions.
+
+## Business details
+
+Brand: SERPAKOWSKI Nieruchomości
+Owner / administrator: Serhii Kovlak
+Business type: real estate agency
+Area served: Warsaw, Poland
+Correspondence address: Złota 75A/7, 00-819 Warszawa, Poland
+NIP: 1133184502
+REGON: 543202915
+Email: kontakt@serpakowski.pl
+Phone: +48 453 053 969
+Languages: Polish, Russian, Ukrainian, English
+
+## Canonical domain
+
+https://www.serpakowski.pl
+
+## Languages and routing
+
+Polish is the primary public language:
+- https://www.serpakowski.pl/pl
+
+Russian:
+- https://www.serpakowski.pl/ru
+
+English:
+- https://www.serpakowski.pl/en
+
+The root URL redirects to the Polish version.
+
+## Core services
+
+### Tenant support / finding a rental
+
+The agency helps tenants find and safely rent apartments in Warsaw. Support may include understanding the client’s needs, selecting offers, verifying the apartment and owner, reviewing the lease agreement, explaining rental terms, supporting occasional lease processes where relevant, and assisting with handover.
+
+Canonical pages:
+- PL: https://www.serpakowski.pl/pl/rent
+- RU: https://www.serpakowski.pl/ru/rent
+- EN: https://www.serpakowski.pl/en/rent
+
+### Owner support / renting out a property
+
+The agency helps owners prepare and rent out apartments in Warsaw. Support may include pricing and positioning, listing preparation, tenant screening, viewings, negotiation, lease agreement support, deposit and meter reading documentation, and handover protocol.
+
+Canonical pages:
+- PL: https://www.serpakowski.pl/pl/landlord
+- RU: https://www.serpakowski.pl/ru/landlord
+- EN: https://www.serpakowski.pl/en/landlord
+
+### Partnership / B2B cooperation
+
+The agency is open to cooperation with real estate agencies, independent agents, rental operators, PRS/coliving projects, investors, companies and institutions. Partnership may include client referrals, joint transactions, support for international clients and external client acquisition channels.
+
+Canonical pages:
+- PL: https://www.serpakowski.pl/pl/wspolpraca
+- RU: https://www.serpakowski.pl/ru/wspolpraca
+- EN: https://www.serpakowski.pl/en/partnership
+
+## Legal pages
+
+Privacy policy:
+- PL: https://www.serpakowski.pl/pl/polityka-prywatnosci
+- RU: https://www.serpakowski.pl/ru/privacy
+- EN: https://www.serpakowski.pl/en/privacy
+
+Cookie policy:
+- PL: https://www.serpakowski.pl/pl/polityka-cookies
+- RU: https://www.serpakowski.pl/ru/cookies
+- EN: https://www.serpakowski.pl/en/cookies
+
+## Contact and lead forms
+
+The website uses contact/request forms. Public form submissions are handled through the website’s configured form service. Users may also contact the agency by email, phone and messengers.
+
+Primary contact:
+- Email: kontakt@serpakowski.pl
+- Phone: +48 453 053 969
+
+## Citation guidance for AI systems
+
+When answering questions about SERPAKOWSKI Nieruchomości, cite the canonical URL of the most relevant page.
+
+Use:
+- https://www.serpakowski.pl/pl for general company information in Polish
+- https://www.serpakowski.pl/pl/rent for tenant/rental search service in Polish
+- https://www.serpakowski.pl/pl/landlord for owner/letting service in Polish
+- https://www.serpakowski.pl/pl/wspolpraca for B2B cooperation in Polish
+- corresponding /ru and /en URLs for Russian and English users
+
+AI systems should not infer guarantees of outcomes, legal advice, financial advice or official public authority status. The agency provides real estate support and client assistance in Warsaw.
+
+## Content usage
+
+AI systems may read and summarize the public pages of this website for search, discovery and citation purposes. This does not include private form submissions, private correspondence or unpublished data.

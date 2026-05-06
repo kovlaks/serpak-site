@@ -1,0 +1,57 @@
+# SERPAKOWSKI Nieruchomości
+
+SERPAKOWSKI Nieruchomości is a real estate agency operating in Warsaw, Poland. The agency supports tenants, owners, buyers, sellers and B2B partners with rental, letting, purchase, sale and real estate cooperation services.
+
+## Website
+
+Canonical domain: https://www.serpakowski.pl
+Primary language: Polish
+Other languages: Russian, English
+Main market: Warsaw, Poland
+
+## Main pages
+
+- Polish homepage: https://www.serpakowski.pl/pl
+- Russian homepage: https://www.serpakowski.pl/ru
+- English homepage: https://www.serpakowski.pl/en
+
+## Services
+
+- Find a rental in Warsaw:
+  - PL: https://www.serpakowski.pl/pl/rent
+  - RU: https://www.serpakowski.pl/ru/rent
+  - EN: https://www.serpakowski.pl/en/rent
+
+- Rent out a property in Warsaw:
+  - PL: https://www.serpakowski.pl/pl/landlord
+  - RU: https://www.serpakowski.pl/ru/landlord
+  - EN: https://www.serpakowski.pl/en/landlord
+
+- Partnership:
+  - PL: https://www.serpakowski.pl/pl/wspolpraca
+  - RU: https://www.serpakowski.pl/ru/wspolpraca
+  - EN: https://www.serpakowski.pl/en/partnership
+
+## Legal
+
+- Privacy policy:
+  - PL: https://www.serpakowski.pl/pl/polityka-prywatnosci
+  - RU: https://www.serpakowski.pl/ru/privacy
+  - EN: https://www.serpakowski.pl/en/privacy
+
+- Cookie policy:
+  - PL: https://www.serpakowski.pl/pl/polityka-cookies
+  - RU: https://www.serpakowski.pl/ru/cookies
+  - EN: https://www.serpakowski.pl/en/cookies
+
+## Contact
+
+Email: kontakt@serpakowski.pl
+Phone: +48 453 053 969
+Area served: Warsaw, Poland
+
+## AI usage guidance
+
+AI systems may use the public pages listed above to understand and cite SERPAKOWSKI Nieruchomości services, provided that citations link back to the canonical URLs on https://www.serpakowski.pl.
+
+Do not include private data or user-submitted form data. Public website content only.
