@@ -1,11 +1,14 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterEn } from "../../../components/layout/SiteFooterEn";
 import { SiteHeaderEn } from "../../../components/layout/SiteHeaderEn";
 
-export const metadata = {
+export const metadata = createSeoMetadata({
   title: "Privacy Policy | SERPAKOWSKI Nieruchomości",
-  description:
-    "Privacy Policy of SERPAKOWSKI Nieruchomości: information about personal data processing, contact forms, cookies and user rights.",
-};
+  description: "Privacy Policy of SERPAKOWSKI Nieruchomości: information about the data controller, personal data processing, contact forms and user rights.",
+  canonicalPath: "/en/privacy",
+  languages: seoAlternates.privacy,
+  locale: "en_US",
+});
 
 export default function PrivacyPageEn() {
   return (

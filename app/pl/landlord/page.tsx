@@ -1,11 +1,14 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import { SiteHeaderPlLandlord } from "../../../components/layout/SiteHeaderPlLandlord";
 
-export const metadata = {
-  title: "Wynajem mieszkania w Warszawie | SERPAKOWSKI Nieruchomości",
-  description:
-    "Profesjonalne wsparcie właścicieli przy wynajmie mieszkania w Warszawie: przygotowanie, marketing, prezentacje, weryfikacja najemcy, umowa i przekazanie lokalu.",
-};
+export const metadata = createSeoMetadata({
+  title: "Wynajem mieszkania właścicielom | SERPAKOWSKI Nieruchomości Warszawa",
+  description: "Wsparcie dla właścicieli mieszkań w Warszawie: przygotowanie oferty, weryfikacja najemców, umowa najmu, protokół przekazania i bezpieczna obsługa wynajmu.",
+  canonicalPath: "/pl/landlord",
+  languages: seoAlternates.landlord,
+  locale: "pl_PL",
+});
 
 const responsibilities = [
   "Analiza ceny i popytu",

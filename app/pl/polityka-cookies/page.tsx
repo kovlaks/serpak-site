@@ -1,11 +1,14 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../../components/layout/SiteHeaderPl";
 
-export const metadata = {
+export const metadata = createSeoMetadata({
   title: "Polityka cookies | SERPAKOWSKI Nieruchomości",
-  description:
-    "Polityka cookies SERPAKOWSKI Nieruchomości: informacje o plikach cookies, kategoriach cookies, zgodach oraz ustawieniach prywatności.",
-};
+  description: "Polityka cookies SERPAKOWSKI Nieruchomości: informacje o plikach cookies, kategoriach cookies, zgodach użytkownika i ustawieniach prywatności.",
+  canonicalPath: "/pl/polityka-cookies",
+  languages: seoAlternates.cookies,
+  locale: "pl_PL",
+});
 
 export default function PolitykaCookiesPage() {
   return (

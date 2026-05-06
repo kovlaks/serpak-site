@@ -1,11 +1,14 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../../components/layout/SiteHeaderPl";
 
-export const metadata = {
+export const metadata = createSeoMetadata({
   title: "Polityka prywatności | SERPAKOWSKI Nieruchomości",
-  description:
-    "Polityka prywatności SERPAKOWSKI Nieruchomości: informacje o przetwarzaniu danych osobowych, formularzach kontaktowych, cookies i prawach użytkownika.",
-};
+  description: "Polityka prywatności SERPAKOWSKI Nieruchomości: informacje o administratorze danych, zakresie przetwarzania danych, formularzach kontaktowych i prawach użytkownika.",
+  canonicalPath: "/pl/polityka-prywatnosci",
+  languages: seoAlternates.privacy,
+  locale: "pl_PL",
+});
 
 export default function PolitykaPrywatnosciPage() {
   return (

@@ -1,12 +1,16 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { Button } from "../../../components/layout/Button";
 import { Container } from "../../../components/layout/Container";
 import { SiteFooterEn } from "../../../components/layout/SiteFooterEn";
 import { SiteHeaderEnPartnership } from "../../../components/layout/SiteHeaderEnPartnership";
 
-export const metadata = {
-  title: "Partnership | SERPAKOWSKI Nieruchomości",
-  description: "Partnership with agencies, independent agents, companies, rental operators, PRS projects and institutions in Warsaw.",
-};
+export const metadata = createSeoMetadata({
+  title: "Real estate partnerships in Warsaw | SERPAKOWSKI Nieruchomości",
+  description: "Partnership opportunities for agencies, private agents, investors and real estate market partners in Warsaw. We build cooperation that brings clients and transactions.",
+  canonicalPath: "/en/partnership",
+  languages: seoAlternates.partnership,
+  locale: "en_US",
+});
 
 const trustItems = ["Focus: Warsaw", "Languages: RU / UA / PL / EN", "Fast response", "Modern approach", "Results-oriented"];
 

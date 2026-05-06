@@ -1,11 +1,14 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterEn } from "../../../components/layout/SiteFooterEn";
 import { SiteHeaderEnLandlord } from "../../../components/layout/SiteHeaderEnLandlord";
 
-export const metadata = {
-  title: "Rent Out a Property in Warsaw | SERPAKOWSKI Nieruchomości",
-  description:
-    "Professional support for owners renting out property in Warsaw: preparation, marketing, viewings, tenant screening, lease agreement and handover.",
-};
+export const metadata = createSeoMetadata({
+  title: "Rent out your apartment in Warsaw | SERPAKOWSKI Nieruchomości",
+  description: "Support for landlords in Warsaw: listing preparation, tenant screening, lease agreement, handover protocol and secure rental management assistance.",
+  canonicalPath: "/en/landlord",
+  languages: seoAlternates.landlord,
+  locale: "en_US",
+});
 
 const responsibilities = [
   "Price and demand analysis",

@@ -1,11 +1,14 @@
+import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterEn } from "../../../components/layout/SiteFooterEn";
 import { SiteHeaderEn } from "../../../components/layout/SiteHeaderEn";
 
-export const metadata = {
+export const metadata = createSeoMetadata({
   title: "Cookie Policy | SERPAKOWSKI Nieruchomości",
-  description:
-    "Cookie Policy of SERPAKOWSKI Nieruchomości: information about cookies, cookie categories, consent and privacy settings.",
-};
+  description: "Cookie Policy of SERPAKOWSKI Nieruchomości: information about cookies, cookie categories, user consent and privacy settings.",
+  canonicalPath: "/en/cookies",
+  languages: seoAlternates.cookies,
+  locale: "en_US",
+});
 
 export default function CookiesPageEn() {
   return (
