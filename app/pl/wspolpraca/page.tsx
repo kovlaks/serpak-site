@@ -180,7 +180,8 @@ export default function WspolpracaPagePl() {
                 B2B · najem · relokacja · Warszawa
               </p>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                Współpraca, która przyciąga klientów
+                Współpraca, która przyciąga {" "}
+                <span className="text-amber-300">klientów</span>
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-200/90">
                 Budujemy ekosystem współpracy wokół najmu i nieruchomości w Warszawie — dla klientów, właścicieli, agentów, operatorów najmu i firm usługowych.
