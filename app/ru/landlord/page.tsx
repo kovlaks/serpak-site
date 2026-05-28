@@ -1,4 +1,4 @@
-import { LandlordContactSections } from "../../../components/common/LandlordContactSections";
+import HomeContactForm from "../../../components/common/HomeContactForm";
 import { SiteFooter } from "../../../components/layout/SiteFooter";
 import { SiteHeader } from "../../../components/layout/SiteHeader";
 import { createSeoMetadata, seoAlternates } from "../../seo";
@@ -209,42 +209,33 @@ export default function Page() {
           ))}
         </section>
 
-        <section className="rounded-3xl bg-gradient-to-r from-[#0F3A4D] to-[#0C2D3A] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
-          <h2 className="font-serif text-3xl text-white">Хотите сдать квартиру безопасно?</h2>
-          <p className="mt-4 max-w-3xl text-neutral-200/90">
-            Оставьте заявку — мы уточним детали квартиры, оценим ситуацию и предложим понятный план действий.
-          </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a href="#contact" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
-              Оставить заявку
-            </a>
-            <a href="https://wa.me/48453053969" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
-              Написать в WhatsApp
-            </a>
-          </div>
-          <div className="mt-6 space-y-1 text-neutral-200/90">
-            <p>kontakt@serpakowski.pl</p>
-            <p>+48 453 053 969</p>
+        <section id="contact" className="relative scroll-mt-28 overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.18),transparent_60%)]" />
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 className="font-serif text-3xl text-white sm:text-4xl">Оставьте ваши контакты</h2>
+              <p className="mt-3 max-w-md text-neutral-200/90">Мы свяжемся с вами как можно скорее.</p>
+              <p className="mt-4 text-xs leading-relaxed text-neutral-200/70">
+                Отправляя форму, вы подтверждаете, что ознакомились с{" "}
+                <a href="/ru/privacy" className="underline underline-offset-2 hover:text-white">
+                  политикой конфиденциальности
+                </a>
+                .
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+              <HomeContactForm
+                language="ru"
+                sourcePage="/ru/landlord"
+                namePlaceholder="Имя"
+                phonePlaceholder="Телефон"
+                messagePlaceholder="Кратко опишите задачу: сдача квартиры, район, сроки"
+                submitLabel="Отправить"
+              />
+            </div>
           </div>
         </section>
 
-        <LandlordContactSections
-          language="ru"
-          sourcePage="/ru/landlord"
-          messengerTitle="Напишите нам в удобном мессенджере"
-          messengerText="Напишите нам в удобном для вас мессенджере или позвоните по телефону. Мы ответим на ваш запрос как можно быстрее."
-          smallLabel="На связи 24/7"
-          phoneLabel="Позвонить"
-          formTitle="Оставьте ваши контакты"
-          formText="Мы свяжемся с вами как можно скорее."
-          privacyText="Отправляя форму, вы подтверждаете, что ознакомились с"
-          privacyHref="/ru/privacy"
-          privacyLinkLabel="политикой конфиденциальности"
-          namePlaceholder="Имя"
-          phonePlaceholder="Телефон"
-          messagePlaceholder="Кратко опишите задачу: сдача квартиры, район, сроки"
-          submitLabel="Отправить"
-        />
       </main>
       <SiteFooter />
     </div>

@@ -1,5 +1,5 @@
 import { createSeoMetadata, seoAlternates } from "../../seo";
-import { LandlordContactSections } from "../../../components/common/LandlordContactSections";
+import HomeContactForm from "../../../components/common/HomeContactForm";
 import { SiteFooterEn } from "../../../components/layout/SiteFooterEn";
 import { SiteHeaderEnLandlord } from "../../../components/layout/SiteHeaderEnLandlord";
 
@@ -76,25 +76,32 @@ export default function Page() {
         <section><h2 className="font-serif text-3xl text-white">Risks we help reduce</h2><div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{risks.map((risk) => (<article key={risk} className="rounded-2xl bg-white/5 p-5 text-sm text-neutral-100 ring-1 ring-white/10">• {risk}</article>))}</div></section>
         <section className="rounded-3xl bg-[#0A2530] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-8"><h2 className="font-serif text-3xl text-white">A property must be presented properly</h2><p className="mt-4 max-w-4xl text-neutral-200/90">Even a strong property can underperform the market if pricing, photos, listing text, or terms are presented poorly. We help prepare an offer that is clear, attractive, and competitive.</p><ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{marketingBullets.map((item) => (<li key={item} className="rounded-xl bg-white/5 px-4 py-3 text-sm text-neutral-100 ring-1 ring-white/10">• {item}</li>))}</ul></section>
         <section className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 sm:p-8"><h2 className="font-serif text-3xl text-white">A reliable tenant is the foundation of a stable rental</h2><p className="mt-4 max-w-4xl text-neutral-200/90">We help owners not just collect many messages, but choose a candidate whose rental terms are clear in advance.</p><ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{screeningBullets.map((item) => (<li key={item} className="rounded-xl bg-[#0A2530] px-4 py-3 text-sm text-neutral-100 ring-1 ring-white/10">• {item}</li>))}</ul></section>
-        <section className="rounded-3xl bg-gradient-to-r from-[#0F3A4D] to-[#0C2D3A] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10"><h2 className="font-serif text-3xl text-white">Want to rent out your property without chaos?</h2><p className="mt-4 max-w-3xl text-neutral-200/90">Tell us about your property — we will assess the situation and suggest a clear cooperation format.</p><div className="mt-7 flex flex-wrap gap-3"><a href="#contact" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">Submit request</a><a href="https://wa.me/48453053969" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">Message on WhatsApp</a></div><div className="mt-6 space-y-1 text-neutral-200/90"><p>kontakt@serpakowski.pl</p><p>+48 453 053 969</p></div></section>
-
-        <LandlordContactSections
-          language="en"
-          sourcePage="/en/landlord"
-          messengerTitle="Contact us in a convenient messenger"
-          messengerText="Message us in your preferred messenger or call us. We will respond to your request as soon as possible."
-          smallLabel="Available 24/7"
-          phoneLabel="Call"
-          formTitle="Leave your contact details"
-          formText="We will contact you as soon as possible."
-          privacyText="By submitting the form, you confirm that you have read the"
-          privacyHref="/en/privacy"
-          privacyLinkLabel="privacy policy"
-          namePlaceholder="Name"
-          phonePlaceholder="Phone"
-          messagePlaceholder="Briefly describe your request: rent-out, district, timeline"
-          submitLabel="Send"
-        />
+        <section id="contact" className="relative scroll-mt-28 overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.18),transparent_60%)]" />
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 className="font-serif text-3xl text-white sm:text-4xl">Leave your contact details</h2>
+              <p className="mt-3 max-w-md text-neutral-200/90">We will contact you as soon as possible.</p>
+              <p className="mt-4 text-xs leading-relaxed text-neutral-200/70">
+                By submitting the form, you confirm that you have read the{" "}
+                <a href="/en/privacy" className="underline underline-offset-2 hover:text-white">
+                  privacy policy
+                </a>
+                .
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+              <HomeContactForm
+                language="en"
+                sourcePage="/en/landlord"
+                namePlaceholder="Name"
+                phonePlaceholder="Phone"
+                messagePlaceholder="Briefly describe your request: rent-out, district, timeline"
+                submitLabel="Send"
+              />
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooterEn />
     </div>
