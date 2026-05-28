@@ -1,5 +1,6 @@
 import { createSeoMetadata, seoAlternates } from "../../seo";
 import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
+import { LandlordContactSections } from "../../../components/common/LandlordContactSections";
 import { SiteHeaderPlLandlord } from "../../../components/layout/SiteHeaderPlLandlord";
 
 export const metadata = createSeoMetadata({
@@ -355,7 +356,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="contact" className="scroll-mt-28 overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#123F51] via-[#0C2D3A] to-[#061B24] p-6 ring-1 ring-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.36)] sm:p-10">
+        <section className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#123F51] via-[#0C2D3A] to-[#061B24] p-6 ring-1 ring-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.36)] sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Kontakt</p>
@@ -365,7 +366,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <a href="mailto:kontakt@serpakowski.pl" className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+              <a href="#contact" className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
                 Zostaw zgłoszenie
               </a>
               <a href="https://wa.me/48453053969" target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
@@ -378,6 +379,24 @@ export default function Page() {
             <p>+48 453 053 969</p>
           </div>
         </section>
+
+        <LandlordContactSections
+          language="pl"
+          sourcePage="/pl/landlord"
+          messengerTitle="Napisz do nas w wygodnym komunikatorze"
+          messengerText="Napisz do nas w wybranym komunikatorze albo zadzwoń. Odpowiemy tak szybko, jak to możliwe."
+          smallLabel="W kontakcie 24/7"
+          phoneLabel="Zadzwoń"
+          formTitle="Zostaw swoje dane"
+          formText="Skontaktujemy się z Tobą tak szybko, jak to możliwe."
+          privacyText="Wysyłając formularz, potwierdzasz, że zapoznałeś(-aś) się z"
+          privacyHref="/pl/polityka-prywatnosci"
+          privacyLinkLabel="polityką prywatności"
+          namePlaceholder="Imię"
+          phonePlaceholder="Telefon"
+          messagePlaceholder="Krótko opisz sprawę: wynajem, dzielnica, budżet, termin"
+          submitLabel="Wyślij"
+        />
       </main>
       <SiteFooterPl />
     </div>

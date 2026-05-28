@@ -1,3 +1,4 @@
+import { LandlordContactSections } from "../../../components/common/LandlordContactSections";
 import { SiteFooter } from "../../../components/layout/SiteFooter";
 import { SiteHeader } from "../../../components/layout/SiteHeader";
 import { createSeoMetadata, seoAlternates } from "../../seo";
@@ -208,13 +209,13 @@ export default function Page() {
           ))}
         </section>
 
-        <section id="contact" className="scroll-mt-24 rounded-3xl bg-gradient-to-r from-[#0F3A4D] to-[#0C2D3A] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
+        <section className="rounded-3xl bg-gradient-to-r from-[#0F3A4D] to-[#0C2D3A] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
           <h2 className="font-serif text-3xl text-white">Хотите сдать квартиру безопасно?</h2>
           <p className="mt-4 max-w-3xl text-neutral-200/90">
             Оставьте заявку — мы уточним детали квартиры, оценим ситуацию и предложим понятный план действий.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <a href="mailto:kontakt@serpakowski.pl" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+            <a href="#contact" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
               Оставить заявку
             </a>
             <a href="https://wa.me/48453053969" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
@@ -226,6 +227,24 @@ export default function Page() {
             <p>+48 453 053 969</p>
           </div>
         </section>
+
+        <LandlordContactSections
+          language="ru"
+          sourcePage="/ru/landlord"
+          messengerTitle="Напишите нам в удобном мессенджере"
+          messengerText="Напишите нам в удобном для вас мессенджере или позвоните по телефону. Мы ответим на ваш запрос как можно быстрее."
+          smallLabel="На связи 24/7"
+          phoneLabel="Позвонить"
+          formTitle="Оставьте ваши контакты"
+          formText="Мы свяжемся с вами как можно скорее."
+          privacyText="Отправляя форму, вы подтверждаете, что ознакомились с"
+          privacyHref="/ru/privacy"
+          privacyLinkLabel="политикой конфиденциальности"
+          namePlaceholder="Имя"
+          phonePlaceholder="Телефон"
+          messagePlaceholder="Кратко опишите задачу: сдача квартиры, район, сроки"
+          submitLabel="Отправить"
+        />
       </main>
       <SiteFooter />
     </div>

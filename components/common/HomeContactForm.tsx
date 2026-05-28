@@ -7,7 +7,7 @@ type Language = "ru" | "pl" | "en";
 
 type HomeContactFormProps = {
   language: Language;
-  sourcePage: "/" | "/pl" | "/en";
+  sourcePage: "/" | "/pl" | "/en" | "/ru/landlord" | "/pl/landlord" | "/en/landlord";
   namePlaceholder: string;
   phonePlaceholder: string;
   messagePlaceholder: string;
