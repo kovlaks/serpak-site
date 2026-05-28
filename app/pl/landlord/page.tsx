@@ -10,182 +10,226 @@ export const metadata = createSeoMetadata({
   locale: "pl_PL",
 });
 
-const responsibilities = [
-  "Analiza ceny i popytu",
-  "Przygotowanie nieruchomości",
-  "Marketing i ogłoszenia",
-  "Prezentacje i negocjacje",
-  "Weryfikacja najemcy",
-  "Umowa i protokół zdawczo-odbiorczy",
+const processSections = [
+  {
+    title: "Przygotujemy mieszkanie do wynajmu",
+    text: "Przed publikacją ogłoszenia warto zrozumieć, jak mieszkanie wygląda na tle rynku i co można poprawić przed rozpoczęciem promocji oferty.",
+    intro: "Możemy pomóc:",
+    points: [
+      "ocenić rynkową cenę najmu;",
+      "porównać mieszkanie z podobnymi ofertami;",
+      "przygotować rekomendacje przed prezentacjami;",
+      "określić, co może zwiększyć atrakcyjność mieszkania;",
+      "przygotować materiały foto i wideo;",
+      "stworzyć jasny opis oferty;",
+      "przygotować ogłoszenie do publikacji.",
+    ],
+    closing:
+      "Możemy również zaproponować rozwiązania, które pomagają podnieść cenę najmu — zarówno przy pierwszym wynajmie, jak i przy kolejnym okresie najmu, szczególnie jeśli najemca będzie chciał przedłużyć umowę.",
+  },
+  {
+    title: "Znajdziemy i wybierzemy odpowiednich kandydatów",
+    text: "Po publikacji ogłoszenia właściciel często mierzy się z dużą liczbą wiadomości, telefonów i nieodpowiednich zgłoszeń.",
+    intro: "Możemy wziąć to na siebie:",
+    points: [
+      "opublikować ogłoszenie;",
+      "prowadzić komunikację z kandydatami;",
+      "odpowiadać na pytania;",
+      "organizować prezentacje mieszkania;",
+      "zbierać podstawowe informacje o kandydatach;",
+      "odrzucać nieodpowiednie zgłoszenia;",
+      "przedstawiać właścicielowi tylko tych najemców, którzy pasują do warunków mieszkania.",
+    ],
+    closing:
+      "Naszym celem nie jest tylko znalezienie osoby, która chce wynająć mieszkanie, ale pomoc w wyborze najemcy, z którym najem będzie zrozumiały i bezpieczny.",
+  },
+  {
+    title: "Pomożemy sprawdzić najemcę",
+    text: "Pierwsze wrażenie nie wystarczy. Przed podpisaniem umowy warto zrozumieć, kto będzie mieszkał w lokalu i czy kandydat odpowiada warunkom właściciela.",
+    points: [
+      "sprawdzeniu najemcy przez Simple.rent lub inne dostępne narzędzie;",
+      "analizie zdolności płatniczej kandydata;",
+      "weryfikacji dokumentów i podstawowych informacji;",
+      "doprecyzowaniu warunków najmu przed podpisaniem umowy;",
+      "komunikacji z najemcami zagranicznymi, jeśli jest to potrzebne.",
+    ],
+    closing:
+      "Pomaga to ograniczyć ryzyko nieporozumień, opóźnień w płatnościach i problemów po zamieszkaniu.",
+  },
+  {
+    title: "Wesprzemy umowę i przekazanie mieszkania",
+    text: "Kiedy najemca zostanie wybrany, ważne jest prawidłowe ustalenie warunków najmu i udokumentowanie stanu mieszkania.",
+    points: [
+      "przygotowaniu lub uzgodnieniu umowy najmu;",
+      "wsparciu przy najmie okazjonalnym;",
+      "koordynacji notariusza;",
+      "przygotowaniu protokołu przekazania mieszkania;",
+      "udokumentowaniu stanu mieszkania;",
+      "przekazaniu kluczy;",
+      "uzgodnieniu warunków dotyczących kaucji, płatności i opłat eksploatacyjnych.",
+    ],
+    closing:
+      "Dzięki temu właściciel otrzymuje nie tylko najemcę, ale też jasny i starannie przeprowadzony proces wynajmu mieszkania.",
+  },
+  {
+    title: "Podłączymy dodatkowe usługi, jeśli będą potrzebne",
+    text: "W zależności od stanu mieszkania i celów właściciela możemy pomóc zorganizować dodatkowe elementy przygotowania.",
+    points: [
+      "sprzątanie;",
+      "drobne naprawy;",
+      "przygotowanie mieszkania do zdjęć i prezentacji;",
+      "ubezpieczenie najemcy lub mieszkania;",
+      "dodatkowe materiały do ogłoszenia;",
+      "konsultację dotyczącą legalizacji dochodu z najmu.",
+    ],
+    closing:
+      "Te usługi nie zawsze są konieczne, ale w niektórych przypadkach pomagają szybciej wynająć mieszkanie, zwiększyć jego atrakcyjność lub ograniczyć ryzyka.",
+  },
+  {
+    title: "Informujemy właściciela o przebiegu procesu",
+    text: "Dla właściciela ważne jest, aby wiedzieć, co dzieje się z mieszkaniem, nawet jeśli nie uczestniczy w każdej rozmowie.",
+    intro: "Dlatego możemy przekazywać krótkie raporty po kluczowych etapach:",
+    points: [
+      "po przygotowaniu mieszkania;",
+      "po publikacji ogłoszenia;",
+      "po pierwszych zgłoszeniach;",
+      "po prezentacjach;",
+      "po selekcji kandydatów;",
+      "po wyborze najemcy;",
+      "po podpisaniu umowy i przekazaniu mieszkania.",
+    ],
+    closing: "Daje to większą kontrolę i mniej chaosu w procesie wynajmu.",
+  },
 ];
 
-const valueCards = [
+const afterRentSections = [
   {
-    title: "Cena i pozycjonowanie",
-    text: "Ustalamy realistyczną cenę rynkową, analizujemy konkurencję i pomagamy zaprezentować nieruchomość tak, aby przyciągnąć odpowiednich najemców.",
+    title: "Możemy omówić dalszą obsługę najmu",
+    text: "Po podpisaniu umowy właściciel może potrzebować pomocy nie tylko w znalezieniu najemcy, ale również w bieżącej komunikacji.",
+    intro: "W rozszerzonym formacie możemy omówić:",
+    points: [
+      "kontrolę wpływu płatności;",
+      "komunikację z najemcą;",
+      "koordynację drobnych napraw;",
+      "okresowe przeglądy mieszkania;",
+      "raporty dla właściciela;",
+      "pomoc w sprawach bieżących;",
+      "przypomnienia o ważnych terminach wynikających z umowy.",
+    ],
+    closing:
+      "Jest to szczególnie przydatne dla właścicieli, którzy nie chcą samodzielnie zajmować się stałą komunikacją z najemcą.",
   },
   {
-    title: "Jakość najemcy",
-    text: "Pomagamy odfiltrować przypadkowe zapytania, doprecyzowujemy sytuację klienta, terminy, dokumenty i gotowość do najmu.",
-  },
-  {
-    title: "Bezpieczeństwo transakcji",
-    text: "Wspieramy przy umowie, protokole zdawczo-odbiorczym, kaucji, licznikach i kluczowych warunkach najmu.",
-  },
-];
-
-const steps = [
-  {
-    title: "Poznanie nieruchomości",
-    text: "Zbieramy informacje o mieszkaniu, lokalizacji, stanie, opłatach i oczekiwaniach właściciela.",
-  },
-  {
-    title: "Analiza rynku",
-    text: "Porównujemy podobne oferty i określamy strategię ceny.",
-  },
-  {
-    title: "Przygotowanie ogłoszenia",
-    text: "Pomagamy z opisem, zdjęciami, atutami nieruchomości i właściwą prezentacją.",
-  },
-  {
-    title: "Promocja i prezentacje",
-    text: "Publikujemy ofertę, obsługujemy zapytania, organizujemy prezentacje i komunikację.",
-  },
-  {
-    title: "Weryfikacja kandydata",
-    text: "Weryfikujemy dokumenty, źródło dochodu, skład osób zamieszkujących, czas najmu i ważne warunki.",
-  },
-  {
-    title: "Umowa i przekazanie mieszkania",
-    text: "Pomagamy przejść podpisanie, płatność, kaucję, protokół, liczniki i przekazanie kluczy.",
+    title: "Pomożemy wcześniej przygotować się do zakończenia umowy",
+    text: "Dobry najem nie kończy się ostatniego dnia umowy. Lepiej wcześniej wiedzieć, czy będzie przedłużenie, czy trzeba zmienić cenę i kiedy rozpocząć poszukiwanie kolejnego najemcy.",
+    points: [
+      "analizie sytuacji przed zakończeniem umowy;",
+      "negocjacjach dotyczących przedłużenia;",
+      "ponownym zawarciu umowy;",
+      "przeglądzie ceny najmu;",
+      "przygotowaniu mieszkania do kolejnego okresu;",
+      "wcześniejszym poszukiwaniu nowego najemcy, jeśli obecny najemca nie przedłuża umowy.",
+    ],
+    closing:
+      "Celem jest ograniczenie ryzyka przestoju mieszkania i wcześniejsze przygotowanie kolejnego kroku.",
   },
 ];
 
-const risks = [
-  "Zaniżona lub zawyżona cena",
-  "Długi przestój mieszkania",
-  "Słabi lub przypadkowi kandydaci",
-  "Niejasne warunki umowy",
-  "Spory o kaucję i uszkodzenia",
-  "Nieprawidłowo przygotowane przekazanie mieszkania",
-  "Utrata czasu na prezentacje i korespondencję",
-  "Nieprzejrzyste opłaty i oczekiwania",
-];
-
-const marketingBullets = [
-  "opis bez zbędnego szumu",
-  "akcent na mocnych stronach nieruchomości",
-  "jasne warunki dla najemcy",
-  "prawidłowa komunikacja",
-  "szybka odpowiedź na zapytania",
-];
-
-const screeningBullets = [
-  "kto będzie mieszkać",
-  "okres najmu",
-  "źródło dochodu",
-  "dokumenty",
-  "oczekiwania dotyczące umowy",
-  "gotowość do kaucji i opłat",
-];
+function ServiceCard({
+  title,
+  text,
+  intro,
+  points,
+  closing,
+  index,
+}: {
+  title: string;
+  text: string;
+  intro?: string;
+  points: string[];
+  closing: string;
+  index?: number;
+}) {
+  return (
+    <article className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:p-8">
+      {typeof index === "number" && (
+        <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-300/20 text-sm font-semibold text-amber-100 ring-1 ring-amber-200/30">
+          {index + 1}
+        </div>
+      )}
+      <h2 className="font-serif text-3xl text-white">{title}</h2>
+      <p className="mt-4 max-w-4xl text-neutral-200/90">{text}</p>
+      {intro && <p className="mt-5 font-semibold text-amber-100">{intro}</p>}
+      <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+        {points.map((point) => (
+          <li key={point} className="rounded-xl bg-[#0A2530] px-4 py-3 text-sm leading-relaxed text-neutral-100 ring-1 ring-white/10">
+            • {point}
+          </li>
+        ))}
+      </ul>
+      <p className="mt-6 max-w-4xl text-neutral-200/90">{closing}</p>
+    </article>
+  );
+}
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-[#0C2D3A] text-neutral-100">
       <SiteHeaderPlLandlord />
-      <main className="mx-auto max-w-6xl space-y-20 px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-6xl space-y-16 px-4 pb-20 pt-28 sm:px-6 lg:px-8">
         <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0C2D3A] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/10 sm:p-12">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,193,7,0.12),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_35%)]" />
-          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-6">
-              <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Wsparcie dla właścicieli w Warszawie</p>
-              <h1 className="font-serif text-4xl leading-tight text-white sm:text-5xl">
-                Wynająć mieszkanie <br />
-                spokojnie i <span className="text-amber-300">korzystnie</span>
-              </h1>
-              <p className="max-w-2xl text-lg text-neutral-200/90">
-                Wspieramy właścicieli w przygotowaniu nieruchomości, wyborze odpowiedniego najemcy i przejściu przez cały proces najmu bez chaosu i zbędnego ryzyka.
-              </p>
-              <div className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-amber-200 ring-1 ring-amber-200/30">
-                Profesjonalne wsparcie właściciela na każdym etapie najmu.
-              </div>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a href="#contact" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">Omówić wynajem mieszkania</a>
-                <a href="#contact" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">Uzyskaj konsultację</a>
-              </div>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-              <h2 className="text-2xl font-semibold text-white">Co bierzemy na siebie</h2>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {responsibilities.map((item) => (
-                  <div key={item} className="rounded-xl bg-white/5 px-4 py-3 text-sm text-neutral-100 ring-1 ring-white/10">• {item}</div>
-                ))}
-              </div>
+          <div className="max-w-4xl space-y-6">
+            <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Wsparcie dla właścicieli w Warszawie</p>
+            <h1 className="font-serif text-4xl leading-tight text-white sm:text-5xl">
+              Wynajmij mieszkanie bezpiecznie i bez zbędnego chaosu
+            </h1>
+            <p className="text-lg text-neutral-200/90">
+              SERPAKOWSKI Nieruchomości pomaga właścicielom w Warszawie przejść przez cały proces wynajmu: od wyceny mieszkania i przygotowania oferty po wybór najemcy, umowę i przekazanie kluczy.
+            </p>
+            <p className="text-base leading-relaxed text-neutral-200/85">
+              Bierzemy na siebie nie tylko publikację ogłoszenia, ale również organizację całego procesu — tak, aby właściciel nie tracił czasu na przypadkowe zgłoszenia, powtarzające się pytania i ryzykowne decyzje.
+            </p>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a href="#contact" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+                Zostaw zgłoszenie
+              </a>
+              <a href="#process" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
+                Zobacz etapy pracy
+              </a>
             </div>
           </div>
         </section>
 
-        <section className="rounded-3xl bg-[#0A2530] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-8">
-          <h2 className="font-serif text-3xl text-white">Najważniejsze: wynająć nie tylko szybko, ale właściwie</h2>
-          <p className="mt-4 max-w-4xl text-neutral-200/90">Prawidłowy wynajem mieszkania zaczyna się nie od publikacji ogłoszenia, ale od oceny nieruchomości, zrozumienia rynku, przygotowania warunków, selekcji kandydatów i bezpiecznego przygotowania umowy.</p>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {valueCards.map((card) => (
-              <article key={card.title} className="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
-                <h3 className="text-lg font-semibold text-white">{card.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-neutral-200/85">{card.text}</p>
-              </article>
-            ))}
-          </div>
+        <section id="process" className="space-y-6 scroll-mt-28">
+          {processSections.map((section, index) => (
+            <ServiceCard key={section.title} {...section} index={index} />
+          ))}
         </section>
 
-        <section>
-          <h2 className="font-serif text-3xl text-white">Jak przebiega współpraca</h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {steps.map((step, index) => (
-              <article key={step.title} className="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
-                <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-300/20 text-sm font-semibold text-amber-100 ring-1 ring-amber-200/30">{index + 1}</div>
-                <h3 className="text-lg font-semibold text-white">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-200/85">{step.text}</p>
-              </article>
-            ))}
-          </div>
+        <section className="rounded-3xl bg-[#0A2530] p-8 text-center ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
+          <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Dalsze wsparcie</p>
+          <h2 className="mt-3 font-serif text-4xl text-white">Po wynajęciu mieszkania</h2>
         </section>
 
-        <section>
-          <h2 className="font-serif text-3xl text-white">Jakie ryzyka pomagamy ograniczyć</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {risks.map((risk) => (
-              <article key={risk} className="rounded-2xl bg-white/5 p-5 text-sm text-neutral-100 ring-1 ring-white/10">• {risk}</article>
-            ))}
-          </div>
+        <section className="space-y-6">
+          {afterRentSections.map((section) => (
+            <ServiceCard key={section.title} {...section} />
+          ))}
         </section>
 
-        <section className="rounded-3xl bg-[#0A2530] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-8">
-          <h2 className="font-serif text-3xl text-white">Mieszkanie trzeba zaprezentować właściwie</h2>
-          <p className="mt-4 max-w-4xl text-neutral-200/90">Nawet dobra nieruchomość może zostać wynajęta poniżej potencjału rynku, jeśli cena, zdjęcia, opis lub warunki będą źle przedstawione. Pomagamy przygotować ofertę, która jest czytelna, atrakcyjna i konkurencyjna.</p>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {marketingBullets.map((item) => (
-              <li key={item} className="rounded-xl bg-white/5 px-4 py-3 text-sm text-neutral-100 ring-1 ring-white/10">• {item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 sm:p-8">
-          <h2 className="font-serif text-3xl text-white">Rzetelny najemca to podstawa spokojnego najmu</h2>
-          <p className="mt-4 max-w-4xl text-neutral-200/90">Pomagamy właścicielowi nie tylko zebrać wiele wiadomości, ale wybrać kandydata, z którym warunki najmu będą jasno ustalone z wyprzedzeniem.</p>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {screeningBullets.map((item) => (
-              <li key={item} className="rounded-xl bg-[#0A2530] px-4 py-3 text-sm text-neutral-100 ring-1 ring-white/10">• {item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section id="contact" className="rounded-3xl bg-gradient-to-r from-[#0F3A4D] to-[#0C2D3A] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
-          <h2 className="font-serif text-3xl text-white">Chcesz wynająć mieszkanie bez chaosu?</h2>
-          <p className="mt-4 max-w-3xl text-neutral-200/90">Opowiedz nam o nieruchomości — ocenimy sytuację i zaproponujemy przejrzysty format współpracy.</p>
+        <section id="contact" className="scroll-mt-28 rounded-3xl bg-gradient-to-r from-[#0F3A4D] to-[#0C2D3A] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
+          <h2 className="font-serif text-3xl text-white">Chcesz bezpiecznie wynająć mieszkanie?</h2>
+          <p className="mt-4 max-w-3xl text-neutral-200/90">
+            Zostaw zgłoszenie — doprecyzujemy szczegóły mieszkania, ocenimy sytuację i zaproponujemy jasny plan działania.
+          </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <a href="mailto:kontakt@serpakowski.pl" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">Zostaw zgłoszenie</a>
-            <a href="https://wa.me/48453053969" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">Napisz na WhatsApp</a>
+            <a href="mailto:kontakt@serpakowski.pl" className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+              Zostaw zgłoszenie
+            </a>
+            <a href="https://wa.me/48453053969" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
+              Napisz na WhatsApp
+            </a>
           </div>
           <div className="mt-6 space-y-1 text-neutral-200/90">
             <p>kontakt@serpakowski.pl</p>
