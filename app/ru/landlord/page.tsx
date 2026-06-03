@@ -1,4 +1,5 @@
 import HomeContactForm from "../../../components/common/HomeContactForm";
+import { FaqAccordion } from "./FaqAccordion";
 import { SiteFooter } from "../../../components/layout/SiteFooter";
 import { SiteHeader } from "../../../components/layout/SiteHeader";
 import { createSeoMetadata, seoAlternates } from "../../seo";
@@ -329,19 +330,6 @@ function SectionCard({ section, index }: { section: ContentSection; index: numbe
   );
 }
 
-function FaqCard({ item }: { item: FaqItem }) {
-  return (
-    <article className="rounded-2xl bg-[#123746] p-6 ring-1 ring-white/10">
-      <h3 className="font-serif text-xl text-white">{item.question}</h3>
-      <div className="mt-4 space-y-3 text-sm leading-relaxed text-neutral-200/90">
-        {item.answer.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </article>
-  );
-}
-
 export default function Page() {
   return (
     <div className="min-h-screen bg-[#0C2D3A] text-neutral-100">
@@ -408,11 +396,7 @@ export default function Page() {
             <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">FAQ</p>
             <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Частые вопросы</h2>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {faqItems.map((item) => (
-              <FaqCard key={item.question} item={item} />
-            ))}
-          </div>
+          <FaqAccordion items={faqItems} />
         </section>
 
         <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
