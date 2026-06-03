@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
-import { createSeoMetadata, seoAlternates } from "../../seo";
-import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import HomeContactForm from "../../../components/common/HomeContactForm";
+import { SiteFooterPl } from "../../../components/layout/SiteFooterPl";
 import { SiteHeaderPlLandlord } from "../../../components/layout/SiteHeaderPlLandlord";
+import { createSeoMetadata, seoAlternates } from "../../seo";
+import { FaqAccordion } from "./FaqAccordion";
 
 export const metadata = createSeoMetadata({
   title: "Wynajem mieszkania właścicielom | SERPAKOWSKI Nieruchomości Warszawa",
@@ -12,94 +12,205 @@ export const metadata = createSeoMetadata({
   locale: "pl_PL",
 });
 
-const scopePoints = [
-  "oceniamy rynkową cenę najmu;",
-  "porównujemy mieszkanie z podobnymi ofertami;",
-  "przygotowujemy rekomendacje przed publikacją;",
-  "pomagamy zwiększyć atrakcyjność mieszkania;",
-  "przygotowujemy zdjęcia, wideo i opis;",
-  "publikujemy ogłoszenie;",
-  "prowadzimy komunikację z kandydatami;",
-  "organizujemy prezentacje;",
-  "zbieramy podstawowe informacje o najemcach;",
-  "pomagamy sprawdzić kandydata;",
-  "uzgadniamy umowę, kaucję i opłaty eksploatacyjne;",
-  "przygotowujemy przekazanie mieszkania i protokół.",
+type ContentSection = {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  paragraphs?: string[];
+  points?: string[];
+  closing?: string;
+  cta?: string;
+  ctaHref?: string;
+};
+
+type FaqItem = {
+  question: string;
+  answer: string[];
+};
+
+const serviceSections: ContentSection[] = [
+  {
+    eyebrow: "Proces bez chaosu",
+    title: "Wynajem mieszkania to nie tylko publikacja ogłoszenia",
+    paragraphs: [
+      "Na pierwszy rzut oka wynajem wygląda prosto: zrobić zdjęcia, wystawić ogłoszenie i wybrać najemcę. W praktyce właściciel często mierzy się z chaosem: dziesiątkami wiadomości, przekładaniem prezentacji, nieodpowiednimi kandydatami, negocjacjami, pytaniami o dokumenty i ryzykiem podjęcia decyzji zbyt szybko.",
+      "Naszym zadaniem jest przeprowadzić proces spokojnie i etapami: od oceny mieszkania po podpisanie umowy i przekazanie kluczy.",
+    ],
+  },
+  {
+    eyebrow: "Organizacja wynajmu",
+    title: "Co bierzemy na siebie",
+    intro: "Organizujemy cały proces wynajmu mieszkania.",
+    points: [
+      "oceniamy rynkową cenę najmu;",
+      "porównujemy mieszkanie z podobnymi ofertami;",
+      "przygotowujemy rekomendacje przed publikacją;",
+      "pomagamy zwiększyć atrakcyjność mieszkania;",
+      "przygotowujemy zdjęcia, wideo i opis;",
+      "publikujemy ogłoszenie;",
+      "prowadzimy komunikację z kandydatami;",
+      "organizujemy prezentacje;",
+      "zbieramy podstawowe informacje o najemcach;",
+      "pomagamy sprawdzić kandydata;",
+      "uzgadniamy umowę, kaucję i opłaty eksploatacyjne;",
+      "przygotowujemy przekazanie mieszkania i protokół.",
+    ],
+    closing: "Właściciel zachowuje kontrolę i podejmuje ostateczną decyzję, ale nie zajmuje się wszystkimi szczegółami ręcznie.",
+    cta: "Otrzymaj plan wynajmu mieszkania",
+    ctaHref: "#contact",
+  },
+  {
+    eyebrow: "Cena najmu",
+    title: "Ocenimy mieszkanie i pomożemy nie wynająć poniżej rynku",
+    paragraphs: [
+      "Przed publikacją warto zrozumieć, jak mieszkanie wygląda na tle innych ofert w Warszawie: jaka cena jest realistyczna, co może utrudniać wynajem i jakie ulepszenia mogą zwiększyć zainteresowanie najemców.",
+      "Możemy również zaproponować rozwiązania, które pomagają podnieść cenę najmu — zarówno przy pierwszym wynajmie, jak i przy kolejnym okresie najmu, szczególnie jeśli najemca będzie chciał przedłużyć umowę. Możliwość takiej zmiany zależy od mieszkania, konkurencji i aktualnej sytuacji na rynku.",
+    ],
+    points: [
+      "określić rynkową cenę najmu;",
+      "porównać mieszkanie z podobnymi lokalami;",
+      "zrozumieć mocne i słabsze strony mieszkania;",
+      "przygotować rekomendacje przed prezentacjami;",
+      "określić, co może zwiększyć cenę lub atrakcyjność oferty.",
+    ],
+    cta: "Oceń mieszkanie",
+    ctaHref: "#contact",
+  },
+  {
+    eyebrow: "Publikacja",
+    title: "Przygotujemy mieszkanie i ogłoszenie do publikacji",
+    intro: "Dobre ogłoszenie powinno nie tylko pokazać mieszkanie, ale również właściwie wyjaśnić jego wartość dla najemcy.",
+    points: [
+      "materiały zdjęciowe i wideo;",
+      "jasny opis mieszkania;",
+      "akcenty na zaletach lokalu;",
+      "rekomendacje dotyczące przygotowania mieszkania do prezentacji;",
+      "ogłoszenie do publikacji.",
+    ],
+    closing: "Jeśli będzie to potrzebne, możemy dodatkowo zorganizować sprzątanie, drobne naprawy lub przygotowanie mieszkania do zdjęć i prezentacji.",
+  },
+  {
+    eyebrow: "Kandydaci",
+    title: "Znajdziemy i wybierzemy odpowiednich kandydatów",
+    paragraphs: [
+      "Po publikacji ogłoszenia właściciel często otrzymuje wiele wiadomości, ale nie każde zgłoszenie pasuje do warunków mieszkania.",
+      "Naszym celem nie jest tylko znalezienie osoby, która chce wynająć mieszkanie, ale pomoc w wyborze najemcy, z którym najem będzie zrozumiały i bezpieczny.",
+    ],
+    intro: "Bierzemy na siebie pierwszą komunikację:",
+    points: [
+      "odpowiadamy na pytania kandydatów;",
+      "organizujemy prezentacje;",
+      "doprecyzowujemy podstawowe informacje;",
+      "odrzucamy nieodpowiednie zgłoszenia;",
+      "przedstawiamy właścicielowi kandydatów, którzy odpowiadają warunkom mieszkania.",
+    ],
+  },
+  {
+    eyebrow: "Weryfikacja najemcy",
+    title: "Pomożemy sprawdzić najemcę przed umową",
+    paragraphs: [
+      "Pierwsze wrażenie nie wystarczy. Przed podpisaniem umowy warto zrozumieć, kto będzie mieszkał w lokalu, czy kandydat odpowiada warunkom właściciela i czy jest gotowy do realizacji zobowiązań finansowych.",
+      "Takie podejście zmniejsza ryzyko nieporozumień, opóźnień w płatnościach i problemów po zamieszkaniu.",
+    ],
+    intro: "Pomagamy:",
+    points: [
+      "zebrać podstawowe informacje o kandydacie;",
+      "sprawdzić dokumenty i podstawowe dane;",
+      "przeanalizować zdolność płatniczą;",
+      "skorzystać z Simple.rent lub innego narzędzia dostępnego w konkretnej sytuacji;",
+      "doprecyzować warunki najmu przed podpisaniem umowy;",
+      "przeprowadzić komunikację z najemcami zagranicznymi, jeśli jest to potrzebne.",
+    ],
+    cta: "Porozmawiajmy o bezpiecznym wynajmie",
+    ctaHref: "#contact",
+  },
+  {
+    eyebrow: "Umowa i przekazanie",
+    title: "Wesprzemy umowę, najem okazjonalny i przekazanie mieszkania",
+    paragraphs: [
+      "Kiedy najemca zostanie wybrany, ważne jest prawidłowe ustalenie warunków najmu i udokumentowanie stanu mieszkania.",
+      "Właściciel otrzymuje nie tylko najemcę, ale też starannie przeprowadzony proces wynajmu mieszkania z jasnymi warunkami i udokumentowanymi ustaleniami.",
+    ],
+    intro: "Pomagamy przy:",
+    points: [
+      "przygotowaniu lub uzgodnieniu umowy najmu;",
+      "warunkach dotyczących kaucji, płatności i opłat eksploatacyjnych;",
+      "organizacji najmu okazjonalnego, jeśli taki format pasuje do sytuacji;",
+      "koordynacji notariusza;",
+      "przygotowaniu protokołu przekazania mieszkania;",
+      "udokumentowaniu stanu mieszkania;",
+      "przekazaniu kluczy.",
+    ],
+  },
+  {
+    eyebrow: "Kontrola procesu",
+    title: "Zachowujesz kontrolę na każdym etapie",
+    paragraphs: [
+      "Nawet jeśli właściciel nie uczestniczy w każdej rozmowie, ważne jest, aby wiedział, co dzieje się z mieszkaniem.",
+      "Widzisz, jak przebiega proces, jacy kandydaci się pojawiają, jakie pytania powstają i dlaczego rekomendujemy konkretny kolejny krok.",
+    ],
+    intro: "Możemy przekazywać krótkie informacje po kluczowych etapach:",
+    points: [
+      "po przygotowaniu mieszkania;",
+      "po publikacji ogłoszenia;",
+      "po pierwszych zgłoszeniach;",
+      "po prezentacjach;",
+      "po selekcji kandydatów;",
+      "po wyborze najemcy;",
+      "po podpisaniu umowy i przekazaniu mieszkania.",
+    ],
+  },
 ];
 
-const valuationPoints = [
-  "określić rynkową cenę najmu;",
-  "porównać mieszkanie z podobnymi lokalami;",
-  "zrozumieć mocne i słabsze strony mieszkania;",
-  "przygotować rekomendacje przed prezentacjami;",
-  "określić, co może zwiększyć cenę lub atrakcyjność oferty.",
+const afterRentalSections: ContentSection[] = [
+  {
+    eyebrow: "Po wynajęciu mieszkania",
+    title: "Można podłączyć dalszą obsługę najmu",
+    paragraphs: [
+      "Po podpisaniu umowy właściciel może potrzebować pomocy nie tylko w znalezieniu najemcy, ale również w bieżącej komunikacji.",
+      "Jest to szczególnie przydatne dla właścicieli, którzy nie chcą samodzielnie zajmować się stałą komunikacją z najemcą. Taki format omawiamy osobno jako rozszerzoną obsługę i nie jest on automatycznie wliczony w podstawową usługę.",
+    ],
+    intro: "W rozszerzonym formacie można omówić:",
+    points: [
+      "kontrolę wpływu płatności;",
+      "komunikację z najemcą;",
+      "koordynację drobnych napraw;",
+      "okresowe przeglądy mieszkania;",
+      "raporty dla właściciela;",
+      "pomoc w sprawach bieżących;",
+      "przypomnienia o ważnych terminach wynikających z umowy.",
+    ],
+    cta: "Zapytaj o obsługę najmu",
+    ctaHref: "#contact",
+  },
+  {
+    eyebrow: "Przedłużenie lub nowy najemca",
+    title: "Przygotujemy kolejny krok przed zakończeniem umowy",
+    paragraphs: [
+      "Dobry najem nie powinien kończyć się nagle w ostatnim dniu umowy. Lepiej wcześniej wiedzieć, czy będzie przedłużenie, czy trzeba zmienić cenę i kiedy zacząć szukać kolejnego najemcy.",
+      "Celem jest ograniczenie ryzyka przestoju mieszkania i wcześniejsze przygotowanie kolejnego kroku.",
+    ],
+    intro: "Możemy pomóc przy:",
+    points: [
+      "analizie sytuacji przed zakończeniem umowy;",
+      "negocjacjach dotyczących przedłużenia;",
+      "ponownym zawarciu umowy;",
+      "przeglądzie ceny najmu;",
+      "przygotowaniu mieszkania do kolejnego okresu;",
+      "wcześniejszym poszukiwaniu nowego najemcy, jeśli obecny najemca nie przedłuża umowy.",
+    ],
+  },
 ];
 
-const publicationPoints = [
-  "materiały zdjęciowe i wideo;",
-  "jasny opis mieszkania;",
-  "akcenty na zaletach lokalu;",
-  "rekomendacje dotyczące przygotowania mieszkania do prezentacji;",
-  "ogłoszenie do publikacji.",
+const pricingParagraphs = [
+  "Koszt usługi wynosi 100% miesięcznego czynszu najmu.",
+  "Rekomendowany przez nas model to płatność za usługę po stronie właściciela. W takim przypadku mieszkanie może być oferowane najemcom bez osobnej prowizji agencyjnej, co sprawia, że warunki są bardziej zrozumiałe i atrakcyjne na rynku.",
+  "Możliwe są również inne warianty: podział prowizji 50/50 między właściciela i najemcę albo płatność po stronie najemcy. Omawiamy to indywidualnie i z wyprzedzeniem wyjaśniamy, jak wybrany model może wpłynąć na zainteresowanie mieszkaniem.",
+  "Aby prowizja nie była dla właściciela bezpośrednią stratą, możemy pomóc uwzględnić koszt usługi w stawce najmu. Jeśli mieszkanie i rynek na to pozwalają, niewielkie podwyższenie ceny o około 8–8,5% może zwrócić koszt usługi w ciągu 12 miesięcy.",
+  "Jeśli najemca przedłuży umowę, a cena zostanie utrzymana, dla najemcy nic się nie zmienia: nadal płaci ten sam czynsz. Dla właściciela może to oznaczać dodatkowy dochód po pierwszym roku najmu.",
 ];
 
-const candidatePoints = [
-  "odpowiadamy na pytania kandydatów;",
-  "organizujemy prezentacje;",
-  "doprecyzowujemy podstawowe informacje;",
-  "odrzucamy nieodpowiednie zgłoszenia;",
-  "przedstawiamy właścicielowi kandydatów, którzy odpowiadają warunkom mieszkania.",
-];
-
-const verificationPoints = [
-  "zebrać podstawowe informacje o kandydacie;",
-  "sprawdzić dokumenty i podstawowe dane;",
-  "przeanalizować zdolność płatniczą;",
-  "skorzystać z Simple.rent lub innego narzędzia dostępnego w konkretnej sytuacji;",
-  "doprecyzować warunki najmu przed podpisaniem umowy;",
-  "przeprowadzić komunikację z najemcami zagranicznymi, jeśli jest to potrzebne.",
-];
-
-const contractPoints = [
-  "przygotowaniu lub uzgodnieniu umowy najmu;",
-  "warunkach dotyczących kaucji, płatności i opłat eksploatacyjnych;",
-  "organizacji najmu okazjonalnego, jeśli taki format pasuje do sytuacji;",
-  "koordynacji notariusza;",
-  "przygotowaniu protokołu przekazania mieszkania;",
-  "udokumentowaniu stanu mieszkania;",
-  "przekazaniu kluczy.",
-];
-
-const reportPoints = [
-  "po przygotowaniu mieszkania;",
-  "po publikacji ogłoszenia;",
-  "po pierwszych zgłoszeniach;",
-  "po prezentacjach;",
-  "po selekcji kandydatów;",
-  "po wyborze najemcy;",
-  "po podpisaniu umowy i przekazaniu mieszkania.",
-];
-
-const managementPoints = [
-  "kontrolę wpływu płatności;",
-  "komunikację z najemcą;",
-  "koordynację drobnych napraw;",
-  "okresowe przeglądy mieszkania;",
-  "raporty dla właściciela;",
-  "pomoc w sprawach bieżących;",
-  "przypomnienia o ważnych terminach wynikających z umowy.",
-];
-
-const nextStepPoints = [
-  "analizie sytuacji przed zakończeniem umowy;",
-  "negocjacjach dotyczących przedłużenia;",
-  "ponownym zawarciu umowy;",
-  "przeglądzie ceny najmu;",
-  "przygotowaniu mieszkania do kolejnego okresu;",
-  "wcześniejszym poszukiwaniu nowego najemcy, jeśli obecny najemca nie przedłuża umowy.",
-];
-
-const faqItems = [
+const faqItems: FaqItem[] = [
   {
     question: "Po co mi agencja, jeśli mogę wynająć mieszkanie samodzielnie?",
     answer: [
@@ -179,285 +290,125 @@ const faqItems = [
   },
 ];
 
-function PrimaryButton({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a href={href} className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
-      {children}
-    </a>
-  );
-}
+const primaryCtaClass = "inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-[#0C2D3A] shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]";
+const secondaryCtaClass = "inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10";
 
-function SecondaryButton({ href, children }: { href: string; children: ReactNode }) {
+function SectionCard({ section, index }: { section: ContentSection; index: number }) {
   return (
-    <a href={href} className="inline-flex min-h-12 items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
-      {children}
-    </a>
-  );
-}
-
-function BulletList({ items, columns = true }: { items: string[]; columns?: boolean }) {
-  return (
-    <ul className={columns ? "mt-5 grid gap-3 sm:grid-cols-2" : "mt-5 space-y-3"}>
-      {items.map((item) => (
-        <li key={item} className="flex gap-3 rounded-2xl bg-[#0A2530]/90 px-4 py-3 text-sm leading-relaxed text-neutral-100 ring-1 ring-white/10">
-          <span className="mt-1 text-amber-300">•</span>
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function ContentSection({
-  eyebrow,
-  title,
-  children,
-  id,
-  accent = false,
-}: {
-  eyebrow?: string;
-  title: string;
-  children: ReactNode;
-  id?: string;
-  accent?: boolean;
-}) {
-  return (
-    <section id={id} className={`scroll-mt-28 rounded-[2rem] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:p-8 lg:p-10 ${accent ? "relative overflow-hidden bg-[#071F2A]" : "bg-white/[0.045]"}`}>
-      {accent && <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(251,191,36,0.13),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.07),transparent_45%)]" />}
-      <div className="relative">
-        {eyebrow && <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">{eyebrow}</p>}
-        <h2 className="mt-3 font-serif text-3xl leading-tight text-white sm:text-4xl">{title}</h2>
-        <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-200/90 sm:text-base">{children}</div>
+    <article className="rounded-3xl bg-[#123746] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:p-8">
+      <div className="mb-5 flex items-center gap-3">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-300/20 text-sm font-semibold text-amber-100 ring-1 ring-amber-200/30">
+          {index + 1}
+        </div>
+        {section.eyebrow ? <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">{section.eyebrow}</p> : null}
       </div>
-    </section>
+      <h2 className="font-serif text-3xl text-white">{section.title}</h2>
+      {section.paragraphs?.map((paragraph) => (
+        <p key={paragraph} className="mt-4 leading-relaxed text-neutral-200/90">
+          {paragraph}
+        </p>
+      ))}
+      {section.intro ? <p className="mt-5 font-semibold text-amber-100">{section.intro}</p> : null}
+      {section.points ? (
+        <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+          {section.points.map((point) => (
+            <li key={point} className="rounded-xl bg-[#0A2530] px-4 py-3 text-sm leading-relaxed text-neutral-100 ring-1 ring-white/10">
+              • {point}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {section.closing ? <p className="mt-5 leading-relaxed text-neutral-200/90">{section.closing}</p> : null}
+      {section.cta && section.ctaHref ? (
+        <div className="mt-6">
+          <a href={section.ctaHref} className={secondaryCtaClass}>
+            {section.cta}
+          </a>
+        </div>
+      ) : null}
+    </article>
   );
 }
 
 export default function Page() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#0C2D3A] text-neutral-100">
+    <div className="min-h-screen bg-[#0C2D3A] text-neutral-100">
       <SiteHeaderPlLandlord />
-      <main className="mx-auto max-w-6xl space-y-16 px-4 pb-20 pt-28 sm:px-6 lg:px-8">
-        <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#123F51] via-[#0C2D3A] to-[#061B24] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.38)] ring-1 ring-white/10 sm:p-10 lg:p-12">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(251,191,36,0.17),transparent_30%),radial-gradient(circle_at_85%_15%,rgba(255,255,255,0.09),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_42%)]" />
-          <div className="relative grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
-            <div className="max-w-4xl space-y-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-amber-200/80">Wsparcie dla właścicieli w Warszawie</p>
-              <h1 className="font-serif text-4xl leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-                Wynajmij mieszkanie w Warszawie <span className="text-amber-300">bezpiecznie</span>, korzystnie i bez zbędnego chaosu
-              </h1>
-              <div className="max-w-3xl space-y-4 text-neutral-200/90">
-                <p className="text-lg leading-relaxed">
-                  SERPAKOWSKI Nieruchomości pomaga właścicielom wynająć mieszkanie: ocenić cenę, przygotować ofertę, znaleźć i sprawdzić najemcę, uzgodnić umowę i spokojnie przekazać lokal.
-                </p>
-                <p className="text-base leading-relaxed text-neutral-200/85">
-                  Bierzemy na siebie organizację procesu, aby właściciel nie tracił czasu na przypadkowe zgłoszenia, powtarzające się pytania, prezentacje, dokumenty i ryzykowne decyzje.
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
-                <PrimaryButton href="#wycena">Dowiedz się, za ile można wynająć mieszkanie</PrimaryButton>
-                <SecondaryButton href="#contact">Porozmawiajmy o wynajmie mieszkania</SecondaryButton>
-              </div>
-            </div>
-
-            <div className="relative rounded-3xl bg-white/[0.055] p-5 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.28)] sm:p-6">
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-amber-300/10 blur-2xl" />
-              <p className="text-xs uppercase tracking-[0.18em] text-amber-200/75">Proces pod kontrolą</p>
-              <div className="mt-6 space-y-4">
-                {["Ocena ceny", "Oferta", "Selekcja", "Umowa", "Przekazanie"].map((item, index) => (
-                  <div key={item} className="flex items-center gap-4 rounded-2xl bg-[#0A2530]/85 px-4 py-4 ring-1 ring-white/10">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-amber-300/15 text-xs font-semibold text-amber-100 ring-1 ring-amber-200/25">
-                      {index + 1}
-                    </span>
-                    <span className="font-semibold text-white">{item}</span>
-                  </div>
-                ))}
-              </div>
+      <main className="mx-auto max-w-6xl space-y-20 px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0C2D3A] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/10 sm:p-12">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,193,7,0.12),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_35%)]" />
+          <div className="max-w-4xl space-y-6">
+            <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Obsługa właścicieli w Warszawie</p>
+            <h1 className="font-serif text-4xl leading-tight text-white sm:text-5xl">
+              Wynajmij mieszkanie w Warszawie bezpiecznie, korzystnie i bez zbędnego chaosu
+            </h1>
+            <p className="max-w-3xl text-lg leading-relaxed text-neutral-200/90">
+              SERPAKOWSKI Nieruchomości pomaga właścicielom wynająć mieszkanie: ocenić cenę, przygotować ofertę, znaleźć i sprawdzić najemcę, uzgodnić umowę i spokojnie przekazać lokal.
+            </p>
+            <p className="max-w-3xl leading-relaxed text-neutral-200/85">
+              Bierzemy na siebie organizację procesu, aby właściciel nie tracił czasu na przypadkowe zgłoszenia, powtarzające się pytania, prezentacje, dokumenty i ryzykowne decyzje.
+            </p>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a href="#contact" className={primaryCtaClass}>
+                Dowiedz się, za ile można wynająć mieszkanie
+              </a>
+              <a href="#contact" className={secondaryCtaClass}>
+                Porozmawiajmy o wynajmie mieszkania
+              </a>
             </div>
           </div>
         </section>
 
-        <ContentSection eyebrow="Dlaczego proces ma znaczenie" title="Wynajem mieszkania to nie tylko publikacja ogłoszenia">
-          <p>
-            Na pierwszy rzut oka wynajem wygląda prosto: zrobić zdjęcia, wystawić ogłoszenie i wybrać najemcę. W praktyce właściciel często mierzy się z chaosem: dziesiątkami wiadomości, przekładaniem prezentacji, nieodpowiednimi kandydatami, negocjacjami, pytaniami o dokumenty i ryzykiem podjęcia decyzji zbyt szybko.
-          </p>
-          <p>
-            Naszym zadaniem jest przeprowadzić proces spokojnie i etapami: od oceny mieszkania po podpisanie umowy i przekazanie kluczy.
-          </p>
-        </ContentSection>
-
-        <ContentSection eyebrow="Zakres pracy" title="Co bierzemy na siebie" id="plan" accent>
-          <p>Organizujemy cały proces wynajmu mieszkania:</p>
-          <BulletList items={scopePoints} />
-          <p>
-            Właściciel zachowuje kontrolę i podejmuje ostateczną decyzję, ale nie zajmuje się wszystkimi szczegółami ręcznie.
-          </p>
-          <div className="pt-2">
-            <PrimaryButton href="#contact">Otrzymaj plan wynajmu mieszkania</PrimaryButton>
-          </div>
-        </ContentSection>
-
-        <ContentSection eyebrow="Wycena i rekomendacje" title="Ocenimy mieszkanie i pomożemy nie wynająć poniżej rynku" id="wycena">
-          <p>
-            Przed publikacją warto zrozumieć, jak mieszkanie wygląda na tle innych ofert w Warszawie: jaka cena jest realistyczna, co może utrudniać wynajem i jakie ulepszenia mogą zwiększyć zainteresowanie najemców.
-          </p>
-          <p>Pomagamy:</p>
-          <BulletList items={valuationPoints} />
-          <p>
-            Możemy również zaproponować rozwiązania, które mogą pomóc podnieść cenę najmu — zarówno przy pierwszym wynajmie, jak i przy kolejnym okresie najmu, szczególnie jeśli najemca będzie chciał przedłużyć umowę. Zawsze zależy to od konkretnego mieszkania i aktualnej sytuacji rynkowej.
-          </p>
-          <div className="pt-2">
-            <PrimaryButton href="#contact">Oceń mieszkanie</PrimaryButton>
-          </div>
-        </ContentSection>
-
-        <div className="grid gap-5 lg:grid-cols-2">
-          <ContentSection eyebrow="Oferta" title="Przygotujemy mieszkanie i ogłoszenie do publikacji">
-            <p>Dobre ogłoszenie powinno nie tylko pokazać mieszkanie, ale również właściwie wyjaśnić jego wartość dla najemcy.</p>
-            <p>Pomagamy przygotować:</p>
-            <BulletList items={publicationPoints} columns={false} />
-            <p>Jeśli będzie to potrzebne, możemy dodatkowo zorganizować sprzątanie, drobne naprawy lub przygotowanie mieszkania do zdjęć i prezentacji.</p>
-          </ContentSection>
-
-          <ContentSection eyebrow="Kandydaci" title="Znajdziemy i wybierzemy odpowiednich kandydatów">
-            <p>Po publikacji ogłoszenia właściciel często otrzymuje wiele wiadomości, ale nie każde zgłoszenie pasuje do warunków mieszkania.</p>
-            <p>Bierzemy na siebie wstępną komunikację:</p>
-            <BulletList items={candidatePoints} columns={false} />
-            <p>Naszym celem nie jest tylko znalezienie osoby, która chce wynająć mieszkanie, ale pomoc w wyborze najemcy, z którym najem będzie zrozumiały i bezpieczny.</p>
-          </ContentSection>
-        </div>
-
-        <ContentSection eyebrow="Weryfikacja" title="Pomożemy sprawdzić najemcę przed umową" accent>
-          <p>
-            Pierwsze wrażenie nie wystarczy. Przed podpisaniem umowy warto zrozumieć, kto będzie mieszkał w lokalu, czy kandydat odpowiada warunkom właściciela i czy jest gotowy do realizacji zobowiązań finansowych.
-          </p>
-          <p>Pomagamy:</p>
-          <BulletList items={verificationPoints} />
-          <p>Takie podejście zmniejsza ryzyko nieporozumień, opóźnień w płatnościach i problemów po zamieszkaniu.</p>
-          <div className="pt-2">
-            <PrimaryButton href="#contact">Porozmawiajmy o bezpiecznym wynajmie</PrimaryButton>
-          </div>
-        </ContentSection>
-
-        <ContentSection eyebrow="Umowa i przekazanie" title="Wesprzemy umowę, najem okazjonalny i przekazanie mieszkania">
-          <p>Kiedy najemca zostanie wybrany, ważne jest prawidłowe ustalenie warunków najmu i udokumentowanie stanu mieszkania.</p>
-          <p>Pomagamy przy:</p>
-          <BulletList items={contractPoints} />
-          <p>
-            Właściciel otrzymuje nie tylko najemcę, ale też starannie przeprowadzony proces wynajmu mieszkania z jasnymi warunkami i udokumentowanymi ustaleniami.
-          </p>
-        </ContentSection>
-
-        <ContentSection eyebrow="Raportowanie" title="Zachowujesz kontrolę na każdym etapie" accent>
-          <p>Nawet jeśli właściciel nie uczestniczy w każdej rozmowie, ważne jest, aby wiedział, co dzieje się z mieszkaniem.</p>
-          <p>Dlatego możemy przekazywać krótkie raporty po kluczowych etapach:</p>
-          <BulletList items={reportPoints} />
-          <p>
-            Widzisz, jak przebiega proces, jacy kandydaci się pojawiają, jakie pytania powstają i dlaczego rekomendujemy konkretny kolejny krok.
-          </p>
-        </ContentSection>
-
-        <section className="space-y-7">
-          <div className="rounded-[2rem] bg-gradient-to-r from-[#0A2530] to-[#102F3D] p-6 text-center ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.28)] sm:p-8">
-            <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Po wynajęciu mieszkania</p>
-            <h2 className="mt-3 font-serif text-4xl leading-tight text-white sm:text-5xl">Można podłączyć dalszą obsługę najmu</h2>
-          </div>
-
-          <div className="grid gap-5 lg:grid-cols-2">
-            <article className="flex h-full flex-col rounded-3xl bg-[#0A2530] p-6 ring-1 ring-white/10 shadow-[0_18px_50px_rgba(0,0,0,0.24)] sm:p-7">
-              <div className="mb-5 inline-flex w-fit rounded-full bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-amber-100 ring-1 ring-amber-200/20">
-                Opcjonalna usługa rozszerzona
-              </div>
-              <h3 className="font-serif text-2xl leading-tight text-white sm:text-3xl">Dalsza obsługa po podpisaniu umowy</h3>
-              <div className="mt-4 space-y-4 text-sm leading-relaxed text-neutral-200/90 sm:text-base">
-                <p>Po podpisaniu umowy właściciel może potrzebować pomocy nie tylko w znalezieniu najemcy, ale również w bieżącej komunikacji.</p>
-                <p>W rozszerzonym formacie można omówić:</p>
-              </div>
-              <BulletList items={managementPoints} columns={false} />
-              <p className="mt-5 border-t border-white/10 pt-5 text-sm leading-relaxed text-neutral-200/85">
-                Jest to szczególnie przydatne dla właścicieli, którzy nie chcą samodzielnie zajmować się stałą komunikacją z najemcą.
-              </p>
-              <div className="mt-5">
-                <PrimaryButton href="#contact">Zapytaj o obsługę najmu</PrimaryButton>
-              </div>
-            </article>
-
-            <article className="flex h-full flex-col rounded-3xl bg-white/[0.055] p-6 ring-1 ring-white/10 shadow-[0_18px_50px_rgba(0,0,0,0.24)] sm:p-7">
-              <div className="mb-5 inline-flex w-fit rounded-full bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-amber-100 ring-1 ring-amber-200/20">
-                Przed końcem umowy
-              </div>
-              <h3 className="font-serif text-2xl leading-tight text-white sm:text-3xl">Przygotujemy kolejny krok przed zakończeniem umowy</h3>
-              <div className="mt-4 space-y-4 text-sm leading-relaxed text-neutral-200/90 sm:text-base">
-                <p>Dobry najem nie powinien kończyć się nagle w ostatnim dniu umowy. Lepiej wcześniej wiedzieć, czy będzie przedłużenie, czy trzeba zmienić cenę i kiedy zacząć szukać kolejnego najemcy.</p>
-                <p>Możemy pomóc w:</p>
-              </div>
-              <BulletList items={nextStepPoints} columns={false} />
-              <p className="mt-5 border-t border-white/10 pt-5 text-sm leading-relaxed text-neutral-200/85">
-                Celem jest ograniczenie ryzyka przestoju mieszkania i wcześniejsze przygotowanie kolejnego kroku.
-              </p>
-            </article>
-          </div>
+        <section id="process" className="space-y-6 scroll-mt-24">
+          {serviceSections.map((section, index) => (
+            <SectionCard key={section.title} section={section} index={index} />
+          ))}
         </section>
 
-        <ContentSection eyebrow="Koszt i model płatności" title="Koszt i model płatności" id="koszt" accent>
-          <p className="text-lg font-semibold text-amber-100">Koszt usługi wynosi 100% miesięcznego czynszu najmu.</p>
-          <p>
-            Rekomendowany przez nas model to płatność za usługę po stronie właściciela. W takim przypadku mieszkanie może być oferowane najemcom bez osobnej prowizji agencyjnej, co sprawia, że warunki są bardziej zrozumiałe i atrakcyjne na rynku.
-          </p>
-          <p>
-            Możliwe są również inne warianty: podział prowizji 50/50 między właściciela i najemcę albo płatność po stronie najemcy. Omawiamy to indywidualnie i z wyprzedzeniem wyjaśniamy, jak wybrany model może wpłynąć na zainteresowanie mieszkaniem.
-          </p>
-          <p>
-            Aby prowizja nie była dla właściciela bezpośrednią stratą, możemy pomóc uwzględnić koszt usługi w stawce najmu. Jeśli mieszkanie i rynek na to pozwalają, niewielkie podwyższenie ceny o około 8–8,5% może zwrócić koszt usługi w ciągu 12 miesięcy.
-          </p>
-          <p>
-            Jeśli najemca przedłuży umowę, a cena zostanie utrzymana, dla najemcy nic się nie zmienia: nadal płaci ten sam czynsz. Dla właściciela może to oznaczać dodatkowy dochód po pierwszym roku najmu.
-          </p>
-          <div className="pt-2">
-            <PrimaryButton href="#contact">Oblicz cenę najmu</PrimaryButton>
-          </div>
-        </ContentSection>
+        <section className="rounded-3xl bg-[#0A2530] p-8 text-center ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
+          <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Kolejny etap</p>
+          <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Po wynajęciu mieszkania</h2>
+        </section>
 
-        <section className="space-y-7">
-          <div className="max-w-3xl space-y-3">
-            <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Najczęstsze pytania</p>
-            <h2 className="font-serif text-4xl leading-tight text-white sm:text-5xl">Najczęstsze pytania</h2>
-          </div>
-          <div className="grid gap-4">
-            {faqItems.map((item) => (
-              <article key={item.question} className="rounded-3xl bg-white/[0.055] p-6 ring-1 ring-white/10 shadow-[0_14px_42px_rgba(0,0,0,0.22)] sm:p-7">
-                <h3 className="text-xl font-semibold text-white">{item.question}</h3>
-                <div className="mt-4 space-y-3 text-sm leading-relaxed text-neutral-200/85 sm:text-base">
-                  {item.answer.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </article>
+        <section className="space-y-6">
+          {afterRentalSections.map((section, index) => (
+            <SectionCard key={section.title} section={section} index={index + serviceSections.length} />
+          ))}
+        </section>
+
+        <section id="pricing" className="scroll-mt-24 rounded-3xl bg-[#123746] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:p-8">
+          <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Model płatności</p>
+          <h2 className="mt-4 font-serif text-3xl text-white">Koszt i model płatności</h2>
+          <div className="mt-5 space-y-4 leading-relaxed text-neutral-200/90">
+            {pricingParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          <div className="mt-6">
+            <a href="#contact" className={primaryCtaClass}>
+              Oblicz cenę najmu
+            </a>
+          </div>
         </section>
 
-        <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#123F51] via-[#0C2D3A] to-[#061B24] p-6 text-center shadow-[0_24px_80px_rgba(0,0,0,0.38)] ring-1 ring-white/10 sm:p-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_10%,rgba(251,191,36,0.14),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_42%)]" />
-          <div className="relative mx-auto max-w-3xl space-y-5">
-            <h2 className="font-serif text-3xl leading-tight text-white sm:text-5xl">Chcesz wynająć mieszkanie bezpiecznie i bez dodatkowego obciążenia?</h2>
-            <p className="text-base leading-relaxed text-neutral-200/90 sm:text-lg">
-              Zostaw zgłoszenie — doprecyzujemy szczegóły mieszkania, ocenimy sytuację i zaproponujemy jasny plan działania.
-            </p>
-            <div className="flex flex-col justify-center gap-3 pt-2 sm:flex-row sm:flex-wrap">
-              <PrimaryButton href="#contact">Zostaw zgłoszenie</PrimaryButton>
-              <SecondaryButton href="#contact">Porozmawiajmy o wynajmie mieszkania</SecondaryButton>
-            </div>
+        <section className="space-y-6">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">FAQ</p>
+            <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Najczęstsze pytania</h2>
           </div>
+          <FaqAccordion items={faqItems} />
         </section>
 
         <section id="contact" className="relative scroll-mt-28 overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.18),transparent_60%)]" />
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
-              <h2 className="font-serif text-3xl text-white sm:text-4xl">Zostaw swoje dane</h2>
-              <p className="mt-3 max-w-md text-neutral-200/90">Skontaktujemy się z Tobą tak szybko, jak to możliwe.</p>
-              <p className="mt-4 text-xs leading-relaxed text-neutral-200/70">
+              <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Następny krok</p>
+              <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Chcesz wynająć mieszkanie bezpiecznie i bez dodatkowego obciążenia?</h2>
+              <p className="mt-4 max-w-md leading-relaxed text-neutral-200/90">
+                Zostaw zgłoszenie — doprecyzujemy szczegóły mieszkania, ocenimy sytuację i zaproponujemy jasny plan działania.
+              </p>
+              <p className="mt-5 text-xs leading-relaxed text-neutral-200/70">
                 Wysyłając formularz, potwierdzasz, że zapoznałeś(-aś) się z{" "}
                 <a href="/pl/polityka-prywatnosci" className="underline underline-offset-2 hover:text-white">
                   polityką prywatności
@@ -471,7 +422,7 @@ export default function Page() {
                 sourcePage="/pl/landlord"
                 namePlaceholder="Imię"
                 phonePlaceholder="Telefon"
-                messagePlaceholder="Krótko opisz sprawę: wynajem, dzielnica, budżet, termin"
+                messagePlaceholder="Krótko opisz zadanie: wynajem mieszkania, dzielnica, termin"
                 submitLabel="Wyślij"
               />
             </div>
