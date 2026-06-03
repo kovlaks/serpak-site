@@ -399,34 +399,16 @@ export default function Page() {
           <FaqAccordion items={faqItems} />
         </section>
 
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.18),transparent_60%)]" />
-          <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Следующий шаг</p>
-              <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Хотите сдать квартиру безопасно и без лишней нагрузки?</h2>
-              <p className="mt-4 max-w-2xl leading-relaxed text-neutral-200/90">
-                Оставьте заявку — мы уточним детали квартиры, оценим ситуацию и предложим понятный план действий.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              <a href="#contact" className={primaryCtaClass}>
-                Оставить заявку
-              </a>
-              <a href="#contact" className={secondaryCtaClass}>
-                Обсудить сдачу квартиры
-              </a>
-            </div>
-          </div>
-        </section>
-
         <section id="contact" className="relative scroll-mt-28 overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.18),transparent_60%)]" />
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
-              <h2 className="font-serif text-3xl text-white sm:text-4xl">Оставьте ваши контакты</h2>
-              <p className="mt-3 max-w-md text-neutral-200/90">Мы свяжемся с вами как можно скорее.</p>
-              <p className="mt-4 text-xs leading-relaxed text-neutral-200/70">
+              <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Следующий шаг</p>
+              <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Хотите сдать квартиру безопасно и без лишней нагрузки?</h2>
+              <p className="mt-4 max-w-md leading-relaxed text-neutral-200/90">
+                Оставьте заявку — мы уточним детали квартиры, оценим ситуацию и предложим понятный план действий.
+              </p>
+              <p className="mt-5 text-xs leading-relaxed text-neutral-200/70">
                 Отправляя форму, вы подтверждаете, что ознакомились с{" "}
                 <a href="/ru/privacy" className="underline underline-offset-2 hover:text-white">
                   политикой конфиденциальности
