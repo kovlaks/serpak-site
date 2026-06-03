@@ -201,12 +201,29 @@ const afterRentalSections: ContentSection[] = [
   },
 ];
 
-const pricingParagraphs = [
-  "Стоимость услуги составляет 100% месячной арендной платы.",
-  "Наша рекомендуемая модель — оплата услуги со стороны собственника. В таком случае квартира может предлагаться арендаторам без отдельной агентской комиссии, что делает условия более понятными и привлекательными на рынке.",
-  "При этом возможны и другие варианты: разделение комиссии 50/50 между собственником и арендатором или оплата услуги со стороны арендатора. Мы обсуждаем это индивидуально и заранее объясняем, как выбранная модель может повлиять на интерес к квартире.",
-  "Чтобы комиссия не была для собственника прямой потерей, мы можем помочь заложить стоимость услуги в арендную ставку. Если квартира и рынок позволяют, небольшое повышение цены примерно на 8–8,5% может вернуть стоимость услуги в течение 12 месяцев.",
-  "Если арендатор продлевает договор и цена сохраняется, для арендатора ничего не меняется: он продолжает платить ту же арендную плату. Для собственника это может стать дополнительным доходом после первого года аренды.",
+const pricingSections = [
+  {
+    title: "Рекомендуемая модель",
+    text: "Наша рекомендуемая модель — оплата услуги со стороны собственника. В таком случае квартира может предлагаться арендаторам без отдельной агентской комиссии, что делает условия более понятными и привлекательными на рынке.",
+  },
+  {
+    title: "Другие варианты",
+    text: "При этом возможны и другие варианты: разделение комиссии 50/50 между собственником и арендатором или оплата услуги со стороны арендатора. Мы обсуждаем это индивидуально и заранее объясняем, как выбранная модель может повлиять на интерес к квартире.",
+  },
+  {
+    title: "Как можно вернуть стоимость услуги через аренду",
+    text: "Чтобы комиссия не была для собственника прямой потерей, мы можем помочь заложить стоимость услуги в арендную ставку. Если квартира и рынок позволяют, небольшое повышение цены примерно на 8–8,5% может вернуть стоимость услуги в течение 12 месяцев.",
+    note: "Если арендатор продлевает договор и цена сохраняется, для арендатора ничего не меняется: он продолжает платить ту же арендную плату. Для собственника это может стать дополнительным доходом после первого года аренды.",
+  },
+];
+
+const processOverviewSteps = [
+  "Оценка цены",
+  "Подготовка предложения",
+  "Публикация и коммуникация",
+  "Показы и отбор",
+  "Проверка кандидата",
+  "Договор и передача",
 ];
 
 const faqItems: FaqItem[] = [
@@ -293,8 +310,11 @@ const primaryCtaClass = "inline-flex items-center justify-center rounded-2xl bg-
 const secondaryCtaClass = "inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10";
 
 function SectionCard({ section, index }: { section: ContentSection; index: number }) {
+  const hasDetails = Boolean(section.points?.length || section.closing);
+  const isOverview = section.title === "Что мы берём на себя";
+
   return (
-    <article className="rounded-3xl bg-[#123746] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:p-8">
+    <article className="rounded-3xl bg-[#123746] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:ring-amber-200/20 sm:p-8">
       <div className="mb-5 flex items-center gap-3">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-300/20 text-sm font-semibold text-amber-100 ring-1 ring-amber-200/30">
           {index + 1}
@@ -308,16 +328,41 @@ function SectionCard({ section, index }: { section: ContentSection; index: numbe
         </p>
       ))}
       {section.intro ? <p className="mt-5 font-semibold text-amber-100">{section.intro}</p> : null}
-      {section.points ? (
-        <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-          {section.points.map((point) => (
-            <li key={point} className="rounded-xl bg-[#0A2530] px-4 py-3 text-sm leading-relaxed text-neutral-100 ring-1 ring-white/10">
-              • {point}
-            </li>
+
+      {isOverview ? (
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {processOverviewSteps.map((step, stepIndex) => (
+            <div key={step} className="rounded-2xl bg-[#0A2530]/80 px-4 py-4 ring-1 ring-white/10">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-200/80">
+                {String(stepIndex + 1).padStart(2, "0")}
+              </p>
+              <p className="mt-2 text-sm font-semibold leading-snug text-white">{step}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : null}
-      {section.closing ? <p className="mt-5 leading-relaxed text-neutral-200/90">{section.closing}</p> : null}
+
+      {hasDetails ? (
+        <details className="group mt-6 rounded-2xl bg-[#0A2530]/75 p-4 ring-1 ring-white/10 open:ring-amber-200/25">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-amber-100 transition hover:text-amber-50 [&::-webkit-details-marker]:hidden">
+            <span>{section.points?.length ? "Что входит" : "Подробнее"}</span>
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5 text-lg leading-none transition group-open:rotate-45">+</span>
+          </summary>
+          <div className="mt-4 border-t border-white/10 pt-4">
+            {section.points ? (
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {section.points.map((point) => (
+                  <li key={point} className="rounded-xl bg-[#123746] px-4 py-3 text-sm leading-relaxed text-neutral-100 ring-1 ring-white/10">
+                    • {point}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {section.closing ? <p className="mt-5 leading-relaxed text-neutral-200/90">{section.closing}</p> : null}
+          </div>
+        </details>
+      ) : null}
+
       {section.cta && section.ctaHref ? (
         <div className="mt-6">
           <a href={section.ctaHref} className={secondaryCtaClass}>
@@ -331,14 +376,17 @@ function SectionCard({ section, index }: { section: ContentSection; index: numbe
 
 function FaqCard({ item }: { item: FaqItem }) {
   return (
-    <article className="rounded-2xl bg-[#123746] p-6 ring-1 ring-white/10">
-      <h3 className="font-serif text-xl text-white">{item.question}</h3>
-      <div className="mt-4 space-y-3 text-sm leading-relaxed text-neutral-200/90">
+    <details className="group rounded-2xl bg-[#123746] p-5 ring-1 ring-white/10 transition open:ring-amber-200/25 sm:p-6">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+        <h3 className="font-serif text-lg text-white sm:text-xl">{item.question}</h3>
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5 text-lg font-semibold text-amber-100 transition group-open:rotate-45">+</span>
+      </summary>
+      <div className="mt-4 space-y-3 border-t border-white/10 pt-4 text-sm leading-relaxed text-neutral-200/90">
         {item.answer.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
-    </article>
+    </details>
   );
 }
 
@@ -391,9 +439,16 @@ export default function Page() {
         <section id="pricing" className="scroll-mt-24 rounded-3xl bg-[#123746] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:p-8">
           <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Модель оплаты</p>
           <h2 className="mt-4 font-serif text-3xl text-white">Стоимость и модель оплаты</h2>
-          <div className="mt-5 space-y-4 leading-relaxed text-neutral-200/90">
-            {pricingParagraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+          <p className="mt-5 rounded-2xl bg-amber-300/15 px-5 py-4 text-lg font-semibold leading-relaxed text-amber-50 ring-1 ring-amber-200/25">
+            Стоимость услуги составляет 100% месячной арендной платы.
+          </p>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            {pricingSections.map((section) => (
+              <article key={section.title} className="rounded-2xl bg-[#0A2530]/75 p-5 ring-1 ring-white/10">
+                <h3 className="font-serif text-xl text-white">{section.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-200/90">{section.text}</p>
+                {section.note ? <p className="mt-3 text-sm leading-relaxed text-neutral-200/80">{section.note}</p> : null}
+              </article>
             ))}
           </div>
           <div className="mt-6">
@@ -415,34 +470,16 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.18),transparent_60%)]" />
-          <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Следующий шаг</p>
-              <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Хотите сдать квартиру безопасно и без лишней нагрузки?</h2>
-              <p className="mt-4 max-w-2xl leading-relaxed text-neutral-200/90">
-                Оставьте заявку — мы уточним детали квартиры, оценим ситуацию и предложим понятный план действий.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              <a href="#contact" className={primaryCtaClass}>
-                Оставить заявку
-              </a>
-              <a href="#contact" className={secondaryCtaClass}>
-                Обсудить сдачу квартиры
-              </a>
-            </div>
-          </div>
-        </section>
-
         <section id="contact" className="relative scroll-mt-28 overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0A2530] p-8 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-10">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(46,107,127,0.18),transparent_60%)]" />
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
-              <h2 className="font-serif text-3xl text-white sm:text-4xl">Оставьте ваши контакты</h2>
-              <p className="mt-3 max-w-md text-neutral-200/90">Мы свяжемся с вами как можно скорее.</p>
-              <p className="mt-4 text-xs leading-relaxed text-neutral-200/70">
+              <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Следующий шаг</p>
+              <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">Хотите сдать квартиру безопасно и без лишней нагрузки?</h2>
+              <p className="mt-4 max-w-xl leading-relaxed text-neutral-200/90">
+                Оставьте заявку — мы уточним детали квартиры, оценим ситуацию и предложим понятный план действий.
+              </p>
+              <p className="mt-5 text-xs leading-relaxed text-neutral-200/70">
                 Отправляя форму, вы подтверждаете, что ознакомились с{" "}
                 <a href="/ru/privacy" className="underline underline-offset-2 hover:text-white">
                   политикой конфиденциальности
