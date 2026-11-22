@@ -366,6 +366,14 @@ export default function RzutMieszkaniaPage() {
           </section>
 
           <section className={panelClass}>
+            <h2 className="font-serif text-2xl text-white">Chcesz pokazać więcej niż sam układ mieszkania?</h2>
+            <p className={`mt-2 max-w-3xl ${bodyClass}`}>
+              Poznaj wirtualny spacer 3D i umożliw potencjalnym klientom zdalne oglądanie nieruchomości.
+            </p>
+            <a href="/pl/spacer-3d" className={`mt-5 ${secondaryCtaClass}`}>Poznaj wirtualny spacer 3D</a>
+          </section>
+
+          <section className={panelClass}>
             <h2 className="font-serif text-2xl text-white">Charakter opracowania</h2>
             <div className={`mt-3 max-w-3xl space-y-2 ${bodyClass}`}>
               <p>Rzut mieszkania 2D służy przede wszystkim prezentacji układu nieruchomości w materiałach informacyjnych i marketingowych.</p>
