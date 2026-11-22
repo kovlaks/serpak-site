@@ -202,12 +202,32 @@ const afterRentalSections: ContentSection[] = [
   },
 ];
 
-const pricingParagraphs = [
-  "Koszt usługi wynosi 100% miesięcznego czynszu najmu.",
-  "Rekomendowany przez nas model to płatność za usługę po stronie właściciela. W takim przypadku mieszkanie może być oferowane najemcom bez osobnej prowizji agencyjnej, co sprawia, że warunki są bardziej zrozumiałe i atrakcyjne na rynku.",
-  "Możliwe są również inne warianty: podział prowizji 50/50 między właściciela i najemcę albo płatność po stronie najemcy. Omawiamy to indywidualnie i z wyprzedzeniem wyjaśniamy, jak wybrany model może wpłynąć na zainteresowanie mieszkaniem.",
-  "Aby prowizja nie była dla właściciela bezpośrednią stratą, możemy pomóc uwzględnić koszt usługi w stawce najmu. Jeśli mieszkanie i rynek na to pozwalają, niewielkie podwyższenie ceny o około 8–8,5% może zwrócić koszt usługi w ciągu 12 miesięcy.",
-  "Jeśli najemca przedłuży umowę, a cena zostanie utrzymana, dla najemcy nic się nie zmienia: nadal płaci ten sam czynsz. Dla właściciela może to oznaczać dodatkowy dochód po pierwszym roku najmu.",
+const paymentModels = [
+  {
+    name: "Najem Solo",
+    eyebrow: "Standardowa płatność",
+    amount: "100%",
+    frequency: "Jednorazowo",
+    description: "Kompleksowe pośrednictwo w wynajmie mieszkania z jednorazową płatnością prowizji.",
+    paymentBenefit: "Jedna płatność.",
+    href: "/pl/najem-solo",
+  },
+  {
+    name: "Najem Split",
+    eyebrow: "Elastyczna płatność",
+    amount: "8,33%*",
+    frequency: "Miesięcznie przez 12 miesięcy",
+    description: "Ten sam zakres usług i ta sama łączna prowizja, rozłożona na 12 miesięcznych rat bez odsetek.",
+    paymentBenefit: "12 rat bez odsetek.",
+    href: "/pl/najem-split",
+  },
+];
+
+const sharedPaymentBenefits = [
+  "0 zł prowizji dla najemcy.",
+  "Do 100% rabatu przy ponownym wynajmie.",
+  "Pełny zakres usług.",
+  "14 dni dodatkowego wsparcia.",
 ];
 
 const faqItems: FaqItem[] = [
@@ -240,46 +260,31 @@ const faqItems: FaqItem[] = [
   {
     question: "Co obejmuje koszt usługi?",
     answer: [
-      "Koszt usługi wynosi 100% miesięcznego czynszu najmu.",
       "W tej kwocie mieści się organizacja procesu wynajmu mieszkania: ocena, przygotowanie oferty, publikacja ogłoszenia, komunikacja z kandydatami, prezentacje, wybór najemcy, pomoc przy weryfikacji, umowie i przekazaniu mieszkania.",
     ],
   },
   {
-    question: "Kto płaci prowizję — właściciel czy najemca?",
+    question: "Kto płaci prowizję?",
     answer: [
-      "Rekomendowany przez nas model to płatność za usługę po stronie właściciela. Wtedy mieszkanie może być oferowane najemcom bez osobnej prowizji agencyjnej.",
-      "Taki format zwykle sprawia, że oferta jest bardziej atrakcyjna: najemca od początku widzi jasne warunki zamieszkania i nie mierzy się z dodatkową dużą płatnością przy podpisaniu umowy.",
+      "Prowizję za pośrednictwo w wynajmie mieszkania pokrywa wyłącznie właściciel. Najemca nie płaci prowizji agencyjnej.",
     ],
   },
   {
-    question: "Czy można podzielić prowizję 50/50?",
+    question: "Ile wynosi prowizja?",
     answer: [
-      "Tak, taki model jest możliwy. Prowizja może zostać podzielona między właściciela i najemcę.",
-      "Warto jednak pamiętać, że nawet częściowa prowizja po stronie najemcy może wpłynąć na zainteresowanie mieszkaniem, szczególnie jeśli obok są podobne oferty bez prowizji agencyjnej po stronie najemcy.",
-      "Dlatego wcześniej wyjaśniamy plusy i minusy takiego modelu i pomagamy wybrać wariant, który najlepiej pasuje do konkretnego mieszkania i sytuacji na rynku.",
+      "Standardowa prowizja brutto odpowiada jednomiesięcznemu bazowemu czynszowi najmu. Można ją rozliczyć jednorazowo w modelu Najem Solo lub w 12 miesięcznych ratach bez odsetek w modelu Najem Split.",
     ],
   },
   {
-    question: "Czy można zrobić tak, aby prowizję w całości zapłacił najemca?",
+    question: "Czym różni się Najem Solo od Najem Split?",
     answer: [
-      "Tak, taki wariant jest możliwy, ale nie uważamy go za optymalny w każdej sytuacji.",
-      "Jeśli najemca ma zapłacić osobną prowizję agencji, oferta może stać się mniej atrakcyjna w porównaniu z podobnymi mieszkaniami bez takiej opłaty. Może to zmniejszyć liczbę zgłoszeń albo wydłużyć czas poszukiwania najemcy.",
-      "Dlatego rekomendujemy najpierw ocenić mieszkanie, konkurencję i popyt, a dopiero potem wybrać model płatności.",
+      "Obie propozycje obejmują ten sam zakres usług i te same dodatkowe korzyści. Różnią się wyłącznie sposobem płatności.",
     ],
   },
   {
-    question: "Czy można odzyskać koszt prowizji przez czynsz?",
+    question: "Czy mogę otrzymać rabat przy ponownym wynajmie mieszkania?",
     answer: [
-      "Tak, w niektórych przypadkach koszt usługi można uwzględnić w stawce najmu.",
-      "Na przykład, jeśli prowizja wynosi równowartość jednego miesiąca najmu, można ją stopniowo odzyskać poprzez niewielkie podwyższenie ceny o około 8–8,5% w ciągu 12 miesięcy.",
-      "Przed tym oceniamy mieszkanie i rynek, aby zrozumieć, jaką cenę można realnie zastosować bez ryzyka wydłużenia procesu wynajmu.",
-    ],
-  },
-  {
-    question: "Co dzieje się przy przedłużeniu umowy?",
-    answer: [
-      "Jeśli najemca przedłuży umowę, a cena zostanie utrzymana, dla najemcy nic się nie zmienia: nadal płaci ten sam czynsz.",
-      "Dla właściciela oznacza to, że po pierwszym roku nadwyżka, która pomagała odzyskać koszt usługi, może stać się dodatkowym dochodem.",
+      "Tak. System rabatowy jest dostępny w obu modelach. Wysokość rabatu zależy od przyszłych części wcześniejszych rozliczeń na dzień faktycznego przekazania mieszkania nowemu najemcy oraz warunków umowy pośrednictwa.",
     ],
   },
   {
@@ -377,17 +382,39 @@ export default function Page() {
         </section>
 
         <section id="pricing" className="scroll-mt-24 rounded-3xl bg-[#123746] p-6 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:p-8">
-          <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Model płatności</p>
-          <h2 className="mt-4 font-serif text-3xl text-white">Koszt i model płatności</h2>
-          <div className="mt-5 space-y-4 leading-relaxed text-neutral-200/90">
-            {pricingParagraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+          <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Model współpracy</p>
+          <h2 className="mt-4 font-serif text-3xl text-white">Jedna usługa. Dwa sposoby płatności.</h2>
+          <div className="mt-5 max-w-3xl space-y-4 leading-relaxed text-neutral-200/90">
+            <p>W SERPAKOWSKI Nieruchomości oferujemy kompleksowe pośrednictwo w wynajmie mieszkania w dwóch modelach rozliczenia.</p>
+            <p>Niezależnie od wybranego modelu otrzymujesz ten sam zakres usług, te same korzyści i ten sam standard obsługi.</p>
+            <p>Prowizję pokrywa wyłącznie właściciel. Najemca nie płaci prowizji agencyjnej.</p>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {paymentModels.map((model) => (
+              <article key={model.name} className="flex flex-col rounded-2xl bg-[#0A2530] p-5 ring-1 ring-white/10 sm:p-6">
+                <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">{model.eyebrow}</p>
+                <h3 className="mt-3 font-serif text-2xl text-white">{model.name}</h3>
+                <p className="mt-4 text-4xl font-semibold text-amber-200 sm:text-5xl">{model.amount}</p>
+                <p className="mt-1 text-sm font-semibold text-amber-100">{model.frequency}</p>
+                <p className="mt-4 leading-relaxed text-neutral-200/90">{model.description}</p>
+                <ul className="mb-6 mt-4 space-y-2 text-sm leading-relaxed text-neutral-100">
+                  {[model.paymentBenefit, ...sharedPaymentBenefits].map((benefit) => (
+                    <li key={benefit} className="flex gap-2">
+                      <span aria-hidden="true" className="text-amber-200">•</span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href={model.href} className={`mt-auto self-start ${primaryCtaClass}`}>
+                  Poznaj {model.name}
+                </a>
+              </article>
             ))}
           </div>
-          <div className="mt-6">
-            <a href="#contact" className={primaryCtaClass}>
-              Oblicz cenę najmu
-            </a>
+          <div className="mt-6 max-w-3xl space-y-3 text-sm leading-relaxed text-neutral-200/90">
+            <p>Standardowa łączna prowizja w obu modelach wynosi równowartość jednomiesięcznego bazowego czynszu najmu brutto i obejmuje VAT.</p>
+            <p>* Około 8,33% bazowego miesięcznego czynszu najmu stanowi jedną z 12 rat.</p>
+            <p>W obu modelach możesz skorzystać z rabatu przy ponownym wynajmie tego samego mieszkania. Szczegółowe warunki określa umowa pośrednictwa.</p>
           </div>
         </section>
 

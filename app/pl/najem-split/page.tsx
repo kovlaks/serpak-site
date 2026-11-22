@@ -46,17 +46,17 @@ const heroBenefits = [
 
 const exampleAmounts = [
   ["Nowa standardowa prowizja", "3 600 zł"],
-  ["Rabat Najem Split", "2 400 zł"],
-  ["Nowa prowizja po rabacie", "1 200 zł"],
+  ["Rabat", "900 zł"],
+  ["Nowa prowizja po rabacie", "2 700 zł"],
 ];
 
 const discountConditions = [
   "Rabat dotyczy tego samego mieszkania.",
   "Każde kolejne zlecenie wymaga odrębnej umowy pośrednictwa.",
-  "Rabat obliczamy na dzień podpisania nowej umowy najmu.",
-  "Uwzględniamy przyszłe raty wszystkich wcześniejszych harmonogramów dotyczących tego mieszkania, również raty opłacone przed terminem.",
-  "Warunkiem jest brak zaległości z wcześniejszych prowizji w dniu podpisania nowej umowy najmu.",
-  "Rabat nie może przekroczyć ostatecznej wartości nowej usługi.",
+  "Rabat obliczamy na dzień faktycznego przekazania mieszkania nowemu najemcy.",
+  "Uwzględniamy przyszłe części wszystkich mających zastosowanie wcześniejszych harmonogramów dla tego mieszkania, w tym raty opłacone przed terminem.",
+  "Warunkiem jest brak zaległych zobowiązań wobec agencji w dniu faktycznego przekazania mieszkania nowemu najemcy.",
+  "Rabat może wynieść maksymalnie 100% nowej prowizji.",
 ];
 
 const serviceScope: ({ title: string; points: string[] } | { title: string; paragraphs: string[] })[] = [
@@ -184,12 +184,14 @@ const faqItems = [
   },
   {
     question: "Co się stanie, jeśli najemca wyprowadzi się wcześniej?",
-    answer: ["Wcześniejsze zakończenie najmu nie anuluje poprzedniej prowizji. Rabat może dotyczyć kolejnej usługi pośrednictwa."],
+    answer: [
+      "Wcześniejsze zakończenie najmu nie anuluje poprzedniej prowizji ani nie wstrzymuje harmonogramu. Rabat na kolejną prowizję obliczamy na dzień faktycznego przekazania mieszkania nowemu najemcy. Czas poszukiwania nowego najemcy wlicza się do okresu rozliczeniowego.",
+    ],
   },
   {
     question: "Czy rabat może wynieść 100%?",
     answer: [
-      "Tak. Jeżeli obliczony rabat jest równy lub wyższy od ostatecznej wartości nowej usługi, nowe wynagrodzenie wynosi 0 zł. Niewykorzystana część rabatu nie podlega zwrotowi ani przeniesieniu. Wcześniejsze zobowiązania pozostają bez zmian.",
+      "Tak. Jeżeli obliczony rabat jest równy lub wyższy od nowej prowizji, wynagrodzenie za nową usługę wynosi 0 zł. Niewykorzystana kwota rabatu nie podlega zwrotowi ani przeniesieniu na kolejne usługi jako odrębne saldo. Wcześniejsze zobowiązania pozostają bez zmian, a opłacona prowizja nie podlega zwrotowi.",
     ],
   },
   {
@@ -287,7 +289,7 @@ export default function NajemSplitPage() {
           <section className="space-y-6">
             <h2 className={headingClass}>Wynajem na nowych zasadach</h2>
             <p className={`max-w-3xl ${bodyClass}`}>
-              Profesjonalne pośrednictwo nie musi oznaczać jednorazowego wydatku w wysokości całego miesięcznego czynszu. Najem Split to inny sposób rozliczenia usługi oraz dodatkowe korzyści przy kolejnych wynajmach.
+              Najem Solo i Najem Split obejmują ten sam zakres usług, tę samą łączną prowizję oraz te same dodatkowe korzyści. Różnią się wyłącznie sposobem płatności.
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {benefits.map(({ figure, title, description }) => (
@@ -337,7 +339,7 @@ export default function NajemSplitPage() {
                 <p>Pierwszy czynsz, kaucja i koszty przeprowadzki to już duże wydatki dla osoby poszukującej mieszkania.</p>
                 <p>W Najem Split najemca nie płaci naszemu biuru dodatkowej prowizji za wynajęcie Twojego mieszkania.</p>
                 <p>Dzięki temu Twoja oferta może być bardziej atrakcyjna dla potencjalnych najemców.</p>
-                <p>Koszty pośrednictwa pokrywa właściciel w 12 miesięcznych ratach.</p>
+                <p>Prowizję za pośrednictwo pokrywa wyłącznie właściciel w 12 miesięcznych ratach.</p>
               </div>
             </div>
             <p className="rounded-2xl bg-[#123746] p-5 font-serif text-2xl leading-snug text-amber-100 ring-1 ring-amber-200/20 sm:p-6">
@@ -351,27 +353,30 @@ export default function NajemSplitPage() {
               <p className="mt-4 text-lg font-semibold text-amber-100">Kolejny wynajem nie musi oznaczać kolejnej pełnej prowizji.</p>
               <div className={`mt-4 space-y-3 ${bodyClass}`}>
                 <p>Życie potrafi zmienić plany. Najemca może zmienić pracę, wyjechać do innego miasta lub zakończyć najem wcześniej, niż przewidywano.</p>
-                <p>Najem Split przewiduje możliwość obniżenia prowizji za kolejną usługę pośrednictwa dotyczącą tego samego mieszkania.</p>
-                <p>Przy obliczaniu rabatu uwzględniamy przyszłe raty wynikające z wcześniejszych harmonogramów prowizji.</p>
-                <p>Nie anulujemy wcześniejszych zobowiązań. Obniżamy koszt nowej usługi pośrednictwa.</p>
+                <p>W obu modelach możesz uzyskać rabat na nową prowizję za ponowne wynajęcie tego samego mieszkania. Jego wartość odpowiada sumie przyszłych części wcześniejszych harmonogramów na dzień faktycznego przekazania mieszkania nowemu najemcy. Data przekazania jest również decydująca, gdy umowa najmu została podpisana wcześniej.</p>
+                <p>Podstawą obliczenia rabatu jest 12-miesięczny harmonogram każdej prowizji. W Najem Split stosujemy harmonogram rat, a jednorazowo opłaconą prowizję w Najem Solo dzielimy na 12 części wyłącznie na potrzeby obliczenia rabatu.</p>
+                <p>Wcześniejsze zakończenie najmu, pustostan, poszukiwanie najemcy i przygotowanie nowej umowy nie wstrzymują okresu rozliczeniowego ani harmonogramów płatności. Czas poszukiwania nowego najemcy wlicza się do okresu rozliczeniowego.</p>
+                <p>Rabat obniża wyłącznie nową prowizję. Wcześniejsze zobowiązania pozostają w mocy, a opłacona prowizja nie podlega zwrotowi.</p>
               </div>
             </div>
             <div className={panelClass}>
               <h3 className="font-serif text-2xl text-white">Przykład</h3>
               <div className={`mt-3 space-y-2 ${bodyClass}`}>
-                <p>Czynsz najmu: <strong className="text-white">3 600 zł</strong>.</p>
+                <p>Bazowy czynsz najmu: <strong className="text-white">3 600 zł</strong>.</p>
                 <p>Pierwsza prowizja: <strong className="text-white">12 rat po 300 zł</strong>.</p>
-                <p>Najemca wyprowadza się po czterech miesiącach, a nowa umowa najmu zostaje podpisana przed terminem piątej raty.</p>
+                <p>Najemca wyprowadza się po 8 miesiącach. Poszukiwanie nowego najemcy trwa kolejny miesiąc. W dniu faktycznego przekazania mieszkania nowemu najemcy pozostają 3 przyszłe raty po 300 zł, co daje 900 zł rabatu.</p>
               </div>
               <figure className={`my-6 ${cardClass}`}>
-                <div aria-hidden="true" className="grid grid-cols-12 gap-1 sm:gap-2">
+                <div aria-hidden="true" className="grid grid-cols-6 gap-1 sm:grid-cols-12 sm:gap-2">
                   {Array.from({ length: 12 }, (_, index) => (
                     <span
                       key={index}
                       className={`flex h-9 items-center justify-center rounded text-[10px] font-semibold sm:h-11 sm:rounded-lg sm:text-sm ${
-                        index < 4
+                        index < 8
                           ? "bg-white/10 text-white ring-1 ring-inset ring-white/15"
-                          : "bg-amber-300 text-[#0C2D3A]"
+                          : index === 8
+                            ? "bg-amber-300/20 text-amber-100 ring-1 ring-inset ring-amber-200/30"
+                            : "bg-amber-300 text-[#0C2D3A]"
                       }`}
                     >
                       {index + 1}
@@ -379,8 +384,9 @@ export default function NajemSplitPage() {
                   ))}
                 </div>
                 <figcaption className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
-                  <span className="text-neutral-100">4 raty: 1 200 zł.</span>
-                  <span className="text-amber-200">8 przyszłych rat: 2 400 zł.</span>
+                  <span className="text-neutral-100">Miesiące 1–8 · poprzedni najem</span>
+                  <span className="text-amber-100">Miesiąc 9 · poszukiwanie najemcy</span>
+                  <span className="text-amber-300">Miesiące 10–12 · 3 przyszłe raty</span>
                 </figcaption>
               </figure>
               <dl className="grid gap-3 sm:grid-cols-3">
@@ -391,16 +397,17 @@ export default function NajemSplitPage() {
                   </div>
                 ))}
               </dl>
-              <p className="mt-5 font-serif text-2xl text-amber-300">12 nowych rat po 100 zł.</p>
+              <p className="mt-5 font-serif text-2xl text-amber-300">Najem Split · 12 nowych rat po 225 zł</p>
+              <p className="mt-2 font-serif text-xl text-white">Najem Solo · jednorazowa płatność 2 700 zł</p>
               <p className={`mt-3 text-sm ${bodyClass}`}>
-                Przykład zakłada ponowne wynajęcie mieszkania za taką samą cenę, brak zaległości w płatnościach i zawarcie nowej umowy pośrednictwa. Wcześniejsze raty pozostają należne.
+                Przykład zakłada niezmieniony bazowy czynsz najmu, brak zaległości w płatnościach oraz zawarcie odrębnej umowy pośrednictwa i spełnienie jej warunków. Wcześniejsze raty pozostają należne zgodnie z harmonogramem, a terminy nowych rat wynikają z umowy.
               </p>
             </div>
           </section>
 
           <section className={panelClass}>
             <h2 className={headingClass}>Nawet <span className="text-amber-300">100%</span> rabatu na nową prowizję</h2>
-            <p className={`mt-4 max-w-3xl ${bodyClass}`}>W określonych przypadkach suma przyszłych rat wcześniejszych harmonogramów może pokryć nawet całe wynagrodzenie za kolejną usługę pośrednictwa.</p>
+            <p className={`mt-4 max-w-3xl ${bodyClass}`}>Suma przyszłych części z kilku wcześniejszych harmonogramów może pokryć całą nową prowizję. Przy kolejnym obliczeniu uwzględniamy też części użyte wcześniej do ustalenia rabatu, jeśli według pierwotnych harmonogramów nadal są przyszłe.</p>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {discountConditions.map((condition) => (
                 <li key={condition} className={`flex items-start gap-3 ${cardClass} ${bodyClass}`}>
@@ -410,7 +417,7 @@ export default function NajemSplitPage() {
               ))}
             </ul>
             <p className={`mt-5 max-w-3xl ${bodyClass}`}>
-              Udzielenie rabatu nie zmienia wcześniejszych zobowiązań. Przyjęcie kolejnego zlecenia wymaga uzgodnienia z agencją. Szczegółowe warunki określa umowa Najem Split.
+              Gdy obliczony rabat jest co najmniej równy nowej prowizji, po rabacie wynosi ona 0 zł. Niewykorzystanej kwoty rabatu nie wypłacamy ani nie zapisujemy jako odrębnego salda na przyszłe usługi. Przyjęcie kolejnego zlecenia wymaga uzgodnienia z agencją, a przyznanie rabatu wymaga spełnienia pozostałych warunków umowy pośrednictwa.
             </p>
           </section>
 
@@ -418,8 +425,9 @@ export default function NajemSplitPage() {
             <h2 className={headingClass}>Kolejne prowizje bez nakładania się harmonogramów</h2>
             <div className={`space-y-3 ${bodyClass}`}>
               <p>Harmonogramy płatności kolejnych prowizji dotyczących tego samego mieszkania nie nakładają się na siebie.</p>
-              <p>Spłatę nowego wynagrodzenia rozpoczynasz zgodnie z zasadami umowy po zakończeniu wcześniejszych harmonogramów.</p>
+              <p>Spłatę nowego wynagrodzenia rozpoczynasz zgodnie z zasadami umowy po zakończeniu wcześniejszych harmonogramów mających zastosowanie.</p>
               <p>Wcześniejsza spłata poprzedniej prowizji nie przyspiesza terminów kolejnych rat.</p>
+              <p>Wyprowadzka najemcy i pustostan nie wstrzymują wcześniejszych harmonogramów.</p>
               <p>Jeżeli wcześniejsze harmonogramy zakończyły się przed przekazaniem mieszkania nowemu najemcy, pierwsza nowa rata jest płatna w terminie 7 dni od przekazania.</p>
             </div>
           </section>
@@ -495,6 +503,17 @@ export default function NajemSplitPage() {
                 </article>
               ))}
             </div>
+          </section>
+
+          <section className={`${panelClass} gap-6 lg:flex lg:items-center lg:justify-between`}>
+            <div className="max-w-3xl">
+              <p className={eyebrowClass}>Alternatywny sposób płatności</p>
+              <h2 className={`mt-2 ${headingClass}`}>Wolisz zapłacić jednorazowo?</h2>
+              <p className={`mt-3 ${bodyClass}`}>
+                Wybierz Najem Solo i skorzystaj z tego samego zakresu usług oraz tych samych korzyści, rozliczając prowizję w jednej płatności.
+              </p>
+            </div>
+            <a href="/pl/najem-solo" className={`mt-5 shrink-0 lg:mt-0 ${secondaryCtaClass}`}>Poznaj Najem Solo</a>
           </section>
 
           <section className="space-y-6">
