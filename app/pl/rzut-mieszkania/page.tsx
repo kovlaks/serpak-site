@@ -139,97 +139,106 @@ const secondaryCtaClass = "inline-flex items-center justify-center rounded-2xl p
 
 function ExampleFloorPlan() {
   return (
-    <figure className="mx-auto w-full max-w-lg min-w-0 rounded-2xl bg-[#0A2530] ring-1 ring-white/10 sm:p-4">
+    <figure className="-mx-2 min-w-0 rounded-2xl bg-[#0A2530] ring-1 ring-white/10 sm:mx-auto sm:w-full sm:max-w-lg sm:p-4">
       <svg
         className="block h-auto w-full rounded-2xl bg-neutral-100"
-        viewBox="0 0 420 342"
+        viewBox="8 8 424 336"
         role="img"
         aria-labelledby="rzut-mieszkania-svg-title"
         aria-describedby="rzut-mieszkania-svg-description"
       >
         <title id="rzut-mieszkania-svg-title">Przykładowy układ mieszkania z balkonem</title>
         <desc id="rzut-mieszkania-svg-description">
-          Z przedpokoju prowadzą drzwi do salonu, sypialni, kuchni i łazienki. Na balkon wychodzi się z salonu.
+          Wejście do mieszkania prowadzi do przedpokoju, który łączy salon, sypialnię, kuchnię i łazienkę.
+          Drzwi przesuwne w salonie prowadzą na balkon.
         </desc>
 
         {/* Pomieszczenia */}
-        <path className="fill-amber-50" d="M16 100h179v224H16z" />
-        <path className="fill-neutral-200" d="M16 18h179v82H16z M306 210h98v114h-98z" />
-        <path className="fill-amber-100" d="M195 18h209v124H195z M195 210h111v114H195z" />
-        <path className="fill-neutral-50" d="M195 142h209v68H195z" />
+        <path className="fill-neutral-200" d="M18 18h195v60H18z M298 227h124v107H298z" />
+        <path className="fill-amber-50" d="M18 78h195v149H18z" />
+        <path className="fill-amber-100" d="M213 78h209v149H213z M18 227h129v107H18z" />
+        <path className="fill-neutral-50" d="M147 227h151v107H147z" />
 
-        {/* Wyposażenie */}
-        <g stroke="#123746" strokeWidth="1.5" strokeLinejoin="round">
-          <g className="fill-neutral-50">
-            <rect x="29" y="125" width="45" height="96" rx="7" />
-            <rect x="39" y="135" width="27" height="76" rx="4" />
-            <path d="M39 160h27m-27 26h27" fill="none" />
-            <rect x="91" y="153" width="38" height="50" rx="12" />
-            <rect x="173" y="213" width="10" height="35" rx="2" />
-            <rect x="76" y="260" width="55" height="37" rx="10" />
-            <path d="M83 260v-7h13v7m15 0v-7h13v7m-41 37v7h13v-7m15 0v7h13v-7" fill="none" />
-            <circle cx="43" cy="39" r="10" />
-            <circle cx="74" cy="39" r="10" />
-            <rect x="52" y="56" width="14" height="12" rx="3" />
-            <rect x="160" y="30" width="19" height="38" rx="3" />
-            <circle cx="169.5" cy="40" r="3" />
-            <circle cx="169.5" cy="57" r="3" />
-            <rect x="255" y="29" width="88" height="63" rx="5" />
-            <rect x="263" y="35" width="31" height="15" rx="4" />
-            <rect x="304" y="35" width="31" height="15" rx="4" />
-            <path d="M255 58h88m-88 25h88" fill="none" />
-            <rect x="230" y="29" width="17" height="18" rx="3" />
-            <rect x="351" y="29" width="17" height="18" rx="3" />
-            <rect x="376" y="64" width="19" height="52" rx="2" />
-            <path d="M376 90h19" fill="none" />
-            <rect x="327" y="151" width="57" height="13" rx="2" />
-            <path d="M346 151v13m19-13v13" fill="none" />
-            <path d="M270 221h25v59h-89v-22h64z" />
-            <rect x="274" y="228" width="17" height="22" rx="3" />
-            <path d="M282.5 225v8" fill="none" />
-            <circle cx="220" cy="265" r="2.5" />
-            <circle cx="230" cy="265" r="2.5" />
-            <circle cx="220" cy="273" r="2.5" />
-            <circle cx="230" cy="273" r="2.5" />
-            <rect x="375" y="221" width="20" height="55" rx="7" />
-            <rect x="379" y="225" width="12" height="47" rx="5" />
-            <rect x="315" y="257" width="14" height="20" rx="3" />
-            <ellipse cx="340" cy="267" rx="9" ry="8" />
-            <path d="M329 261h7m-7 12h7" fill="none" />
-          </g>
+        <g className="fill-neutral-50" stroke="#123746" strokeWidth="1.5" strokeLinejoin="round">
+          {/* Balkon */}
+          <circle cx="174" cy="46" r="9" />
+          <rect x="169" y="59" width="10" height="9" rx="2" />
+          <rect x="189" y="40" width="10" height="12" rx="2" />
+
+          {/* Salon */}
+          <rect x="76" y="102" width="54" height="57" rx="5" className="fill-amber-100" stroke="none" />
+          <rect x="31" y="108" width="35" height="72" rx="5" />
+          <path d="M40 109v70m0-47h25m-25 22h25" fill="none" />
+          <rect x="87" y="117" width="27" height="27" rx="5" />
+          <rect x="177" y="102" width="21" height="57" rx="2" />
+          <path d="M189 113v35" fill="none" strokeWidth="2.5" />
+          <rect x="108" y="194" width="26" height="8" rx="3" />
+          <rect x="108" y="215" width="26" height="8" rx="3" />
+          <rect x="99" y="200" width="44" height="17" rx="4" />
+
+          {/* Sypialnia */}
+          <rect x="222" y="90" width="50" height="22" rx="2" />
+          <path d="M247 90v22" fill="none" />
+          <rect x="284" y="97" width="15" height="18" rx="2" />
+          <rect x="380" y="97" width="15" height="18" rx="2" />
+          <rect x="306" y="94" width="67" height="79" rx="4" />
+          <rect x="311" y="100" width="26" height="17" rx="3" />
+          <rect x="342" y="100" width="26" height="17" rx="3" />
+          <rect x="306" y="123" width="67" height="50" rx="3" className="fill-amber-50" />
+
+          {/* Kuchnia */}
+          <path d="M28 236h109v22H49v34H28z" />
+          <rect x="34" y="241" width="25" height="12" rx="3" fill="none" />
+          <path d="M46 240v6m28-10v22m49-22v22" fill="none" />
+          <circle cx="98" cy="243" r="2.3" />
+          <circle cx="110" cy="243" r="2.3" />
+          <circle cx="98" cy="251" r="2.3" />
+          <circle cx="110" cy="251" r="2.3" />
+
+          {/* Przedpokój */}
+          <rect x="157" y="237" width="22" height="14" rx="2" />
+          <rect x="267" y="303" width="20" height="23" rx="2" />
+          <path d="M277 303v23" fill="none" />
+
+          {/* Łazienka */}
+          <rect x="340" y="235" width="72" height="22" rx="5" />
+          <rect x="346" y="239" width="60" height="14" rx="6" fill="none" />
+          <rect x="305" y="235" width="25" height="17" rx="3" />
+          <ellipse cx="317.5" cy="244" rx="7" ry="4" fill="none" />
+          <rect x="386" y="264" width="22" height="7" rx="2" />
+          <path d="M389 271h16v7a8 8 0 0 1-16 0z" />
         </g>
 
-        {/* Ściany, okna i drzwi */}
+        {/* Ściany i balustrada */}
         <path
-          d="M16 100V18h179v82"
+          d="M18 78V18h195v60m-189-5V24h183v49"
           fill="none"
           stroke="#123746"
-          strokeWidth="3"
+          strokeWidth="1.5"
         />
-        <path
-          d="M195 18h40m129 0h40v145m0 36v125H16v-43m0-101v-80h94m38 0h47v58m0 38v128m0-182h133m38 0h38M195 210h26m37 0h73m36 0h37m-98 0v114"
-          fill="none"
-          stroke="#0C2D3A"
-          strokeWidth="6"
-        />
-        <path d="M235 18h129M16 180v101" fill="none" stroke="#0F3A4D" strokeWidth="5" />
-        <path d="M235 18h129M16 180v101" fill="none" stroke="#fafafa" strokeWidth="1.5" />
-        <g fill="none" stroke="#0F3A4D" strokeWidth="1.8">
-          <path d="M110 100v38a38 38 0 0 0 38-38" />
-          <path d="M195 158h-38a38 38 0 0 0 38 38" />
-          <path d="M366 142v-38a38 38 0 0 0-38 38" />
-          <path d="M404 199h-36a36 36 0 0 1 36-36" />
-          <path d="M221 210v37a37 37 0 0 0 37-37" />
-          <path d="M367 210v36a36 36 0 0 1-36-36" />
+        <g fill="none" stroke="#0C2D3A" strokeLinecap="square" strokeWidth="5.5">
+          <path d="M18 103V78h42m78 0h139m83 0h62v256H247m-40 0H18v-35m0-26V158" />
+          <path d="M18 227h145m42 0h40m42 0h135M213 78v149" />
+          <path d="M147 227v31m0 33v43M298 227v34m0 33v40" />
         </g>
 
-        <g className="fill-[#0C2D3A] font-sans font-semibold" textAnchor="middle" fontSize="23">
-          <text x="105" y="80">Balkon</text>
-          <text x="265" y="119">Sypialnia</text>
-          <text x="108" y="237">Salon</text>
-          <text x="281" y="185">Przedpokój</text>
-          <text x="250" y="310">Kuchnia</text>
-          <text x="355" y="310" fontSize="20">Łazienka</text>
+        {/* Okna, drzwi balkonowe i kierunki otwierania drzwi */}
+        <g fill="none" stroke="#0F3A4D" strokeWidth="1.5">
+          <path d="M277 75h83v6h-83zm0 3h83" />
+          <path d="M15 103h6v55h-6zm3 0v55M15 273h6v26h-6zm3 0v26" />
+          <path d="M60 75h78m-78 2h43v3H60zm35 3h43v3H95z" />
+          <path d="M205 227v-42a42 42 0 0 0-42 42m82 0v-42a42 42 0 0 1 42 42" />
+          <path d="M147 291h-33a33 33 0 0 1 33-33M298 261h33a33 33 0 0 1-33 33" />
+          <path d="M247 334v-40a40 40 0 0 0-40 40" />
+        </g>
+
+        <g className="fill-[#0C2D3A] font-sans font-semibold" textAnchor="middle" fontSize="25">
+          <text x="102" y="56">Balkon</text>
+          <text x="117" y="182">Salon</text>
+          <text x="346" y="207">Sypialnia</text>
+          <text x="82.5" y="321">Kuchnia</text>
+          <text x="222.5" y="280">Przedpokój</text>
+          <text x="360" y="321">Łazienka</text>
         </g>
       </svg>
       <figcaption className="px-3 py-3 text-center text-sm text-amber-100 sm:px-0 sm:pb-0">
