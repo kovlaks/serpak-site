@@ -19,6 +19,7 @@ type ContentSection = {
   paragraphs?: string[];
   points?: string[];
   closing?: string;
+  ctaIntro?: string;
   cta?: string;
   ctaHref?: string;
 };
@@ -88,6 +89,9 @@ const serviceSections: ContentSection[] = [
       "ogłoszenie do publikacji.",
     ],
     closing: "Jeśli będzie to potrzebne, możemy dodatkowo zorganizować sprzątanie, drobne naprawy lub przygotowanie mieszkania do zdjęć i prezentacji.",
+    ctaIntro: "Możesz również zamówić wirtualny spacer 3D jako dodatkową usługę prezentacji nieruchomości.",
+    cta: "Poznaj wirtualne spacery 3D",
+    ctaHref: "/pl/spacer-3d",
   },
   {
     eyebrow: "Kandydaci",
@@ -326,6 +330,7 @@ function SectionCard({ section, index }: { section: ContentSection; index: numbe
       {section.closing ? <p className="mt-5 leading-relaxed text-neutral-200/90">{section.closing}</p> : null}
       {section.cta && section.ctaHref ? (
         <div className="mt-6">
+          {section.ctaIntro ? <p className="mb-3 leading-relaxed text-neutral-200/90">{section.ctaIntro}</p> : null}
           <a href={section.ctaHref} className={secondaryCtaClass}>
             {section.cta}
           </a>
