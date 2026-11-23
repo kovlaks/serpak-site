@@ -1,11 +1,14 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { ChatButton } from "../../components/common/ChatButton";
 import HomeContactForm from "../../components/common/HomeContactForm";
 import { Button } from "../../components/layout/Button";
 import { Container } from "../../components/layout/Container";
 import { SiteFooterPl } from "../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../components/layout/SiteHeaderPl";
+
+const highlightWords = ["najlepsze", "bezpieczne", "komfortowe", "właściwe", "idealne", "wyjątkowe"];
 
 const paymentOptions = [
   {
@@ -95,49 +98,67 @@ const focusClass = "focus-visible:outline focus-visible:outline-2 focus-visible:
 const primaryCtaClass = `inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3.5 text-center text-sm font-semibold tracking-wide text-[#0C2D3A] shadow-md transition hover:bg-amber-300 ${focusClass}`;
 
 export default function HomePageClient() {
+  const [highlightIndex, setHighlightIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+  const fadeTimeoutRef = useRef<number | null>(null);
+
+  const heroImageUrl = "/Depositphotos_455695662_XL.jpg";
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setIsFading(true);
+      fadeTimeoutRef.current = window.setTimeout(() => {
+        setHighlightIndex((prev) => (prev + 1) % highlightWords.length);
+        setIsFading(false);
+      }, 350);
+    }, 2500);
+
+    return () => {
+      window.clearInterval(intervalId);
+      if (fadeTimeoutRef.current) {
+        window.clearTimeout(fadeTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0C2D3A] text-neutral-100">
       <SiteHeaderPl />
 
       <main>
-        <section className="relative isolate" aria-labelledby="home-title">
-          <img
-            src="/Depositphotos_455695662_XL.jpg"
-            alt=""
-            fetchPriority="high"
-            className="absolute inset-0 -z-10 h-full w-full object-cover object-center lg:object-[center_46%]"
-          />
-          <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-[#0A2530]/95 via-[#0A2530]/65 to-transparent lg:block" />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0A2530]/80 via-[#0C2D3A]/70 to-[#0C2D3A] lg:via-[#0C2D3A]/20 lg:to-[#0C2D3A]" />
+        <section className="relative isolate pt-24">
+          <div className="absolute inset-0 -z-10">
+            <img
+              src={heroImageUrl}
+              alt="Warsaw skyline"
+              className="h-full w-full object-cover object-[center_50%]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0C2D3A]/25 to-[#0C2D3A]" />
+          </div>
 
           <Container>
-            <div className="max-w-3xl pb-12 pt-32 sm:pb-16 lg:pb-24 lg:pt-40">
-              <p className={eyebrowClass}>SERPAKOWSKI NIERUCHOMOŚCI</p>
-              <h1
-                id="home-title"
-                className="mt-4 font-serif text-[2.125rem] leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[4rem]"
-              >
-                Nieruchomości. <br className="hidden sm:block" />
-                Przejrzyste zasady. <br className="hidden sm:block" />
-                Nowe możliwości.
+            <div className="pt-[50vh] sm:pt-[54vh] md:pt-[58vh] pb-24 sm:pb-28 md:pb-32 lg:-ml-8 xl:-ml-12">
+              <h1 className="font-serif text-white leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                <span className="block">Sztuka</span>
+                <span className="block">
+                  znajdować{" "}
+                  <strong
+                    className={`text-amber-300 inline-block transition-opacity duration-500 ${
+                      isFading ? "opacity-0" : "opacity-100"
+                    }`}
+                  >
+                    {highlightWords[highlightIndex]}
+                  </strong>
+                </span>
               </h1>
-              <p className={`mt-5 max-w-xl sm:text-lg ${bodyClass}`}>
-                Profesjonalne wsparcie na rynku nieruchomości w Warszawie. Pomagamy właścicielom wynajmować mieszkania, a najemcom znaleźć odpowiednie miejsce do życia.
+
+              <p className="mt-6 text-lg text-neutral-200/90 max-w-2xl">
+                Wypełnij formularz i znajdź nieruchomość w najkrótszym możliwym czasie
               </p>
-              <div className="mt-7 flex flex-col gap-3 min-[480px]:flex-row">
-                <a href="#dla-wlascicieli" className={primaryCtaClass}>
-                  Chcę wynająć mieszkanie
-                </a>
-                <Button href="#dla-najemcow" className={`text-center ${focusClass}`}>
-                  Szukam mieszkania
-                </Button>
+
+              <div className="mt-10">
+                <a href="#contact" className="text-sm text-neutral-200/90 hover:text-white">Skontaktuj się z nami →</a>
               </div>
-              <a
-                href="#contact"
-                className={`mt-5 inline-block text-sm text-neutral-200 underline decoration-white/40 underline-offset-4 hover:text-white ${focusClass}`}
-              >
-                Skontaktuj się z nami
-              </a>
             </div>
           </Container>
         </section>
