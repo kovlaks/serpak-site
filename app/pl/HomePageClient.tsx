@@ -8,7 +8,13 @@ import { Container } from "../../components/layout/Container";
 import { SiteFooterPl } from "../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../components/layout/SiteHeaderPl";
 
-const highlightWords = ["najlepsze", "bezpieczne", "komfortowe", "właściwe", "idealne", "wyjątkowe"];
+const highlightWords = [
+  "możliwości",
+  "perspektywy",
+  "rozwiązania",
+  "standardy",
+  "korzyści",
+];
 
 const paymentOptions = [
   {
@@ -138,22 +144,22 @@ export default function HomePageClient() {
 
           <Container>
             <div className="pt-[50vh] sm:pt-[54vh] md:pt-[58vh] pb-24 sm:pb-28 md:pb-32 lg:-ml-8 xl:-ml-12">
-              <h1 className="font-serif text-white leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                <span className="block">Sztuka</span>
+              <h1 className="font-serif text-white leading-tight tracking-tight text-4xl max-[340px]:text-[2.125rem]/[2.8125rem] sm:text-5xl md:text-6xl lg:text-7xl">
+                <span className="block">Przejrzyste zasady.</span>{" "}
                 <span className="block">
-                  znajdować{" "}
+                  Nowe{" "}
                   <strong
                     className={`text-amber-300 inline-block transition-opacity duration-500 ${
                       isFading ? "opacity-0" : "opacity-100"
                     }`}
                   >
                     {highlightWords[highlightIndex]}
-                  </strong>
+                  </strong>.
                 </span>
               </h1>
 
               <p className="mt-6 text-lg text-neutral-200/90 max-w-2xl">
-                Wypełnij formularz i znajdź nieruchomość w najkrótszym możliwym czasie
+                Profesjonalne wsparcie na rynku nieruchomości w Polsce.
               </p>
 
               <div className="mt-10">
