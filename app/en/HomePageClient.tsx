@@ -21,7 +21,7 @@ const paymentOptions = [
     accent: "1 payment",
     description: "A single commission payment for comprehensive letting services.",
     price: "100% of one month's base rent.",
-    href: "/pl/najem-solo",
+    href: "/en/najem-solo",
   },
   {
     title: "Najem Split",
@@ -29,7 +29,7 @@ const paymentOptions = [
     note: "Interest-free",
     description: "The same service and the same total commission, paid in 12 monthly instalments.",
     price: "100% of one month's base rent in total.",
-    href: "/pl/najem-split",
+    href: "/en/najem-split",
   },
 ];
 
@@ -38,38 +38,38 @@ const advantages = [
     accent: "12",
     title: "Interest-Free Instalments",
     description: "Spread your commission over 12 monthly payments with no additional interest.",
-    href: "/pl/najem-split",
+    href: "/en/najem-split",
   },
   {
     accent: "Up to 100%",
     title: "Discount on Reletting",
     description: "The remaining portion of your previous commission may reduce the cost of finding your next tenant.",
     note: "Subject to the agreement terms.",
-    href: "/pl/najem-solo",
+    href: "/en/najem-solo",
   },
   {
     accent: "PLN 0",
     title: "Tenant Commission",
     description: "Under our landlord-focused brokerage model, the owner pays the agency commission.",
-    href: "/pl/landlord",
+    href: "/en/landlord",
   },
   {
     accent: "14 days",
     title: "Additional Support",
     description: "Assistance with urgent matters after the property has been handed over to the tenant.",
-    href: "/pl/landlord",
+    href: "/en/landlord",
   },
   {
     accent: "Tailored",
     title: "Lease Agreement",
     description: "A lease agreement drafted to reflect your property and rental terms.",
-    href: "/pl/umowa-najmu",
+    href: "/en/umowa-najmu",
   },
   {
     accent: "2D Floor Plan",
     title: "Property Layout",
     description: "A clear floor plan showing the property's layout for rental listings.",
-    href: "/pl/rzut-mieszkania",
+    href: "/en/rzut-mieszkania",
   },
 ];
 
@@ -78,24 +78,23 @@ const additionalServices = [
     title: "Tailored Lease Agreement",
     description: "A lease agreement drafted for your specific property and rental conditions.",
     price: "Individual quote",
-    href: "/pl/umowa-najmu",
+    href: "/en/umowa-najmu",
   },
   {
     title: "Virtual 3D Tour",
     description: "An interactive presentation of an apartment or house.",
     price: "From PLN 500, VAT included",
-    href: "/pl/spacer-3d",
+    href: "/en/spacer-3d",
   },
   {
     title: "Rental Assistant",
     description: "Additional support for landlords throughout the tenancy.",
     price: "5% per month",
     note: "Monthly subscription based on the base rent, VAT included.",
-    href: "/pl/asystent-najmu",
+    href: "/en/asystent-najmu",
   },
 ];
 
-const polishDetailsLabel = "Full details (in Polish)";
 const eyebrowClass = "text-sm font-semibold tracking-[0.14em] text-amber-300";
 const headingClass = "font-serif text-3xl leading-tight text-white sm:text-4xl lg:text-5xl";
 const panelClass = "rounded-2xl ring-1 ring-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.16)]";
@@ -222,9 +221,8 @@ export default function HomePageClient() {
                     <p className="font-semibold text-white">{price}</p>
                     <p className="mt-1 text-sm text-neutral-200/75">Total fee, VAT included.</p>
                     <Button href={href} className={`mt-4 text-center ${focusClass}`}>
-                      Explore {title}<span className="sr-only"> (in Polish)</span>
+                      Explore {title}
                     </Button>
-                    <p aria-hidden className="mt-2 text-sm text-neutral-200/75">{polishDetailsLabel}</p>
                   </div>
                 </article>
               ))}
@@ -237,7 +235,6 @@ export default function HomePageClient() {
                   <li key={title} className="min-w-0">
                     <a
                       href={href}
-                      hrefLang="pl"
                       className={`group block h-full bg-[#0A2530] p-4 transition hover:bg-[#123746] hover:ring-amber-300/40 sm:p-5 ${panelClass} ${focusClass}`}
                     >
                       <p className="font-serif text-2xl leading-tight text-amber-300 sm:text-4xl">{accent}</p>
@@ -246,7 +243,6 @@ export default function HomePageClient() {
                       </h4>
                       <p className={`mt-2 ${bodyClass}`}>{description}</p>
                       {note && <p className="mt-2 text-sm text-neutral-200/75">{note}</p>}
-                      <p className="mt-2 text-sm text-neutral-200/75">{polishDetailsLabel}</p>
                     </a>
                   </li>
                 ))}
@@ -269,11 +265,10 @@ export default function HomePageClient() {
                     </div>
                     <a
                       href={href}
-                      hrefLang="pl"
-                      aria-label={`${polishDetailsLabel} for ${title}`}
+                      aria-label={`Full details for ${title}`}
                       className={`mt-4 w-fit text-sm font-semibold text-white underline decoration-amber-200/50 underline-offset-4 hover:text-amber-200 ${focusClass}`}
                     >
-                      {polishDetailsLabel}
+                      Full details
                     </a>
                   </li>
                 ))}
@@ -283,14 +278,11 @@ export default function HomePageClient() {
             <div className="mt-7 text-center">
               <p className={bodyClass}>Discover the full scope of our services and brokerage terms.</p>
               <a
-                href="/pl/landlord"
-                hrefLang="pl"
-                aria-describedby="landlord-details-language"
+                href="/en/landlord"
                 className={`mt-3 w-full sm:w-auto sm:min-w-80 ${primaryCtaClass}`}
               >
                 Explore Our Landlord Services
               </a>
-              <p id="landlord-details-language" className="mt-2 text-sm text-neutral-200/75">{polishDetailsLabel}</p>
             </div>
           </Container>
         </section>
