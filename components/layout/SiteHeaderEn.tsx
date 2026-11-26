@@ -5,25 +5,37 @@ import { usePathname } from "next/navigation";
 import { Button } from "./Button";
 import { Container } from "./Container";
 
-const languageSwitcherMap = {
-  home: { ru: "/ru", pl: "/pl", en: "/en" },
-  rent: { ru: "/ru/rent", pl: "/pl/rent", en: "/en/rent" },
-  landlord: { ru: "/ru/landlord", pl: "/pl/landlord", en: "/en/landlord" },
-  partnership: { ru: "/ru/wspolpraca", pl: "/pl/wspolpraca", en: "/en/partnership" },
-} as const;
+type LanguageLinks = {
+  pl: string;
+  ru: string;
+  en: string;
+  ruUsesHomepage?: true;
+};
 
-function getLanguageLinks(pathname: string) {
-  if (pathname === "/ru/rent" || pathname === "/rent" || pathname === "/pl/rent" || pathname === "/en/rent") return languageSwitcherMap.rent;
-  if (pathname === "/ru/landlord" || pathname === "/landlord" || pathname === "/pl/landlord" || pathname === "/en/landlord") return languageSwitcherMap.landlord;
-  if (pathname === "/ru/wspolpraca" || pathname === "/wspolpraca" || pathname === "/pl/wspolpraca" || pathname === "/en/partnership") return languageSwitcherMap.partnership;
-  return languageSwitcherMap.home;
-}
+const homeLanguageLinks: LanguageLinks = { pl: "/pl", ru: "/ru", en: "/en" };
 
+const languageSwitcherMap = new Map<string, LanguageLinks>([
+  ["/en", homeLanguageLinks],
+  ["/en/landlord", { pl: "/pl/landlord", ru: "/ru/landlord", en: "/en/landlord" }],
+  ["/en/rent", { pl: "/pl/rent", ru: "/ru/rent", en: "/en/rent" }],
+  ["/en/partnership", { pl: "/pl/wspolpraca", ru: "/ru/wspolpraca", en: "/en/partnership" }],
+  ["/en/privacy", { pl: "/pl/polityka-prywatnosci", ru: "/ru/privacy", en: "/en/privacy" }],
+  ["/en/cookies", { pl: "/pl/polityka-cookies", ru: "/ru/cookies", en: "/en/cookies" }],
+  ["/en/najem-solo", { pl: "/pl/najem-solo", ru: "/ru", en: "/en/najem-solo", ruUsesHomepage: true }],
+  ["/en/najem-split", { pl: "/pl/najem-split", ru: "/ru", en: "/en/najem-split", ruUsesHomepage: true }],
+  ["/en/umowa-najmu", { pl: "/pl/umowa-najmu", ru: "/ru", en: "/en/umowa-najmu", ruUsesHomepage: true }],
+  ["/en/rzut-mieszkania", { pl: "/pl/rzut-mieszkania", ru: "/ru", en: "/en/rzut-mieszkania", ruUsesHomepage: true }],
+  ["/en/spacer-3d", { pl: "/pl/spacer-3d", ru: "/ru", en: "/en/spacer-3d", ruUsesHomepage: true }],
+  ["/en/asystent-najmu", { pl: "/pl/asystent-najmu", ru: "/ru", en: "/en/asystent-najmu", ruUsesHomepage: true }],
+]);
 
 export function SiteHeaderEn() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const languageLinks = getLanguageLinks(pathname);
+  const languageLinks = languageSwitcherMap.get(pathname.replace(/\/$/, "")) ?? homeLanguageLinks;
+  const russianHomepageLabel = languageLinks.ruUsesHomepage
+    ? "Russian homepage - this service page is not yet available in Russian."
+    : undefined;
   const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -55,7 +67,7 @@ export function SiteHeaderEn() {
             <div className="flex items-center gap-3">
               <a href={languageLinks.pl} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
               <span className="text-white/30">/</span>
-              <a href={languageLinks.ru} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
+              <a href={languageLinks.ru} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" aria-label={russianHomepageLabel} title={russianHomepageLabel ?? "Russian"}>RU</a>
               <span className="text-white/30">/</span>
               <a href={languageLinks.en} className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
             </div>
@@ -77,7 +89,7 @@ export function SiteHeaderEn() {
               <div className="flex items-center gap-3 pt-2">
                 <a href={languageLinks.pl} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Polish">PL</a>
                 <span className="text-white/30">/</span>
-                <a href={languageLinks.ru} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" title="Russian">RU</a>
+                <a href={languageLinks.ru} className="text-xs uppercase tracking-widest text-white/80 hover:text-white" aria-label={russianHomepageLabel} title={russianHomepageLabel ?? "Russian"}>RU</a>
                 <span className="text-white/30">/</span>
                 <a href={languageLinks.en} className="text-xs uppercase tracking-widest text-white" aria-current="true" title="Current language">EN</a>
               </div>
