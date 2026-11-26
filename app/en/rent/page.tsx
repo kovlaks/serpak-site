@@ -188,8 +188,8 @@ export default function Page() {
       {/* Hero */}
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0F3A4D] via-[#0C2D3A] to-[#0C2D3A] p-8 sm:p-12 ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,193,7,0.12),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_35%)]" />
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="min-w-0 space-y-6">
             <p className="text-xs uppercase tracking-[0.18em] text-amber-200/80">Rental support in Warsaw</p>
             <h1 className="font-serif text-4xl sm:text-5xl text-white leading-tight">
               Find Your New Home in Warsaw With Confidence
@@ -197,7 +197,7 @@ export default function Page() {
             <p className="text-lg text-neutral-200/90 max-w-2xl">
               We help people navigate the Warsaw rental market, understand property offers, arrange viewings and prepare for the rental process.
             </p>
-            <div className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-amber-200 ring-1 ring-amber-200/30">
+            <div className="inline-flex rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold text-amber-200 ring-1 ring-amber-200/30 sm:rounded-full">
               For properties offered through our landlord-focused brokerage model, tenants pay no agency commission. Individually requested search assistance is discussed separately.
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
@@ -230,7 +230,7 @@ export default function Page() {
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div className="min-w-0 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div aria-hidden="true" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-300 to-amber-500 text-xl font-bold text-[#0C2D3A]">
@@ -244,10 +244,10 @@ export default function Page() {
               <div className="rounded-2xl bg-[#0A2530] p-5 ring-1 ring-white/5">
                 <div className="text-sm text-neutral-200/80">Process in brief</div>
                 <p className="mt-2 text-base text-white/90 leading-relaxed">
-                  We can help check available property information, clarify proposed lease terms and prepare for handover. Practical support after move-in depends on the service arranged.
+                  We can help compare property options, agree on viewing dates, check available property information and clarify lease terms before handover. Practical support after move-in depends on the service arranged.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-3 text-sm text-neutral-200/90">
+              <div className="grid grid-cols-1 gap-3 text-sm text-neutral-200/90 min-[360px]:grid-cols-2">
                 <div className="rounded-xl bg-white/5 px-3 py-3 ring-1 ring-white/10 sm:px-4">Property options</div>
                 <div className="rounded-xl bg-white/5 px-3 py-3 ring-1 ring-white/10 sm:px-4">Viewing dates</div>
                 <div className="rounded-xl bg-white/5 px-3 py-3 ring-1 ring-white/10 sm:px-4">Lease terms</div>
