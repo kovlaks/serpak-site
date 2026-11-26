@@ -1,5 +1,5 @@
 import { createSeoMetadata, seoAlternates } from "../../seo";
-export { default } from "../../privacy/page";
+export { default } from "../../(legacy)/privacy/page";
 
 export const metadata = createSeoMetadata({
   title: "Политика конфиденциальности | SERPAKOWSKI Nieruchomości",

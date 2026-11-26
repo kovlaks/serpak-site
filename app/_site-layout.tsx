@@ -1,11 +1,11 @@
-import './globals.css';
+import "./globals.css";
 import type { Metadata } from "next";
-import { Suspense } from "react";
+import { Suspense, type ReactNode } from "react";
 import { CookieConsentManager } from "../components/common/CookieConsentManager";
 import { ConsentBasedTracking } from "../components/common/ConsentBasedTracking";
 import { StructuredData } from "../components/common/StructuredData";
 
-export const metadata: Metadata = {
+export const siteMetadata: Metadata = {
   metadataBase: new URL("https://www.serpakowski.pl"),
   title: "SERPAKOWSKI Nieruchomości | Agencja nieruchomości w Warszawie",
   description:
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const bodyClassName = "bg-[#0C2D3A] text-neutral-100 antialiased";
+
+export function SiteLayoutContent({ children }: { children: ReactNode }) {
   return (
-    <html lang="pl">
-      <body className="bg-[#0C2D3A] text-neutral-100 antialiased">
-        <StructuredData />
-        {children}
-        <Suspense fallback={null}>
-          <ConsentBasedTracking />
-        </Suspense>
-        <CookieConsentManager />
-      </body>
-    </html>
+    <>
+      <StructuredData />
+      {children}
+      <Suspense fallback={null}>
+        <ConsentBasedTracking />
+      </Suspense>
+      <CookieConsentManager />
+    </>
   );
 }

@@ -1,7 +1,7 @@
-import { Button } from "../../components/layout/Button";
-import { Container } from "../../components/layout/Container";
-import { SiteFooter } from "../../components/layout/SiteFooter";
-import { SiteHeader } from "../../components/layout/SiteHeader";
+import { Button } from "../../../components/layout/Button";
+import { Container } from "../../../components/layout/Container";
+import { SiteFooter } from "../../../components/layout/SiteFooter";
+import { SiteHeader } from "../../../components/layout/SiteHeader";
 
 export const metadata = {
   title: "Сотрудничество | SERPAKOWSKI Nieruchomości",
