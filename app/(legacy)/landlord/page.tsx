@@ -1,5 +1,5 @@
-import { SiteFooter } from "../../components/layout/SiteFooter";
-import { SiteHeader } from "../../components/layout/SiteHeader";
+import { SiteFooter } from "../../../components/layout/SiteFooter";
+import { SiteHeader } from "../../../components/layout/SiteHeader";
 
 export const metadata = {
   title: "Сдать квартиру в Варшаве | SERPAKOWSKI Nieruchomości",

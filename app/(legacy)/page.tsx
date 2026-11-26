@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { ChatButton } from "../components/common/ChatButton";
-import { Button } from "../components/layout/Button";
-import HomeContactForm from "../components/common/HomeContactForm";
-import { Container } from "../components/layout/Container";
-import { SiteFooter } from "../components/layout/SiteFooter";
-import { SiteHeader } from "../components/layout/SiteHeader";
+import { ChatButton } from "../../components/common/ChatButton";
+import { Button } from "../../components/layout/Button";
+import HomeContactForm from "../../components/common/HomeContactForm";
+import { Container } from "../../components/layout/Container";
+import { SiteFooter } from "../../components/layout/SiteFooter";
+import { SiteHeader } from "../../components/layout/SiteHeader";
 
 const highlightWords = [
   "лучшее",

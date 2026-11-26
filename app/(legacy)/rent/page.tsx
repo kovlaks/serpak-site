@@ -1,6 +1,6 @@
-import { SiteFooter } from "../../components/layout/SiteFooter";
-import { SiteHeader } from "../../components/layout/SiteHeader";
-import { RentContactSection } from "../../components/rent/RentContactSection";
+import { SiteFooter } from "../../../components/layout/SiteFooter";
+import { SiteHeader } from "../../../components/layout/SiteHeader";
+import { RentContactSection } from "../../../components/rent/RentContactSection";
 
 export const metadata = {
   title: "Хочу снять — SERPAKOWSKI Nieruchomości",

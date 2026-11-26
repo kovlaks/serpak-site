@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import HomeContactForm from "../../components/common/HomeContactForm";
-import { SiteFooter } from "../../components/layout/SiteFooter";
-import { SiteHeader } from "../../components/layout/SiteHeader";
+import HomeContactForm from "../../../components/common/HomeContactForm";
+import { SiteFooter } from "../../../components/layout/SiteFooter";
+import { SiteHeader } from "../../../components/layout/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Test RU | SERPAKOWSKI Nieruchomości",

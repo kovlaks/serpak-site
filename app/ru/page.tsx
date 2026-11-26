@@ -1,5 +1,5 @@
 import { createSeoMetadata, seoAlternates } from "../seo";
-export { default } from "../page";
+export { default } from "../(legacy)/page";
 
 export const metadata = createSeoMetadata({
   title: "SERPAKOWSKI Nieruchomości | Агентство недвижимости в Варшаве",

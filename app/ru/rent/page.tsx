@@ -1,5 +1,5 @@
 import { createSeoMetadata, seoAlternates } from "../../seo";
-export { default } from "../../rent/page";
+export { default } from "../../(legacy)/rent/page";
 
 export const metadata = createSeoMetadata({
   title: "Аренда квартиры в Варшаве | SERPAKOWSKI Nieruchomości",
