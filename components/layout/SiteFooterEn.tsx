@@ -16,14 +16,25 @@ export function SiteFooterEn() {
                             <a href="https://t.me/+48453053969" target="_blank" rel="noopener noreferrer" className="hover:text-white">Telegram</a>
             </div>
           </div>
-          <div>
+          <nav aria-label="Footer navigation">
             <div className="text-white">Navigation</div>
             <ul className="mt-2 space-y-2">
               <li><a href="/en#services" className="hover:text-white">Services</a></li>
+              <li><a href="/en/landlord" className="hover:text-white">For Landlords</a></li>
+              <li><a href="/en/rent" className="hover:text-white">For Tenants</a></li>
               <li><a href="/en/partnership" className="hover:text-white">Partnership</a></li>
               <li><a href="/en#contact" className="hover:text-white">Contact</a></li>
             </ul>
-          </div>
+            <div className="mt-4 text-white">Rental services</div>
+            <ul className="mt-2 space-y-2">
+              <li><a href="/en/najem-solo" className="hover:text-white">Najem Solo</a></li>
+              <li><a href="/en/najem-split" className="hover:text-white">Najem Split</a></li>
+              <li><a href="/en/umowa-najmu" className="hover:text-white">Tailored Lease Agreement</a></li>
+              <li><a href="/en/rzut-mieszkania" className="hover:text-white">2D Floor Plan</a></li>
+              <li><a href="/en/spacer-3d" className="hover:text-white">Virtual 3D Tour</a></li>
+              <li><a href="/en/asystent-najmu" className="hover:text-white">Rental Assistant</a></li>
+            </ul>
+          </nav>
           <div>
             <div className="text-white">Contact</div>
             <ul className="mt-2 space-y-2">
