@@ -6,11 +6,11 @@ export function SiteFooterEn() {
   return (
     <footer className="py-12 bg-gradient-to-b from-transparent to-[#0A2530]">
       <Container>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm text-neutral-200/80">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[20rem_repeat(3,minmax(0,1fr))] text-sm text-neutral-200/80">
           <div>
             <div className="flex items-center gap-3">
-              <div aria-hidden="true" className="h-10 w-10 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 ring-1 ring-white/15 shadow-[0_2px_8px_rgba(0,0,0,0.25)]" />
-              <div className="font-serif text-white text-lg whitespace-nowrap">SERPAKOWSKI Nieruchomości</div>
+              <div aria-hidden="true" className="h-10 w-10 shrink-0 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 ring-1 ring-white/15 shadow-[0_2px_8px_rgba(0,0,0,0.25)]" />
+              <div className="font-serif text-white text-lg">SERPAKOWSKI Nieruchomości</div>
             </div>
             <div className="mt-4 flex items-center gap-4 text-neutral-200/80">
                             <a href="https://t.me/+48453053969" target="_blank" rel="noopener noreferrer" className="hover:text-white">Telegram</a>
