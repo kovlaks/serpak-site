@@ -3,7 +3,7 @@ import HomePageClient from "./HomePageClient";
 
 export const metadata = createSeoMetadata({
   title: "SERPAKOWSKI Nieruchomości | Real estate agency in Warsaw",
-  description: "SERPAKOWSKI Nieruchomości supports rental, purchase, sale and property services in Warsaw. Safe process, clear communication and step-by-step real estate assistance.",
+  description: "Comprehensive apartment letting services in Warsaw. Najem Solo and Najem Split, 12 interest-free instalments, no tenant commission under our landlord-focused model, and additional services for property owners.",
   canonicalPath: "/en",
   languages: seoAlternates.home,
   locale: "en_US",
