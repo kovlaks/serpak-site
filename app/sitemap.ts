@@ -29,6 +29,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/pl/najem-solo`,
+    },
+    {
+      url: `${baseUrl}/pl/najem-split`,
+    },
+    {
+      url: `${baseUrl}/pl/umowa-najmu`,
+    },
+    {
+      url: `${baseUrl}/pl/rzut-mieszkania`,
+    },
+    {
+      url: `${baseUrl}/pl/asystent-najmu`,
+    },
+    {
       url: `${baseUrl}/pl/spacer-3d`,
       lastModified: new Date(),
       changeFrequency: "weekly",
