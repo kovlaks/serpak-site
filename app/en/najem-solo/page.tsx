@@ -12,7 +12,13 @@ const canonical = "https://www.serpakowski.pl/en/najem-solo";
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical },
+  alternates: {
+    canonical,
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/najem-solo",
+      en: "https://www.serpakowski.pl/en/najem-solo",
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
     title,

@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     "Asystent Najmu - dodatkowe wsparcie właścicieli mieszkań podczas trwania najmu. Miesięczny abonament w wysokości 5% bazowego czynszu najmu.",
   alternates: {
     canonical: "https://www.serpakowski.pl/pl/asystent-najmu",
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/asystent-najmu",
+      en: "https://www.serpakowski.pl/en/asystent-najmu",
+    },
   },
   robots: { index: true, follow: true },
 };

@@ -13,7 +13,13 @@ const canonical = "https://www.serpakowski.pl/en/asystent-najmu";
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical },
+  alternates: {
+    canonical,
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/asystent-najmu",
+      en: "https://www.serpakowski.pl/en/asystent-najmu",
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
     title,

@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     "Najem Split: prowizja w 12 ratach bez odsetek, 0 zł prowizji dla najemcy i możliwość rabatu przy ponownym wynajmie mieszkania.",
   alternates: {
     canonical: "https://www.serpakowski.pl/pl/najem-split",
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/najem-split",
+      en: "https://www.serpakowski.pl/en/najem-split",
+    },
   },
   robots: { index: true, follow: true },
 };

@@ -12,7 +12,13 @@ const canonical = "https://www.serpakowski.pl/en/rzut-mieszkania";
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical },
+  alternates: {
+    canonical,
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/rzut-mieszkania",
+      en: "https://www.serpakowski.pl/en/rzut-mieszkania",
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
     title,

@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Najem Solo - kompleksowe pośrednictwo w wynajmie mieszkania, jednorazowa prowizja, 0 zł prowizji dla najemcy i możliwość rabatu przy ponownym wynajmie.",
   alternates: {
     canonical: "https://www.serpakowski.pl/pl/najem-solo",
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/najem-solo",
+      en: "https://www.serpakowski.pl/en/najem-solo",
+    },
   },
   robots: { index: true, follow: true },
 };

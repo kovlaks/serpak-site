@@ -12,7 +12,13 @@ const canonical = "https://www.serpakowski.pl/en/umowa-najmu";
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical },
+  alternates: {
+    canonical,
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/umowa-najmu",
+      en: "https://www.serpakowski.pl/en/umowa-najmu",
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
     title,

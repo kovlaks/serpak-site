@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Czytelne rzuty mieszkań 2D do ogłoszeń sprzedaży i wynajmu nieruchomości. Samodzielna usługa dla właścicieli, agentów i biur nieruchomości.",
   alternates: {
     canonical: "https://www.serpakowski.pl/pl/rzut-mieszkania",
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/rzut-mieszkania",
+      en: "https://www.serpakowski.pl/en/rzut-mieszkania",
+    },
   },
   robots: { index: true, follow: true },
 };

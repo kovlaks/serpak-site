@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Indywidualny projekt umowy najmu dopasowany do Twojego mieszkania i warunków wynajmu. Dostępny jako samodzielna usługa lub w ramach Najem Solo i Najem Split.",
   alternates: {
     canonical: "https://www.serpakowski.pl/pl/umowa-najmu",
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/umowa-najmu",
+      en: "https://www.serpakowski.pl/en/umowa-najmu",
+    },
   },
   robots: { index: true, follow: true },
 };
