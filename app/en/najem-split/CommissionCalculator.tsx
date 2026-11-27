@@ -7,7 +7,7 @@ const sliderMax = 15000;
 const installmentCount = 12;
 
 function parseGrosze(value: string) {
-  const parts = value.match(/^(\d*)(?:\.(\d{1,2}))?$/);
+  const parts = value.match(/^(\d*)(?:[.,](\d{1,2}))?$/);
   if (!parts || value === "") return null;
 
   const grosze = Number(parts[1] + (parts[2] ?? "").padEnd(2, "0"));
@@ -47,13 +47,20 @@ export default function CommissionCalculator() {
             <div className="mt-2 flex items-center gap-3">
               <input
                 id="en-najem-split-rent"
-                type="number"
+                type="text"
                 lang="en"
                 inputMode="decimal"
-                min="0"
-                step="0.01"
-                value={rent}
+                value={rent.replace(/[\r\n]/g, "⏎")}
                 onChange={(event) => setRent(event.currentTarget.value)}
+                onPaste={(event) => {
+                  const text = event.clipboardData.getData("text/plain");
+                  if (!/[\r\n]/.test(text)) return;
+
+                  // Keep line breaks in state before the single-line input can drop them.
+                  event.preventDefault();
+                  const { selectionStart, selectionEnd } = event.currentTarget;
+                  setRent(rent.slice(0, selectionStart ?? rent.length) + text + rent.slice(selectionEnd ?? rent.length));
+                }}
                 aria-invalid={totalGrosze === null}
                 aria-describedby={totalGrosze === null ? "en-najem-split-rent-error" : undefined}
                 className="min-w-0 w-full rounded-xl bg-white/5 px-4 py-3 text-white ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-amber-300"
@@ -62,7 +69,7 @@ export default function CommissionCalculator() {
             </div>
             {totalGrosze === null && (
               <p id="en-najem-split-rent-error" className="mt-2 text-sm text-amber-200">
-                Enter a valid amount of at least PLN 0, with up to two decimal places.
+                Enter a valid amount of at least PLN 0. Use a period or comma for decimals, with no more than two decimal places.
               </p>
             )}
           </div>
