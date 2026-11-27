@@ -7,7 +7,7 @@ const sliderMax = 15000;
 const installmentCount = 12;
 
 function parseGrosze(value: string) {
-  const parts = value.match(/^(\d*)(?:\.(\d{1,2}))?$/);
+  const parts = value.match(/^(\d*)(?:[.,](\d{1,2}))?$/);
   if (!parts || value === "") return null;
 
   const grosze = Number(parts[1] + (parts[2] ?? "").padEnd(2, "0"));
@@ -47,11 +47,9 @@ export default function CommissionCalculator() {
             <div className="mt-2 flex items-center gap-3">
               <input
                 id="najem-split-rent"
-                type="number"
+                type="text"
                 lang="pl"
                 inputMode="decimal"
-                min="0"
-                step="0.01"
                 value={rent}
                 onChange={(event) => setRent(event.currentTarget.value)}
                 aria-invalid={totalGrosze === null}
@@ -62,7 +60,7 @@ export default function CommissionCalculator() {
             </div>
             {totalGrosze === null && (
               <p id="najem-split-rent-error" className="mt-2 text-sm text-amber-200">
-                Podaj poprawną kwotę od 0 zł z dokładnością do pełnych groszy.
+                Podaj poprawną kwotę od 0 zł. Możesz użyć przecinka lub kropki jako separatora dziesiętnego, maksymalnie dwa miejsca po separatorze.
               </p>
             )}
           </div>
