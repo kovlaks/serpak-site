@@ -12,7 +12,13 @@ const canonical = "https://www.serpakowski.pl/en/spacer-3d";
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical },
+  alternates: {
+    canonical,
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/spacer-3d",
+      en: "https://www.serpakowski.pl/en/spacer-3d",
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
     title,

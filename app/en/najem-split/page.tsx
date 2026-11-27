@@ -13,7 +13,13 @@ const canonical = "https://www.serpakowski.pl/en/najem-split";
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical },
+  alternates: {
+    canonical,
+    languages: {
+      pl: "https://www.serpakowski.pl/pl/najem-split",
+      en: "https://www.serpakowski.pl/en/najem-split",
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
     title,
