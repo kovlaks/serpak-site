@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   openGraph: {
     title,
     description,

@@ -118,5 +118,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/en/najem-solo`,
+    },
+    {
+      url: `${baseUrl}/en/najem-split`,
+    },
+    {
+      url: `${baseUrl}/en/umowa-najmu`,
+    },
+    {
+      url: `${baseUrl}/en/rzut-mieszkania`,
+    },
+    {
+      url: `${baseUrl}/en/spacer-3d`,
+    },
+    {
+      url: `${baseUrl}/en/asystent-najmu`,
+    },
   ];
 }
