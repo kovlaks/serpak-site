@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Container } from "../../components/layout/Container";
 import { isYouTubeVideoId, normalizeOfferNumber } from "../../lib/property-video/validation";
 
-const invalidOffer = "Wpisz poprawny numer oferty, np. 1A/2B/03.";
+const invalidOffer = "Wpisz poprawny numer oferty, np. 01U/1126.";
 const unknownOffer = "Nie znaleziono oferty o podanym numerze.";
 const lookupError = "Nie udało się pobrać wideo. Spróbuj ponownie.";
 const focusClass = "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300";
@@ -111,7 +111,7 @@ export default function PropertyVideoLookup() {
                 autoComplete="off"
                 autoCapitalize="characters"
                 spellCheck={false}
-                placeholder="Np. 1A/2B/03"
+                placeholder="Np. 01U/1126"
                 value={offerNumber}
                 disabled={!isReady}
                 readOnly={isPending}
@@ -149,38 +149,42 @@ export default function PropertyVideoLookup() {
             event.preventDefault();
             setVideoId(null);
           }}
-          className="m-auto max-h-[calc(100dvh-2rem)] w-11/12 max-w-3xl overflow-y-auto overscroll-contain rounded-2xl bg-[#123746] p-4 text-white shadow-xl ring-1 ring-white/10 backdrop:bg-black/75 sm:p-6"
+          className="m-auto max-h-[calc(100dvh-2rem)] w-11/12 max-w-md overflow-hidden rounded-2xl bg-[#123746] p-0 text-white shadow-xl ring-1 ring-white/10 backdrop:bg-black/75"
         >
-          <div className="flex items-start justify-between gap-3">
-            <h2 id="property-video-dialog-heading" className="font-serif text-xl leading-tight sm:text-2xl">
-              Spacer wideo po nieruchomości
-            </h2>
-            <button
-              ref={closeButtonRef}
-              type="button"
-              onClick={() => setVideoId(null)}
-              className={`shrink-0 rounded-2xl bg-white/10 px-3 py-2 text-sm font-semibold hover:bg-white/15 ${focusClass}`}
-            >
-              Zamknij
-            </button>
+          <div className="flex max-h-[calc(100dvh-2rem)] flex-col">
+            <div className="flex shrink-0 items-start justify-between gap-3 px-4 pt-4 sm:px-6 sm:pt-6">
+              <h2 id="property-video-dialog-heading" className="font-serif text-xl leading-tight sm:text-2xl">
+                Spacer wideo po nieruchomości
+              </h2>
+              <button
+                ref={closeButtonRef}
+                type="button"
+                onClick={() => setVideoId(null)}
+                className={`shrink-0 rounded-2xl bg-white/10 px-3 py-2 text-sm font-semibold hover:bg-white/15 ${focusClass}`}
+              >
+                Zamknij
+              </button>
+            </div>
+            <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-4 sm:px-6 sm:pb-6">
+              <p id="property-video-notice" className="mt-2 text-sm text-neutral-200/90">
+                Odtwarzacz wczytuje treści z serwisu YouTube.
+              </p>
+              <iframe
+                className="mx-auto mt-4 block aspect-[9/16] w-[clamp(12.5rem,calc((100dvh-13rem)*0.5625),22rem)] max-w-full rounded-xl border-0 bg-black"
+                src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                title="Spacer wideo po nieruchomości w serwisie YouTube"
+                allowFullScreen
+              />
+              <a
+                href={`https://www.youtube.com/watch?v=${videoId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-4 inline-block text-sm font-semibold text-amber-200 underline underline-offset-4 ${focusClass}`}
+              >
+                Otwórz wideo w YouTube
+              </a>
+            </div>
           </div>
-          <p id="property-video-notice" className="mt-2 text-sm text-neutral-200/90">
-            Odtwarzacz wczytuje treści z serwisu YouTube.
-          </p>
-          <iframe
-            className="mt-4 block aspect-video w-full rounded-xl border-0 bg-black"
-            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-            title="Spacer wideo po nieruchomości w serwisie YouTube"
-            allowFullScreen
-          />
-          <a
-            href={`https://www.youtube.com/watch?v=${videoId}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`mt-4 inline-block text-sm font-semibold text-amber-200 underline underline-offset-4 ${focusClass}`}
-          >
-            Otwórz wideo w YouTube
-          </a>
         </dialog>
       )}
     </section>

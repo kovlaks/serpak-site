@@ -11,7 +11,15 @@ type VideoOffer = {
 };
 
 // Add real offers here. Include only the street name and building number in streetAddress.
-const videoOffers: readonly VideoOffer[] = [];
+const videoOffers: readonly VideoOffer[] = [
+  {
+    offerNumber: '01U/1126',
+    country: 'Polska',
+    city: 'Warszawa',
+    streetAddress: 'ul. Pieskowa Skała 15',
+    youtubeVideoId: 'Xm7hcoBWiHQ',
+  },
+];
 
 export function findVideoOffer(offerNumber: string): VideoOffer | undefined {
   return videoOffers.find((offer) => normalizeOfferNumber(offer.offerNumber) === offerNumber);
