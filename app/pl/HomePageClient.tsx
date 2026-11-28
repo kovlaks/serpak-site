@@ -7,6 +7,7 @@ import { Button } from "../../components/layout/Button";
 import { Container } from "../../components/layout/Container";
 import { SiteFooterPl } from "../../components/layout/SiteFooterPl";
 import { SiteHeaderPl } from "../../components/layout/SiteHeaderPl";
+import PropertyVideoLookup from "./PropertyVideoLookup";
 
 const highlightWords = [
   "możliwości",
@@ -168,6 +169,8 @@ export default function HomePageClient() {
             </div>
           </Container>
         </section>
+
+        <PropertyVideoLookup />
 
         <section id="services" className="scroll-mt-16 py-10 sm:py-14" aria-labelledby="owners-title">
           <Container>
